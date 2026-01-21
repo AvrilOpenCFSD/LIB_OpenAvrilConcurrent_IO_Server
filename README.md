@@ -1,4 +1,4 @@
-# Avril - LIBRARY for Template for Concurrent Input Output Server with Full Stack Development.
+# Avril - LIBRARY Template for Concurrent Input Output Server with Full Stack Development.
 
 ### C# .NET Console.
 
