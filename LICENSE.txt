@@ -1,4 +1,4 @@
-Avril FSD - Concurrent (Multi-Threaded) Event Driven Server Assembly Library.
+Avril Concurrency wtih FSD - Concurrent (Multi-Threaded) Event Driven Server Assembly Library.
 Copyright (c) 2022 - 2025 Brenton James Maddocks BEng(CompSys).  
 All rights reserved.
 
@@ -38,7 +38,7 @@ developers framework is itself covered by the above license.
 
 //===
 
-Avril FSD - Concurrent (Multi-Threaded) Event Driven Server Assembly Library.
+Avril Concurrency wtih FSD - Library for Request, Wait, Write for Threads at Stacks.
 Copyright (c) 2022 - 2025 Brenton James Maddocks BEng(CompSys).  
 All rights reserved.
 
