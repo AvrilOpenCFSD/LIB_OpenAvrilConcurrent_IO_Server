@@ -155,5 +155,8 @@ namespace Avril_FSD
 }
 ````
 
+## Prospecting In A Neural Network AI IO Device.
+ - https://github.com/AvrilOpenCFSD/Neural_Network_AI_IO_Device
+
 ## TestBench(s) in C#.
  - https://github.com/AvrilOpenCFSD/Avril_Full_Stack_Development_Template_Libraries/blob/master/TESTBENCH_Libraries_Csharp/Program.cs
