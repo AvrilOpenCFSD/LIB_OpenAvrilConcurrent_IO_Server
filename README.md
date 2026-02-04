@@ -312,8 +312,6 @@ namespace Avril_FSD.ClientAssembly
 line 9:	private List<Avril_FSD.ClientAssembly.Inputs.Input> _stack_Client_InputSend;
 https://github.com/OpenFSD/Avril_Full_Stack_Development_Template/blob/master/APP_ClientAssembly/engine/Input_Instance.cs
 
-### Server Shell App.
-
 #### THREAD: NETWORKING Client Input Action Send.
 https://github.com/OpenFSD/Avril_Full_Stack_Development_Template/blob/master/APP_ClientAssembly/Networking_Client.cs
 ````
