@@ -653,8 +653,8 @@ public void Thread_Concurrent(byte threadId)
 ````
 
 ## TestBench(s) in C#.
- - https://github.com/AvrilOpenCFSD/Avril_Full_Stack_Development_Template_Libraries/blob/master/TESTBENCH_Libraries_Csharp/Program.cs
+ - https://github.com/OpenAvril/TESTBENCH_OpenAvril
 
 
 ## Prospecting In A Neural Network AI IO Device.
- - https://github.com/AvrilOpenCFSD/Neural_Network_AI_IO_Device
+ - https://github.com/OpenAvril/OpenAvrilNNI_Design_Suite
