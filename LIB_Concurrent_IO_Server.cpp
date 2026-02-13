@@ -8,8 +8,6 @@ class Avril_FSD::Framework_Server* _Server_Assembly;
 void* programHandleId_WriteEnalbe_ServerInputAction;
 void* programHandleId_WriteEnalbe_ServerOutputRecieve;
 
-bool _flag_isNewInputDataReady;
-bool _flag_isNewOutputDataReady;
 bool _flag_IsStackLoaded_Server_InputAction;
 bool _flag_IsStackLoaded_Server_OutputRecieve;
 bool _flag_IsInitialised_Avril_FSD_ServerAssembly;
@@ -22,11 +20,7 @@ bool _Praise0_Input_IsPingActive;
 bool _Praise0_Output_IsPingActive;
 
 // Praise 1 Data
-float _Praise1_Input_mouseDelta_X;
-float _Praise1_Input_mouseDelta_Y;
-Eigen::Vector3d _praise1_Output_Player_Camera_Fowards;
-Eigen::Vector3d _praise1_Output_Player_Camera_Up;
-Eigen::Vector3d _praise1_Output_Player_Camera_Right;
+
 
 void* Avril_FSD::CLIBServerIOConcurrnecy::Initialise_Server_Concurrency()
 {
@@ -46,18 +40,6 @@ void Avril_FSD::CLIBServerIOConcurrnecy::Flip_InBufferToWrite(Avril_FSD::Framewo
 void Avril_FSD::CLIBServerIOConcurrnecy::Flip_OutBufferToWrite(Avril_FSD::Framework_Server* obj)
 {
     obj->Get_Server_Assembly()->Get_Data()->Flip_Output_DoubleBuffer();
-}
-
-bool Avril_FSD::CLIBServerIOConcurrnecy::Get_flag_isNewInputDataReady(Avril_FSD::Framework_Server* obj)
-{
-    _flag_isNewInputDataReady = obj->Get_Server_Assembly()->Get_Data()->Get_Data_Control()->Get_flag_IsNewInputDataReady();
-    return _flag_isNewInputDataReady;
-}
-
-bool Avril_FSD::CLIBServerIOConcurrnecy::Get_flag_isNewOutputDataReady(Avril_FSD::Framework_Server* obj)
-{
-    _flag_isNewOutputDataReady = obj->Get_Server_Assembly()->Get_Data()->Get_Data_Control()->Get_flag_IsNewOutputDataReady();
-    return _flag_isNewOutputDataReady;
 }
 
 bool Avril_FSD::CLIBServerIOConcurrnecy::Get_flag_IsStackLoaded_Server_InputAction(class Avril_FSD::Framework_Server* obj)
@@ -136,55 +118,6 @@ void Avril_FSD::CLIBServerIOConcurrnecy::Set_Praise0_Output_IsPingActive(class A
     obj->Get_Server_Assembly()->Get_Data()->Get_User_O()->Get_Praise0_Output()->Set_ping_Active(value);
 }
 //
-float Avril_FSD::CLIBServerIOConcurrnecy::Get_Praise1_Input_mouseDelta_X(class Avril_FSD::Framework_Server* obj)
-{
-    _Praise1_Input_mouseDelta_X = obj->Get_Server_Assembly()->Get_Data()->Get_User_I()->Get_Praise1_Input()->Get_mouse_X();
-    return _Praise1_Input_mouseDelta_X;
-}
-void Avril_FSD::CLIBServerIOConcurrnecy::Set_Praise1_Input_mouseDelta_X(class Avril_FSD::Framework_Server* obj, float value)
-{
-    obj->Get_Server_Assembly()->Get_Data()->Get_User_I()->Get_Praise1_Input()->Set_mouse_X(value);
-}
-float Avril_FSD::CLIBServerIOConcurrnecy::Get_Praise1_Input_mouseDelta_Y(class Avril_FSD::Framework_Server* obj)
-{
-    _Praise1_Input_mouseDelta_Y = obj->Get_Server_Assembly()->Get_Data()->Get_User_I()->Get_Praise1_Input()->Get_mouse_Y();
-    return _Praise1_Input_mouseDelta_Y;
-}
-void Avril_FSD::CLIBServerIOConcurrnecy::Set_Praise1_Input_mouseDelta_Y(class Avril_FSD::Framework_Server* obj, float value)
-{
-    obj->Get_Server_Assembly()->Get_Data()->Get_User_I()->Get_Praise1_Input()->Set_mouse_Y(value);
-}
-
-Eigen::Vector3d Avril_FSD::CLIBServerIOConcurrnecy::Get_Praise1_Output_Player_Fowards(class Avril_FSD::Framework_Server* obj)
-{
-    Avril_FSD::Praise1_Output* outputSebset = (Avril_FSD::Praise1_Output*)obj->Get_Server_Assembly()->Get_Data()->GetBuffer_OutputFrontDouble()->Get_praiseOutputBuffer_Subset();
-    _praise1_Output_Player_Camera_Fowards = outputSebset->GetFowards();
-    return _praise1_Output_Player_Camera_Fowards;
-}
-Eigen::Vector3d Avril_FSD::CLIBServerIOConcurrnecy::Get_Praise1_Output_Player_Up(class Avril_FSD::Framework_Server* obj)
-{
-    Avril_FSD::Praise1_Output* outputSebset = (Avril_FSD::Praise1_Output*)obj->Get_Server_Assembly()->Get_Data()->GetBuffer_OutputFrontDouble()->Get_praiseOutputBuffer_Subset();
-    _praise1_Output_Player_Camera_Up = outputSebset->GetUp();
-    return _praise1_Output_Player_Camera_Up;
-}
-Eigen::Vector3d Avril_FSD::CLIBServerIOConcurrnecy::Get_Praise1_Output_Player_Right(class Avril_FSD::Framework_Server* obj)
-{
-    Avril_FSD::Praise1_Output* outputSebset = (Avril_FSD::Praise1_Output*)obj->Get_Server_Assembly()->Get_Data()->GetBuffer_OutputFrontDouble()->Get_praiseOutputBuffer_Subset();
-    _praise1_Output_Player_Camera_Right = outputSebset->GetRight();
-    return _praise1_Output_Player_Camera_Right;
-}
-void Avril_FSD::CLIBServerIOConcurrnecy::Set_Praise1_Output_Player_Fowards(class Avril_FSD::Framework_Server* obj, Eigen::Vector3d value)
-{
-    obj->Get_Server_Assembly()->Get_Data()->Get_User_O()->Get_Praise1_Output()->SetFowards(value);
-}
-void Avril_FSD::CLIBServerIOConcurrnecy::Set_Praise1_Output_Player_Up(class Avril_FSD::Framework_Server* obj, Eigen::Vector3d value)
-{
-    obj->Get_Server_Assembly()->Get_Data()->Get_User_O()->Get_Praise1_Output()->SetUp(value);
-}
-void Avril_FSD::CLIBServerIOConcurrnecy::Set_Praise1_Output_Player_Right(class Avril_FSD::Framework_Server* obj, Eigen::Vector3d value)
-{
-    obj->Get_Server_Assembly()->Get_Data()->Get_User_O()->Get_Praise1_Output()->SetUp(value);
-}
 
 
 // This is the constructor of a class that has been exported.

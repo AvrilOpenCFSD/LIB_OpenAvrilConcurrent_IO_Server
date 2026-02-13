@@ -21,8 +21,6 @@ namespace Avril_FSD
 		static void Initalise_Programs(class Avril_FSD::Framework_Server* obj);
 		static void Flip_InBufferToWrite(class Avril_FSD::Framework_Server* obj);
 		static void Flip_OutBufferToWrite(class Avril_FSD::Framework_Server* obj);
-		static bool Get_flag_isNewInputDataReady(class Avril_FSD::Framework_Server* obj);
-		static bool Get_flag_isNewOutputDataReady(class Avril_FSD::Framework_Server* obj);
 		static bool Get_flag_IsStackLoaded_Server_InputAction(class Avril_FSD::Framework_Server* obj);
 		static bool Get_flag_IsStackLoaded_Server_OutputRecieve(class Avril_FSD::Framework_Server* obj);
 		static bool Get_flag_IsInitialised_Avril_FSD_ServerConcurrency(class Avril_FSD::Framework_Server* obj);
@@ -43,16 +41,7 @@ namespace Avril_FSD
 		static bool Get_Praise0_Output_IsPingActive(class Avril_FSD::Framework_Server* obj);
 		static void Set_Praise0_Output_IsPingActive(class Avril_FSD::Framework_Server* obj, bool value);
 		// Praise 1 Data
-		static float Get_Praise1_Input_mouseDelta_X(class Avril_FSD::Framework_Server* obj);
-		static float Get_Praise1_Input_mouseDelta_Y(class Avril_FSD::Framework_Server* obj);
-		static void Set_Praise1_Input_mouseDelta_X(class Avril_FSD::Framework_Server* obj, float value);
-		static void Set_Praise1_Input_mouseDelta_Y(class Avril_FSD::Framework_Server* obj, float value);
-		static Eigen::Vector3d Get_Praise1_Output_Player_Fowards(class Avril_FSD::Framework_Server* obj);
-		static Eigen::Vector3d Get_Praise1_Output_Player_Up(class Avril_FSD::Framework_Server* obj);
-		static Eigen::Vector3d Get_Praise1_Output_Player_Right(class Avril_FSD::Framework_Server* obj);
-		static void Set_Praise1_Output_Player_Fowards(class Avril_FSD::Framework_Server* obj, Eigen::Vector3d value);
-		static void Set_Praise1_Output_Player_Up(class Avril_FSD::Framework_Server* obj, Eigen::Vector3d value);
-		static void Set_Praise1_Output_Player_Right(class Avril_FSD::Framework_Server* obj, Eigen::Vector3d value);
+
 		// Praise 0 Data
 
 		// TODO: add your methods here.
