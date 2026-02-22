@@ -1,6 +1,10 @@
 #include "pch.h"
 // enums.
-    public enum Axis { X, Y, Z };
+    enum Axis { X, Y, Z };
+    enum Praise
+    {
+        ADDER
+    };
 
 // classes.
 

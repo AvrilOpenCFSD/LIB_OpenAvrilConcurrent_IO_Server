@@ -19,7 +19,6 @@
     <None Include="LIBLaunchEnableForConcurrentThreadsAtSERVER.dll" />
     <None Include="LIBWriteEnableForThreadsAtSERVERINPUTACTION.dll" />
     <None Include="LIBWriteEnableForThreadsAtSERVEROUTPUTRECIEVE.dll" />
-    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="framework.h">
@@ -52,13 +51,7 @@
     <ClInclude Include="Execute_Control.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="FirstPersonCamera.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Framework_Server.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="GameInstance.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Global.h">
@@ -76,9 +69,6 @@
     <ClInclude Include="Output_Control.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Player.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Praise0_Algorithm.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -88,28 +78,7 @@
     <ClInclude Include="Praise0_Output.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Praise1_Algorithm.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Praise1_Input.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Praise1_Output.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Praise2_Algorithm.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Praise2_Input.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Praise2_Output.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Server.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Settings.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="User_Alg.h">
@@ -198,13 +167,7 @@
     <ClCompile Include="Execute_Control.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="FirstPersonCamera.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Framework_Server.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="GameInstance.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Global.cpp">
@@ -222,9 +185,6 @@
     <ClCompile Include="Output_Control.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Player.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Praise0_Algorithm.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -234,28 +194,7 @@
     <ClCompile Include="Praise0_Output.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Praise1_Algorithm.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Praise1_Input.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Praise1_Output.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Praise2_Algorithm.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Praise2_Input.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Praise2_Output.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Server.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Settings.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="User_Alg.cpp">

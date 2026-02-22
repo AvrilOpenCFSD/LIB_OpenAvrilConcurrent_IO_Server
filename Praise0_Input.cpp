@@ -1,23 +1,45 @@
 #include "pch.h"
 
-bool pingIn_Active;
+	int8_t _input_Value_A = NULL;
+	int8_t _input_Value_B = NULL;
 
-OpenAvril::Praise0_Input::Praise0_Input()
-{
-	pingIn_Active = false;
-}
+	OpenAvril::Praise0_Input::Praise0_Input()
+	{
 
-OpenAvril::Praise0_Input::~Praise0_Input()
-{
+	}
+
+	OpenAvril::Praise0_Input::~Praise0_Input()
+	{
 	
-}
+	}
 
-bool OpenAvril::Praise0_Input::get_ping_Active()
-{
-	return pingIn_Active;
-}
+	void OpenAvril::Praise0_Input::create_input_Value_A()
+	{
+		set_input_Value_A(double(0.0));
+	}
 
-void OpenAvril::Praise0_Input::set_ping_Active(bool value)
-{
-	pingIn_Active = value;
-}
+	void OpenAvril::Praise0_Input::create_input_Value_B()
+	{
+		set_input_Value_B(double(0.0));
+	}
+
+	double OpenAvril::Praise0_Input::get_input_Value_A()
+	{
+		return _input_Value_A;
+	}
+
+	double OpenAvril::Praise0_Input::get_input_Value_B()
+	{
+		return _input_Value_B;
+	}
+
+	void OpenAvril::Praise0_Input::set_input_Value_A(double newValue)
+	{
+		_input_Value_A = newValue;
+	}
+
+	void OpenAvril::Praise0_Input::set_input_Value_B(double newValue)
+	{
+		_input_Value_B = newValue;
+	}
+

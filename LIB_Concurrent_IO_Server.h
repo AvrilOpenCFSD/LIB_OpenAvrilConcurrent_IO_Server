@@ -32,10 +32,7 @@ namespace OpenAvril
 		static void set_PraiseEventId(class OpenAvril::Framework_Server* obj, uint8_t value);
 // TODO: add your methods here.
 	// Praise 0 Data
-		static bool get_Praise0_Input_IsPingActive(class OpenAvril::Framework_Server* obj);
-		static void set_Praise0_Input_IsPingActive(class OpenAvril::Framework_Server* obj, bool value);
-		static bool get_Praise0_Output_IsPingActive(class OpenAvril::Framework_Server* obj);
-		static void set_Praise0_Output_IsPingActive(class OpenAvril::Framework_Server* obj, bool value);
+
 	// Praise 1 Data
 
 	// Praise 0 Data

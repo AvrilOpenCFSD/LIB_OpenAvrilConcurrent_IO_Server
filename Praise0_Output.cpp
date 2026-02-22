@@ -1,20 +1,28 @@
 #include "pch.h"
 
-bool ping_Active;
+	int8_t _output_Value = NULL;
 
-OpenAvril::Praise0_Output::Praise0_Output()
-{
-	ping_Active = false;
-}
+	OpenAvril::Praise0_Output::Praise0_Output()
+	{
+		create_output_Value();
+	}
 
-OpenAvril::Praise0_Output::~Praise0_Output()
-{
-}
-bool OpenAvril::Praise0_Output::get_ping_Active()
-{
-	return ping_Active;
-}
-void OpenAvril::Praise0_Output::set_ping_Active(bool value)
-{
-	ping_Active = value;
-}
+	OpenAvril::Praise0_Output::~Praise0_Output()
+	{
+
+	}
+
+	void OpenAvril::Praise0_Output::create_output_Value()
+	{
+
+	}
+
+	double OpenAvril::Praise0_Output::get_output_Value()
+	{
+		return _output_Value;
+	}
+
+	void OpenAvril::Praise0_Output::set_output_Value(double newValue)
+	{
+		_output_Value = newValue;
+	}
