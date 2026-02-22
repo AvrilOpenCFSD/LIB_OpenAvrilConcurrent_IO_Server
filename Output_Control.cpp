@@ -1,34 +1,34 @@
 #include "pch.h"
 
-OpenAvril::Output_Control::Output_Control()
-{
-	std::cout << "entered => OpenAvril::Output_Control::Output_Control()" << std::endl;
-}
-OpenAvril::Output_Control::~Output_Control()
-{
+// calsses.
 
-}
+// registers.
 
-void OpenAvril::Output_Control::SelectSet_Output_Subset(OpenAvril::Framework_Server* obj, __int8 ptr_praiseEventId, __int8 concurrent_coreId)
-{
-	switch (ptr_praiseEventId)
+// constructor.
+	OpenAvril::Output_Control::Output_Control()
 	{
-	case 0:
-		obj->Get_Server_Assembly()->Get_Data()->Get_OutputRefferenceOfCore(concurrent_coreId)->Set_OutputBuffer_Subset(
-			obj->Get_Server_Assembly()->Get_Data()->Get_User_O()->Get_Praise0_Output()
-		);
-		break;
-
-	case 1:
-		obj->Get_Server_Assembly()->Get_Data()->Get_OutputRefferenceOfCore(concurrent_coreId)->Set_OutputBuffer_Subset(
-			obj->Get_Server_Assembly()->Get_Data()->Get_User_O()->Get_Praise1_Output()
-		);
-		break;
-
-	case 2:
-		obj->Get_Server_Assembly()->Get_Data()->Get_OutputRefferenceOfCore(concurrent_coreId)->Set_OutputBuffer_Subset(
-			obj->Get_Server_Assembly()->Get_Data()->Get_User_O()->Get_Praise2_Output()
-		);
-		break;
+		std::cout << "entered => OpenAvril::Output_Control::Output_Control()" << std::endl;
 	}
-}
+
+// destructor.
+	OpenAvril::Output_Control::~Output_Control()
+	{
+
+	}
+
+// public.
+	void OpenAvril::Output_Control::Selectset_Output_Subset(OpenAvril::Framework_Server* obj, uint8_t ptr_praiseEventId, uint8_t concurrent_threadID)
+	{
+		switch (ptr_praiseEventId)
+		{
+		case 0:
+			obj->get_ptr_Server()->get_ptr_Data()->get_ptr_Item_Of_list_Of_buffer_Output_ReferenceForThread(concurrent_threadID)->set_Subset_OutputBuffer(obj->get_ptr_Server()->get_ptr_Data()->get_ptr_User_O()->get_Praise0_Output());
+			break;
+		}
+	}
+	// get.
+	// set.
+
+// private.
+	// get.
+	// set.

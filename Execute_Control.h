@@ -4,16 +4,35 @@ namespace OpenAvril
 {
     class Execute_Control
     {
-    public:
-        Execute_Control(__int8 number_Implemented_Cores);
-        virtual ~Execute_Control();
-        bool GetFlag_SystemInitialised(class Framework_Server* obj);
-        bool GetFlag_ThreadInitialised(__int8 coreId);
-        void SetConditionCodeOfThisThreadedCore(__int8 coreId);
+// calsses.
 
-    protected:
+// registers.
+
+    public:
+// constructor.
+        Execute_Control(uint8_t number_Implemented_Cores);
+
+// destructor.
+        virtual ~Execute_Control();
+
+// public.
+    // get.
+        bool get_flag_is_SystemInitialised();
+        bool get_Item_On_list_Of_flag_ThreadInitialised(uint8_t threadID);
+        uint8_t get_length_Of_list_Of_flag_ThreadInitialised();
+        std::list<bool>* get_ptr_list_Of_flag_ThreadInitialised();
+    // set.
+        void set_ConditionCode_Of_Thread(uint8_t threadID);
 
     private:
-        void SetFlag_ThreadInitialised(__int8 coreId);
+// private.
+        void create_flag_is_SystemInitialised();
+        void create_list_Of_flag_ThreadInitialised();
+        void create_ptr_list_Of_flag_ThreadInitialised();
+    // get.
+    // set.
+        void set_flag_is_SystemInitialised(bool newFlag);
+        void set_Item_On_list_Of_flag_ThreadInitialised(uint8_t threadID, bool newFlag);
+        void set_ptr_list_Of_flag_ThreadInitialised(std::list<bool>* newList);
     };
 }

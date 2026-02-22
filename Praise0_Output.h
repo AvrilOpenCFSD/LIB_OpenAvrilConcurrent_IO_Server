@@ -7,7 +7,7 @@ namespace OpenAvril
 	public:
 		Praise0_Output();
 		virtual ~Praise0_Output();
-		bool Get_ping_Active();
-		void Set_ping_Active(bool value);
+		bool get_ping_Active();
+		void set_ping_Active(bool value);
 	};
 }

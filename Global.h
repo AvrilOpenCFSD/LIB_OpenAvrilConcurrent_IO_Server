@@ -4,16 +4,30 @@ namespace OpenAvril
 {
     class Global
     {
-    public:
-        Global();
-        ~Global();
-        __int8 Get_NumCores();
-        __int8 Get_NumPraiseEvetns();
+// classes.
 
-    protected:
+// registers.
+
+    public:
+// constructor.
+        Global();
+
+// destructor.
+        ~Global();
+
+// public.
+    // get.
+        uint8_t get_number_Of_Implemented_Cores();
+        uint8_t get_number_Of_Praise_Events();
+    // set:
 
     private:
-        static __int8 number_Implemented_Cores;
-        static __int8 number_Praise_Events;
+// private.
+        void create_number_Of_Implemented_Cores();
+        void create_number_Of_Praise_Events();
+    // get.
+    // set.
+        void set_number_Of_Implemented_Cores(uint8_t newValue);
+        void set_number_Of_Praise_Events(uint8_t newValue);
     };
 }

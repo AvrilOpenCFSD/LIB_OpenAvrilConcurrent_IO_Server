@@ -10,11 +10,11 @@ OpenAvril::Praise0_Output::Praise0_Output()
 OpenAvril::Praise0_Output::~Praise0_Output()
 {
 }
-bool OpenAvril::Praise0_Output::Get_ping_Active()
+bool OpenAvril::Praise0_Output::get_ping_Active()
 {
 	return ping_Active;
 }
-void OpenAvril::Praise0_Output::Set_ping_Active(bool value)
+void OpenAvril::Praise0_Output::set_ping_Active(bool value)
 {
 	ping_Active = value;
 }

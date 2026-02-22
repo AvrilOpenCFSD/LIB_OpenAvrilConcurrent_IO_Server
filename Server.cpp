@@ -1,72 +1,89 @@
 #include "pch.h"
 
-class OpenAvril::Algorithms* ptr_Algorithms = NULL;
-class OpenAvril::Data* ptr_Data = NULL;
-class OpenAvril::Execute* ptr_Execute = NULL;
-class OpenAvril::Global* ptr_Global = NULL;
+// classes.
+    class OpenAvril::Algorithms* _ptr_Algorithms = NULL;
+    class OpenAvril::Data* _ptr_Data = NULL;
+    class OpenAvril::Execute* _ptr_Execute = NULL;
+    class OpenAvril::Global* _ptr_Global = NULL;
 
-OpenAvril::Server::Server()
-{
-    Set_Global(new class OpenAvril::Global());
-    while (Get_Global() == NULL) { }
-    std::cout << "Created => OpenAvril::Global()" << std::endl;
+// registers.
 
-    Set_Algorithms(new class OpenAvril::Algorithms());
-    while (Get_Algorithms() == NULL) { }
-    std::cout << "Created => OpenAvril::Algorithms()" << std::endl;
+// constructor.
+    OpenAvril::Server::Server()
+    {
+		create_ptr_Global();
+		create_ptr_Algorithms();
+		create_ptr_Data();
+        get_ptr_Data()->initialise_Control(get_ptr_Data());
+		create_ptr_Execute();
+        get_ptr_Execute()->initialise_Control(get_ptr_Global()->get_number_Of_Implemented_Cores());
+    }
 
-    Set_Data(new class OpenAvril::Data());
-    while (Get_Data() == NULL) { }
-    ptr_Data->Initialise_Control();
-    std::cout << "Created => OpenAvril::Data()" << std::endl;
+// destructor.
+    OpenAvril::Server::~Server()
+    {
+        delete _ptr_Global;
+        delete _ptr_Algorithms;
+        delete _ptr_Data;
+        delete _ptr_Execute;
+    }
 
-    Set_Execute(new class OpenAvril::Execute());
-    while (Get_Execute() == NULL) { }
-    Get_Execute()->Initialise_Control(Get_Global()->Get_NumCores());
-    std::cout << "Created => OpenAvril::Execute()" << std::endl;
-}
+// public.
+    void OpenAvril::Server::create_ptr_Algorithms()
+    {
+		set_ptr_Algorithms(new class OpenAvril::Algorithms());
+        while (get_ptr_Algorithms() == NULL) { }
+    }
+    void OpenAvril::Server::create_ptr_Data()
+    {
+		set_ptr_Data(new class OpenAvril::Data());
+		while (get_ptr_Data() == NULL) {}
+    }
+    void OpenAvril::Server::create_ptr_Execute()
+    {
+		set_ptr_Execute(new class OpenAvril::Execute());
+		while (get_ptr_Execute() == NULL) {}
+    }
+    void OpenAvril::Server::create_ptr_Global()
+    {
+		set_ptr_Global(new class OpenAvril::Global());
+		while (get_ptr_Global() == NULL) {}
+    }
+    // get.
+    OpenAvril::Algorithms* OpenAvril::Server::get_ptr_Algorithms()
+    {
+        return _ptr_Algorithms;
+    }
+    OpenAvril::Data* OpenAvril::Server::get_ptr_Data()
+    {
+        return _ptr_Data;
+    }
+    OpenAvril::Execute* OpenAvril::Server::get_ptr_Execute()
+    {
+        return _ptr_Execute;
+    }
+    OpenAvril::Global* OpenAvril::Server::get_ptr_Global()
+    {
+        return _ptr_Global;
+    }
+    // set.
 
-OpenAvril::Server::~Server()
-{
-    delete ptr_Global;
-    delete ptr_Algorithms;
-    delete ptr_Data;
-    delete ptr_Execute;
-}
-
-OpenAvril::Algorithms* OpenAvril::Server::Get_Algorithms()
-{
-    return ptr_Algorithms;
-}
-
-OpenAvril::Data* OpenAvril::Server::Get_Data()
-{
-    return ptr_Data;
-}
-
-OpenAvril::Execute* OpenAvril::Server::Get_Execute()
-{
-    return ptr_Execute;
-}
-
-OpenAvril::Global* OpenAvril::Server::Get_Global()
-{
-    return ptr_Global;
-}
-
-void OpenAvril::Server::Set_Algorithms(OpenAvril::Algorithms* algorithms)
-{
-    ptr_Algorithms = algorithms;
-}
-void OpenAvril::Server::Set_Data(OpenAvril::Data* data)
-{
-    ptr_Data = data;
-}
-void OpenAvril::Server::Set_Execute(OpenAvril::Execute* execute)
-{
-    ptr_Execute = execute;
-}
-void OpenAvril::Server::Set_Global(OpenAvril::Global* global)
-{
-    ptr_Global = global;
-}
+// private.
+    // get.
+    // set.
+    void OpenAvril::Server::set_ptr_Algorithms(OpenAvril::Algorithms* algorithms)
+    {
+        _ptr_Algorithms = algorithms;
+    }
+    void OpenAvril::Server::set_ptr_Data(OpenAvril::Data* data)
+    {
+        _ptr_Data = data;
+    }
+    void OpenAvril::Server::set_ptr_Execute(OpenAvril::Execute* execute)
+    {
+        _ptr_Execute = execute;
+    }
+    void OpenAvril::Server::set_ptr_Global(OpenAvril::Global* global)
+    {
+        _ptr_Global = global;
+    }

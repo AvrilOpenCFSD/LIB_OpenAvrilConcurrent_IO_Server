@@ -1,63 +1,81 @@
 #include "pch.h"
 
-class OpenAvril::Concurrent* ptr_Concurrent[4] = { NULL, NULL, NULL, NULL };//NUMBER OF CONCURRENT CORES
-class OpenAvril::Concurrent* ptr_New_Concurrent = NULL;
-class OpenAvril::User_Alg* ptr_User_Algorithms = NULL;
+// classes.
+    class OpenAvril::User_Alg* _ptr_User_Algorithms = NULL;
 
-OpenAvril::Algorithms::Algorithms()
-{
-    std::cout << "entered => Algorithms()" << std::endl;
-    Set_User_Algorithms(new class OpenAvril::User_Alg());
-    std::cout << "exiting => Algorithms()" << std::endl;
-}
-
-OpenAvril::Algorithms::~Algorithms()
-{
-    for (__int8 index = 0; index < 4; index++)//NUMBER OF CONCURRENT CORES
+// registers.
+    std::list<class OpenAvril::Concurrent*> _list_Of_ptr_Concurrent = { NULL };
+    
+// pointers.
+    std::list<class OpenAvril::Concurrent*>* _ptr_list_Of_ptr_Concurrent = &_list_Of_ptr_Concurrent;
+    
+// constructor.
+    OpenAvril::Algorithms::Algorithms()
     {
-        delete ptr_Concurrent[index];
+        std::cout << "entered => Algorithms()" << std::endl;
+		create_ptr_User_Algorithms();
+        create_list_Of_ptr_Concurrent();
+        std::cout << "exiting => Algorithms()" << std::endl;
     }
-    delete ptr_User_Algorithms;;
-}
 
-void OpenAvril::Algorithms::Initialise(__int8 number_Implemented_Cores)
-{
-    std::cout << "entered => OpenAvril::Algorithms::Initialise()" << std::endl;
-    Set_New_Concurrent(new class OpenAvril::Concurrent());
-    std::cout << "entered => OpenAvril::Algorithms::Initialise() ALPHA" << std::endl;
-    while(Get_New_Concurrent() == NULL) { }
-    std::cout << "entered => OpenAvril::Algorithms::Initialise() BRAVO" << std::endl;
-    Get_New_Concurrent()->Initialise_Control();
-    std::cout << "entered => OpenAvril::Algorithms::Initialise() CHARLIE" << std::endl;
-    for (__int8 index = 0; index < (number_Implemented_Cores); index++)
+// destructor.
+    OpenAvril::Algorithms::~Algorithms()
     {
-        Set_Concurrent(Get_New_Concurrent(), index);
+        delete _ptr_User_Algorithms;;
+        delete _ptr_list_Of_ptr_Concurrent;
     }
-    std::cout << "entered => OpenAvril::Algorithms::Initialise() ECHO" << std::endl;
-    delete ptr_New_Concurrent;
-}
 
-OpenAvril::Concurrent* OpenAvril::Algorithms::Get_Concurrent(__int8 index)
-{
-    return ptr_Concurrent[index];
-}
-OpenAvril::Concurrent* OpenAvril::Algorithms::Get_New_Concurrent()
-{
-    return ptr_New_Concurrent;
-}
-OpenAvril::User_Alg* OpenAvril::Algorithms::Get_User_Algorithms()
-{
-    return ptr_User_Algorithms;
-}
-void OpenAvril::Algorithms::Set_Concurrent(OpenAvril::Concurrent* concurrent, __int8 indexCount)
-{
-	ptr_Concurrent[indexCount] = concurrent;
-}
-void OpenAvril::Algorithms::Set_New_Concurrent(OpenAvril::Concurrent* concurrent)
-{
-	ptr_New_Concurrent = concurrent;
-}
-void OpenAvril::Algorithms::Set_User_Algorithms(OpenAvril::User_Alg* user_Algorithms)
-{
-	ptr_User_Algorithms = user_Algorithms;
-}
+// public.
+    // get.
+    OpenAvril::Concurrent* OpenAvril::Algorithms::get_ptr_Item_On_list_Of_ptr_Concurrent(uint8_t threadID)
+    {
+        auto temp = _ptr_list_Of_ptr_Concurrent->begin();
+        std::advance(temp, threadID);
+        return *temp;
+    }
+    std::list<class OpenAvril::Concurrent*>* OpenAvril::Algorithms::get_ptr_list_Of_ptr_Concurrent()
+    {
+        return _ptr_list_Of_ptr_Concurrent;
+    }
+    OpenAvril::User_Alg* OpenAvril::Algorithms::get_ptr_User_Algorithms()
+    {
+        return _ptr_User_Algorithms;
+    }
+    // set.
+
+// private.
+    void OpenAvril::Algorithms::create_list_Of_ptr_Concurrent()
+    {
+        OpenAvril::Concurrent* tempNew = new class OpenAvril::Concurrent();
+        while (tempNew == NULL) {}
+        std::list<class OpenAvril::Concurrent*> _list_Of_ptr_Concurrent = { tempNew , tempNew, tempNew, tempNew };
+        create_ptr_list_Of_ptr_Concurrent();
+        for (uint8_t threadID = 0; threadID < sizeof(_list_Of_ptr_Concurrent); threadID++)//NUMBER OF CONCURRENT THREADS
+        {
+            while(get_ptr_Item_On_list_Of_ptr_Concurrent(threadID) == NULL) { }
+        }
+    }
+    void OpenAvril::Algorithms::create_ptr_User_Algorithms()
+    {
+        set_ptr_User_Algorithms(new class OpenAvril::User_Alg());
+        while (get_ptr_User_Algorithms() == NULL) {}
+    }
+    void OpenAvril::Algorithms::create_ptr_list_Of_ptr_Concurrent()
+    {
+        _ptr_list_Of_ptr_Concurrent = &_list_Of_ptr_Concurrent;
+        while (get_ptr_list_Of_ptr_Concurrent() == NULL) {}
+    }
+    // get.
+    std::list<OpenAvril::Concurrent*> OpenAvril::Algorithms::get_list_Of_ptr_Concurrent()
+    {
+        return _list_Of_ptr_Concurrent;
+    }
+    // set.
+    void OpenAvril::Algorithms::set_ptr_list_Of_ptr_Concurrent(std::list<class OpenAvril::Concurrent*>* newList)
+    {
+        _ptr_list_Of_ptr_Concurrent = newList;
+    }
+    void OpenAvril::Algorithms::set_ptr_User_Algorithms(User_Alg* user_Algorithms)
+    {
+        _ptr_User_Algorithms = user_Algorithms;
+    }

@@ -8,7 +8,7 @@ namespace OpenAvril
 		Praise0_Input();
 		virtual ~Praise0_Input();
 
-		bool Get_ping_Active();
-		void Set_ping_Active(bool value);
+		bool get_ping_Active();
+		void set_ping_Active(bool value);
 	};
 }

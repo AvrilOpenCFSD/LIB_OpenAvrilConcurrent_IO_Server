@@ -4,18 +4,33 @@ namespace OpenAvril
 {
     class Algorithms
     {
+// calsses.
+
+// registers.
+
     public:
+// constructor.
         Algorithms();
+
+// destructor.
         virtual ~Algorithms();
-        void Initialise(__int8 ptr_NumberOfImplementedCores);
-        class User_Alg* Get_User_Algorithms();
-        static class Concurrent* Get_Concurrent(__int8 index);
+
+// public.
+    // get.
+		class Concurrent* get_ptr_Item_On_list_Of_ptr_Concurrent(uint8_t threadID);
+        std::list<class Concurrent*>* get_ptr_list_Of_ptr_Concurrent();
+        class User_Alg* get_ptr_User_Algorithms();
+    // set.
 
     private:
-        static class Concurrent* Get_New_Concurrent();
-        
-        static void Set_Concurrent(class OpenAvril::Concurrent* concurrent, __int8 indexCount);
-        static void Set_New_Concurrent(class OpenAvril::Concurrent* concurrent);
-        static void Set_User_Algorithms(class OpenAvril::User_Alg* user_Algorithms);
+// private.
+        void create_list_Of_ptr_Concurrent();
+        void create_ptr_User_Algorithms();
+        void create_ptr_list_Of_ptr_Concurrent();
+	// get.
+        std::list<class OpenAvril::Concurrent*> get_list_Of_ptr_Concurrent();
+	// set.
+        void set_ptr_list_Of_ptr_Concurrent(std::list<class Concurrent*>* newList);
+        void set_ptr_User_Algorithms(class User_Alg* user_Algorithms);
     };
 }

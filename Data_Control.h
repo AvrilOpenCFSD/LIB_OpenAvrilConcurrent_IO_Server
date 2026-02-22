@@ -4,28 +4,45 @@ namespace OpenAvril
 {
     class Data_Control
     {
+// classes.
+
+// registers.
+
     public:
+// constructor.
         Data_Control();
+
+// destructor.
         virtual ~Data_Control();
-        void Pop_Stack_InputPraises(class OpenAvril::Framework_Server* obj, __int8 concurrentCoreId);
-        void Pop_Stack_Output(class OpenAvril::Framework_Server* obj);
-        void Push_Stack_InputPraises(class OpenAvril::Framework_Server* obj);
-        void Push_Stack_Output(class OpenAvril::Framework_Server* obj, __int8 concurrentCoreId);
-        void Store_Praise_In_Data_To_GameInstance_Data(class OpenAvril::Framework_Server* obj, std::vector<class OpenAvril::Input*>* stack);
-        void Store_Praise_Out_Data_To_GameInstance_Data(class OpenAvril::Framework_Server* obj, std::vector<class OpenAvril::Output*>* stack);
 
-        bool Get_flag_IsStackLoaded_Server_InputAction();
-        bool Get_flag_IsStackLoaded_Server_OutputRecieve();
-        bool Get_flag_IsNewInputDataReady();
-        bool Get_flag_IsNewOutputDataReady();
-
-        void Set_flag_IsNewInputDataReady(bool value);
-        void Set_flag_IsNewOutputDataReady(bool value);
-
-    protected:
+// public.
+        uint8_t boolToInt(bool bufferSide);
+        void flip_Input_DoubleBuffer();
+        void flip_Output_DoubleBuffer();
+        void Pop_From_Stack_Of_Input(class OpenAvril::Data* obj, uint8_t concurrentThreadID);
+        void pop_From_Stack_Of_Output(class OpenAvril::Data* obj);
+        void push_To_Stack_Of_Input(class OpenAvril::Data* obj);
+        void push_To_Stack_Of_Output(class OpenAvril::Data* obj, uint8_t concurrentThreadID);
+    // get.
+        bool get_flag_isLoaded_Stack_InputAction();
+        bool get_flag_isLoaded_Stack_OutputSend();
+        uint8_t get_STATE_Of_READ_For_list_Of_doubleBuffer_Input();
+        uint8_t get_STATE_Of_READ_For_list_Of_doubleBuffer_Output();
+        uint8_t get_STATE_Of_WRITE_For_list_Of_doubleBuffer_Input();
+        uint8_t get_STATE_Of_WRITE_For_list_Of_doubleBuffer_Output();
+    // set.
+        void set_flag_isLoaded_Stack_InputAction(bool value);
+        void set_flag_isLoaded_Stack_OutputSend(bool value);
 
     private:
-        void Set_flag_IsStackLoaded_Server_InputAction(bool value);
-        void Set_flag_IsStackLoaded_Server_OutputRecieve(bool value);
+// private.
+        void create_flag_isLoaded_Stack_InputAction();
+        void create_flag_isLoaded_Stack_OutputSend();
+        void create_side_To_Write_For_list_Of_doubleBuffer_Input();
+        void create_side_To_Write_For_list_Of_doubleBuffer_Output();
+    // get.
+    // set.
+        void set_STATE_Of_WRITE_For_list_Of_doubleBuffer_Input(bool value);
+        void set_STATE_Of_WRITE_For_list_Of_doubleBuffer_Output(bool value);
     };
 }

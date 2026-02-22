@@ -12,12 +12,12 @@ OpenAvril::Praise0_Input::~Praise0_Input()
 	
 }
 
-bool OpenAvril::Praise0_Input::Get_ping_Active()
+bool OpenAvril::Praise0_Input::get_ping_Active()
 {
 	return pingIn_Active;
 }
 
-void OpenAvril::Praise0_Input::Set_ping_Active(bool value)
+void OpenAvril::Praise0_Input::set_ping_Active(bool value)
 {
 	pingIn_Active = value;
 }

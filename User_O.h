@@ -4,18 +4,29 @@ namespace OpenAvril
 {
 	class User_O
 	{
-	public:
-		User_O();
-		virtual ~User_O();
-		class Praise0_Output* Get_Praise0_Output();
-		class Praise1_Output* Get_Praise1_Output();
-		class Praise2_Output* Get_Praise2_Output();
+// classes.
 
-	protected:
+// registers.
+
+// pointers.
+
+	public:
+// constructor.
+		User_O();
+
+// destructor.
+		virtual ~User_O();
+
+// public.
+	// get.
+		class Praise0_Output* get_Praise0_Output();
+	// set.
 
 	private:
-		static void Set_Praise0_Output(class Praise0_Output* praise0_O);
-		static void Set_Praise1_Output(class Praise1_Output* praise1_O);
-		static void Set_Praise2_Output(class Praise2_Output* praise2_O);
+// private.
+		void create_Praise0_Output();
+	// get.
+	// set.
+		void set_Praise0_Output(class Praise0_Output* praise0_O);
 	};
 }

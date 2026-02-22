@@ -4,15 +4,25 @@ namespace OpenAvril
 {
     class Concurrent_Control
     {
+// calsses.
+
+// registers.
+
     public:
+// constructor.
         Concurrent_Control();
+
+// destructor.
         virtual ~Concurrent_Control();
 
-        void SelectSet_Algorithm_Subset(class OpenAvril::Framework_Server* obj, __int8 ptr_praiseEventId, __int8 concurrent_coreId);
-
-    protected:
+// public.
+    void selectset_Algorithm_Subset(class Framework_Server* obj, uint8_t ptr_praiseEventId, uint8_t concurrent_threadID);
+    // get.
+    // set.
 
     private:
-
+// private.
+    // get.
+    // set.
     };
 }

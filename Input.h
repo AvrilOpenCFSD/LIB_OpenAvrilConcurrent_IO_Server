@@ -4,26 +4,38 @@ namespace OpenAvril
 {
     class Input
     {
+// calsses.
+
+// registers.
+
     public:
+// constructor.
         Input();
+
+// destructor.
         virtual ~Input();
-        void Initialise_Control();
 
-        class Input_Control* Get_Input_Control();
-        class Object* Get_InputBuffer_Subset();
-        
-        __int8 GetPraiseEventId();
-        __int8 Get_playerId();
+// public.
+        void initialise_Control();
+    // get.
+        uint8_t get_in_praiseEventId();
+        uint8_t get_in_playerId();
+        class Input_Control* get_ptr_Input_Control();
+        class Object* get_ptr_Item_On_list_Of_Praise_In_Subsets(uint8_t praiseID);
+    // set.
 
-        void Set_in_praiseEventId(__int8 praiseEventId);
-        void Set_in_playerId(__int8 praiseEventId);
-        void Set_Subset_InputBuffer(class Praise0_Input* value);
-        void Set_Subset_InputBuffer(class Praise1_Input* value);
-        void Set_Subset_InputBuffer(class Praise2_Input* value);
-        
-    protected:
-
-    private:
-        static void Set_input_Control(class Input_Control* input_Control);
+// private.
+        void create_ptr_Input_Control();
+        void create_in_praiseEventId();
+        void create_in_playerId();
+        void create_list_Of_Praise_In_Subsets();
+        void create_ptr_list_Of_Praise_In_Subsets();
+    // get.
+        uint8_t get_lenght_Of_list_Of_Praise_In_Subsets();
+    // set.
+        void set_in_praiseEventId(uint8_t praiseEventId);
+        void set_in_playerId(uint8_t praiseEventId);
+        void set_ptr_Input_Control(class Input_Control* newClass);
+        void set_Subset_InputBuffer(class Praise0_Input* value);
     };
 }

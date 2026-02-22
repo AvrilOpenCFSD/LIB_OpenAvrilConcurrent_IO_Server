@@ -1,151 +1,167 @@
 #include "pch.h"
 
-bool flag_isLoaded_Stack_InputPraise = false;
-bool flag_isLoaded_Stack_OutputPraise = false;
-bool flag_isNewInputDataReady = false;
-bool flag_isNewOutputDataReady = false;
+// classes.
 
-OpenAvril::Data_Control::Data_Control()
-{
-    flag_isLoaded_Stack_InputPraise = bool(false);
-    flag_isLoaded_Stack_OutputPraise = bool(false);
-    flag_isNewInputDataReady = bool(false);
-    flag_isNewOutputDataReady = bool(false);
-}
-OpenAvril::Data_Control::~Data_Control()
-{
+// registers.
+    bool _flag_isLoaded_Stack_InputAction = NULL;
+    bool _flag_isLoaded_Stack_OutputSend = NULL;
+    bool _side_To_Write_For_list_Of_doubleBuffer_Input = NULL;
+    bool _side_To_Write_For_list_Of_doubleBuffer_Output = NULL;
 
-}
-void OpenAvril::Data_Control::Pop_Stack_InputPraises(class OpenAvril::Framework_Server* obj, __int8 concurrentCoreId)
-{
-    class OpenAvril::Input* referenceForCore = obj->Get_Server_Assembly()->Get_Data()->Get_InputRefferenceOfCore(concurrentCoreId);
-    std::vector<class OpenAvril::Input*>* ptr_inputStack = obj->Get_Server_Assembly()->Get_Data()->Get_Stack_InputPraise();
-    referenceForCore = ptr_inputStack->at(1);
-    ptr_inputStack->erase(ptr_inputStack->begin() + 1);
-    if (sizeof(ptr_inputStack) < 2)
+// constructor.
+    OpenAvril::Data_Control::Data_Control()
     {
-        Set_flag_IsStackLoaded_Server_InputAction(false);
+        _flag_isLoaded_Stack_InputAction = bool(false);
+        _flag_isLoaded_Stack_OutputSend = bool(false);
+        _side_To_Write_For_list_Of_doubleBuffer_Input = bool(false);
+        _side_To_Write_For_list_Of_doubleBuffer_Output = bool(false);
     }
-    else
+
+// destructor.
+    OpenAvril::Data_Control::~Data_Control()
     {
-        Set_flag_IsStackLoaded_Server_InputAction(true);
-    }
-}
 
-void OpenAvril::Data_Control::Pop_Stack_Output(class OpenAvril::Framework_Server* obj)
-{
-    class Output* distributeBuffer = obj->Get_Server_Assembly()->Get_Data()->GetBuffer_OutputBackDouble();
-    std::vector<class Output*>* ptr_outputStack = obj->Get_Server_Assembly()->Get_Data()->Get_Stack_OutputPraise();
-    distributeBuffer = ptr_outputStack->at(1);
-    ptr_outputStack->erase(ptr_outputStack->begin() + 1);
-    if (sizeof(ptr_outputStack) < 2)
+    }
+
+// public.
+    void OpenAvril::Data_Control::flip_Input_DoubleBuffer()
     {
-        Set_flag_IsStackLoaded_Server_OutputRecieve(false);
+        set_STATE_Of_WRITE_For_list_Of_doubleBuffer_Input(!get_STATE_Of_WRITE_For_list_Of_doubleBuffer_Input());
     }
-    else
+    void OpenAvril::Data_Control::flip_Output_DoubleBuffer()
     {
-        Set_flag_IsStackLoaded_Server_OutputRecieve(true);
+        set_STATE_Of_WRITE_For_list_Of_doubleBuffer_Output(!get_STATE_Of_WRITE_For_list_Of_doubleBuffer_Output());
     }
-}
-void OpenAvril::Data_Control::Push_Stack_InputPraises(class OpenAvril::Framework_Server* obj)
-{
-    std::vector<class OpenAvril::Input*>* ptr_InputStack = obj->Get_Server_Assembly()->Get_Data()->Get_Stack_InputPraise();
-    class OpenAvril::Input* ptr_Buffer_Praise = obj->Get_Server_Assembly()->Get_Data()->GetBuffer_InputBackDouble();
-    ptr_InputStack->push_back(ptr_InputStack->at(0));
-    ptr_InputStack->at(ptr_InputStack->size()) = ptr_Buffer_Praise;
-    if (sizeof(ptr_InputStack) < 2)
+    void OpenAvril::Data_Control::Pop_From_Stack_Of_Input(OpenAvril::Data* data, uint8_t concurrentThreadID)
     {
-        Set_flag_IsStackLoaded_Server_InputAction(false);
+        class OpenAvril::Input* referenceForCore = data->get_ptr_Item_Of_list_Of_buffer_Input_ReferenceForThread(concurrentThreadID);
+        class OpenAvril::Input* inputSlot = data->get_ptr_Item_On_vector_Of_stack_Of_InputPraise(1);
+        referenceForCore = inputSlot;
+        data->get_ptr_vector_Of_stack_Of_InputPraise()->erase(data->get_ptr_vector_Of_stack_Of_InputPraise()->begin() + 1);
+        if (sizeof(data->get_ptr_vector_Of_stack_Of_InputPraise()) < 2)
+        {
+            set_flag_isLoaded_Stack_InputAction(false);
+        }
+        else
+        {
+            set_flag_isLoaded_Stack_InputAction(true);
+        }
     }
-    else
+    void OpenAvril::Data_Control::pop_From_Stack_Of_Output(OpenAvril::Data* data)
     {
-        Set_flag_IsStackLoaded_Server_InputAction(true);
+        class OpenAvril::Output* distributeBuffer = data->get_doubleBuffer_Output_READ();
+        class OpenAvril::Output* outputSlot = data->get_ptr_Item_On_vector_Of_stack_Of_OutputPraise(1);
+        distributeBuffer = outputSlot;
+        data->get_ptr_vector_Of_stack_Of_OutputPraise()->erase(data->get_ptr_vector_Of_stack_Of_OutputPraise()->begin() + 1);
+        if (sizeof(data->get_ptr_vector_Of_stack_Of_OutputPraise()) < 2)
+        {
+            set_flag_isLoaded_Stack_OutputSend(false);
+        }
+        else
+        {
+            set_flag_isLoaded_Stack_OutputSend(true);
+        }
     }
-}
-
-void OpenAvril::Data_Control::Push_Stack_Output(class OpenAvril::Framework_Server* obj, __int8 concurrentCoreId)
-{
-    std::vector<class OpenAvril::Output*>* ptr_outputStack = obj->Get_Server_Assembly()->Get_Data()->Get_Stack_OutputPraise();
-    class OpenAvril::Output* ptr_referenceForCore = obj->Get_Server_Assembly()->Get_Data()->Get_OutputRefferenceOfCore(concurrentCoreId);
-    ptr_outputStack->push_back(ptr_outputStack->at(0));
-    ptr_outputStack->at(ptr_outputStack->size()) = ptr_referenceForCore;
-    if (sizeof(ptr_outputStack) < 2)
+    void OpenAvril::Data_Control::push_To_Stack_Of_Input(OpenAvril::Data* data)
     {
-        Set_flag_IsStackLoaded_Server_OutputRecieve(false);
+        class OpenAvril::Input* inputBuffer = data->get_doubleBuffer_Input_READ();
+        std::vector<class OpenAvril::Input*>* inputStackt = data->get_ptr_vector_Of_stack_Of_InputPraise();
+        inputStackt->push_back(inputBuffer);
+        if (sizeof(inputStackt) < 2)
+        {
+            set_flag_isLoaded_Stack_InputAction(false);
+        }
+        else
+        {
+            set_flag_isLoaded_Stack_InputAction(true);
+        }
     }
-    else
+    void OpenAvril::Data_Control::push_To_Stack_Of_Output(OpenAvril::Data* data, uint8_t concurrentThreadID)
     {
-        Set_flag_IsStackLoaded_Server_OutputRecieve(true);
+        class OpenAvril::Output* referenceForCore = data->get_ptr_Item_Of_list_Of_buffer_Output_ReferenceForThread(concurrentThreadID);
+        std::vector<class OpenAvril::Output*>* outputStack = data->get_ptr_vector_Of_stack_Of_OutputPraise();
+        outputStack->push_back(referenceForCore);
+        if (sizeof(outputStack) < 2)
+        {
+            set_flag_isLoaded_Stack_OutputSend(false);
+        }
+        else
+        {
+            set_flag_isLoaded_Stack_OutputSend(true);
+        }
     }
-}
-
-void OpenAvril::Data_Control::Store_Praise_In_Data_To_GameInstance_Data(OpenAvril::Framework_Server* obj, std::vector<class OpenAvril::Input*>* stack)
-{
-    OpenAvril::Input* input = stack->at(1);
-    switch (input->GetPraiseEventId())
+    // get.
+    bool OpenAvril::Data_Control::get_flag_isLoaded_Stack_InputAction()
     {
-    case 0:
-        break;
-
-    case 1:
-        OpenAvril::Praise1_Input* subset = (OpenAvril::Praise1_Input*)input->Get_InputBuffer_Subset();
-        obj->Get_Server_Assembly()->Get_Data()->Get_GameInstance()->Get_player(input->Get_playerId())->Set_mouse_Position_X(subset->Get_mouse_X());
-        obj->Get_Server_Assembly()->Get_Data()->Get_GameInstance()->Get_player(input->Get_playerId())->Set_mouse_Position_Y(subset->Get_mouse_Y());
-        break;
+        return _flag_isLoaded_Stack_InputAction;
     }
-}
-
-void OpenAvril::Data_Control::Store_Praise_Out_Data_To_GameInstance_Data(OpenAvril::Framework_Server* obj, std::vector<class OpenAvril::Output*>* stack)
-{
-    OpenAvril::Output* output = stack->at(1);
-    switch (output->Get_out_praiseEventId())
+    bool OpenAvril::Data_Control::get_flag_isLoaded_Stack_OutputSend()
     {
-    case 0:
-        break;
-
-    case 1:
-        OpenAvril::Praise1_Output* subset = (OpenAvril::Praise1_Output*)output->Get_praiseOutputBuffer_Subset();
-        obj->Get_Server_Assembly()->Get_Data()->Get_GameInstance()->Get_player(output->Get_out_playerId())->Set_front(subset->GetFowards());
-        obj->Get_Server_Assembly()->Get_Data()->Get_GameInstance()->Get_player(output->Get_out_playerId())->Set_right(subset->GetRight());
-        obj->Get_Server_Assembly()->Get_Data()->Get_GameInstance()->Get_player(output->Get_out_playerId())->Set_up(subset->GetUp());
-        break;
+        return _flag_isLoaded_Stack_OutputSend;
     }
-}
+    uint8_t OpenAvril::Data_Control::get_STATE_Of_READ_For_list_Of_doubleBuffer_Input()
+    {
+        return boolToInt(!_side_To_Write_For_list_Of_doubleBuffer_Input);
+    }
+    uint8_t OpenAvril::Data_Control::get_STATE_Of_READ_For_list_Of_doubleBuffer_Output()
+    {
+        return boolToInt(!_side_To_Write_For_list_Of_doubleBuffer_Output);;
+    }
+    uint8_t OpenAvril::Data_Control::get_STATE_Of_WRITE_For_list_Of_doubleBuffer_Input()
+    {
+        return boolToInt(_side_To_Write_For_list_Of_doubleBuffer_Input);
+    }
+    uint8_t OpenAvril::Data_Control::get_STATE_Of_WRITE_For_list_Of_doubleBuffer_Output()
+    {
+        return boolToInt(_side_To_Write_For_list_Of_doubleBuffer_Output);
+    }
+    // set.
+    void OpenAvril::Data_Control::set_STATE_Of_WRITE_For_list_Of_doubleBuffer_Input(bool value)
+    {
+        _side_To_Write_For_list_Of_doubleBuffer_Input = value;
+    }
+    void OpenAvril::Data_Control::set_STATE_Of_WRITE_For_list_Of_doubleBuffer_Output(bool value)
+    {
+        _side_To_Write_For_list_Of_doubleBuffer_Output = value;
+    }
 
-bool OpenAvril::Data_Control::Get_flag_IsStackLoaded_Server_InputAction()
-{
-    return flag_isLoaded_Stack_InputPraise;
-}
-bool OpenAvril::Data_Control::Get_flag_IsStackLoaded_Server_OutputRecieve()
-{
-    return flag_isLoaded_Stack_OutputPraise;
-}
-
-bool OpenAvril::Data_Control::Get_flag_IsNewInputDataReady()
-{
-    return flag_isNewInputDataReady;
-}
-
-bool OpenAvril::Data_Control::Get_flag_IsNewOutputDataReady()
-{
-    return flag_isNewOutputDataReady;
-}
-
-void OpenAvril::Data_Control::Set_flag_IsStackLoaded_Server_InputAction(bool value)
-{
-    flag_isLoaded_Stack_InputPraise = value;
-}
-void OpenAvril::Data_Control::Set_flag_IsStackLoaded_Server_OutputRecieve(bool value)
-{
-    flag_isLoaded_Stack_OutputPraise = value;
-}
-
-void OpenAvril::Data_Control::Set_flag_IsNewInputDataReady(bool value)
-{
-    flag_isNewInputDataReady = value;
-}
-
-void OpenAvril::Data_Control::Set_flag_IsNewOutputDataReady(bool value)
-{
-    flag_isNewOutputDataReady = value;
-}
+// private.
+    uint8_t OpenAvril::Data_Control::boolToInt(bool bufferSide)
+    {
+        uint8_t temp = 2;
+        if (bufferSide)
+        {
+            temp = 1;
+        }
+        else
+        {
+            temp = 0;
+        }
+        return temp;
+    }
+    void OpenAvril::Data_Control::create_flag_isLoaded_Stack_InputAction()
+    {
+        set_flag_isLoaded_Stack_InputAction(false);
+    }
+    void OpenAvril::Data_Control::create_flag_isLoaded_Stack_OutputSend()
+    {
+        set_flag_isLoaded_Stack_OutputSend(false);
+    }
+    void OpenAvril::Data_Control::create_side_To_Write_For_list_Of_doubleBuffer_Input()
+    {
+        _side_To_Write_For_list_Of_doubleBuffer_Input = bool(false);
+    }
+    void OpenAvril::Data_Control::create_side_To_Write_For_list_Of_doubleBuffer_Output()
+    {
+        _side_To_Write_For_list_Of_doubleBuffer_Output = bool(false);
+    }
+    // get.
+    // set.
+    void OpenAvril::Data_Control::set_flag_isLoaded_Stack_InputAction(bool value)
+    {
+        _flag_isLoaded_Stack_InputAction = value;
+    }
+    void OpenAvril::Data_Control::set_flag_isLoaded_Stack_OutputSend(bool value)
+    {
+        _flag_isLoaded_Stack_OutputSend = value;
+    }

@@ -1,24 +1,54 @@
 #include "pch.h"
+// enums.
+    public enum Axis { X, Y, Z };
 
-__int8 OpenAvril::Global::number_Implemented_Cores = NULL;
-__int8 OpenAvril::Global::number_Praise_Events = NULL;
+// classes.
 
-OpenAvril::Global::Global()
-{
-    number_Implemented_Cores = __int8(4);//NUMBER OF CORES
-    number_Praise_Events = __int8(2);
-}
+// registers.
+    uint8_t _number_Of_Implemented_Cores = NULL;
+    uint8_t _number_Of_Praise_Events = NULL;
 
-OpenAvril::Global::~Global()
+// constructor.
+    OpenAvril::Global::Global()
+    {
+        create_number_Of_Implemented_Cores();
+        create_number_Of_Praise_Events();
+    }
+
+// destructor.
+    OpenAvril::Global::~Global()
 {
         
 }
 
-__int8 OpenAvril::Global::Get_NumCores()
+// public.
+    // get.
+    uint8_t OpenAvril::Global::get_number_Of_Implemented_Cores()
+    {
+        return _number_Of_Implemented_Cores;
+    }
+    uint8_t OpenAvril::Global::get_number_Of_Praise_Events()
+    {
+        return 0;
+    }
+    // set.
+
+// private.
+    void OpenAvril::Global::create_number_Of_Implemented_Cores()
+    {
+        set_number_Of_Implemented_Cores(uint8_t(4));//NUMBER OF CONCURRENT THREADS
+    }
+    void OpenAvril::Global::create_number_Of_Praise_Events()
+    {
+        set_number_Of_Praise_Events(uint8_t(3));//NUMBER OF PRAISES
+    }
+    // get.
+    // set.
+    void OpenAvril::Global::set_number_Of_Implemented_Cores(uint8_t newValue)
 {
-    return number_Implemented_Cores;
+    _number_Of_Implemented_Cores = newValue;
 }
-__int8 OpenAvril::Global::Get_NumPraiseEvetns()
+    void OpenAvril::Global::set_number_Of_Praise_Events(uint8_t newValue)
 {
-    return number_Praise_Events;
+    _number_Of_Praise_Events = newValue;
 }
