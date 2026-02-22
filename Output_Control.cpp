@@ -5,19 +5,19 @@
 // registers.
 
 // constructor.
-	OpenAvril::Output_Control::Output_Control()
+	OpenAvrilConcurrency::Output_Control::Output_Control()
 	{
-		std::cout << "entered => OpenAvril::Output_Control::Output_Control()" << std::endl;
+		std::cout << "entered => OpenAvrilConcurrency::Output_Control::Output_Control()" << std::endl;
 	}
 
 // destructor.
-	OpenAvril::Output_Control::~Output_Control()
+	OpenAvrilConcurrency::Output_Control::~Output_Control()
 	{
 
 	}
 
 // public.
-	void OpenAvril::Output_Control::Selectset_Output_Subset(OpenAvril::Framework_Server* obj, uint8_t ptr_praiseEventId, uint8_t concurrent_threadID)
+	void OpenAvrilConcurrency::Output_Control::Selectset_Output_Subset(OpenAvrilConcurrency::Framework_Server* obj, uint8_t ptr_praiseEventId, uint8_t concurrent_threadID)
 	{
 		switch (ptr_praiseEventId)
 		{

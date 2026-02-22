@@ -1,6 +1,6 @@
 #pragma once
 
-namespace OpenAvril
+namespace OpenAvrilConcurrency
 {
     class Data_Control
     {
@@ -19,10 +19,10 @@ namespace OpenAvril
         uint8_t boolToInt(bool bufferSide);
         void flip_Input_DoubleBuffer();
         void flip_Output_DoubleBuffer();
-        void Pop_From_Stack_Of_Input(class OpenAvril::Data* obj, uint8_t concurrentThreadID);
-        void pop_From_Stack_Of_Output(class OpenAvril::Data* obj);
-        void push_To_Stack_Of_Input(class OpenAvril::Data* obj);
-        void push_To_Stack_Of_Output(class OpenAvril::Data* obj, uint8_t concurrentThreadID);
+        void Pop_From_Stack_Of_Input(class OpenAvrilConcurrency::Data* obj, uint8_t concurrentThreadID);
+        void pop_From_Stack_Of_Output(class OpenAvrilConcurrency::Data* obj);
+        void push_To_Stack_Of_Input(class OpenAvrilConcurrency::Data* obj);
+        void push_To_Stack_Of_Output(class OpenAvrilConcurrency::Data* obj, uint8_t concurrentThreadID);
     // get.
         bool get_flag_isLoaded_Stack_InputAction();
         bool get_flag_isLoaded_Stack_OutputSend();

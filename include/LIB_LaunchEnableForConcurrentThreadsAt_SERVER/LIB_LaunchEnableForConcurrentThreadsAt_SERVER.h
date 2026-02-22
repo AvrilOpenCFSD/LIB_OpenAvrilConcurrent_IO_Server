@@ -10,7 +10,7 @@
 #define LIBLAUNCHENABLEFORCONCURRENTTHREADSATSERVER_API __declspec(dllimport)
 #endif
 
-namespace OpenAvril
+namespace OpenAvrilConcurrency
 {
 	// This class is exported from the dll
 	class LIBLAUNCHENABLEFORCONCURRENTTHREADSATSERVER_API CLIBLaunchEnableForConcurrentThreadsAtSERVER {
@@ -19,15 +19,15 @@ namespace OpenAvril
 			// TODO: add your methods here.
 			static void* Initialise_LaunchEnableForConcurrentThreadsAt();
 
-			static void Request_Wait_Launch(class LaunchEnableForConcurrentThreadsAt_SERVER_Framework* obj, unsigned char concurrent_CoreId);
-			static void Thread_End(class LaunchEnableForConcurrentThreadsAt_SERVER_Framework*, unsigned char concurrent_CoreId);
+			static void Request_Wait_Launch(class LaunchEnableForConcurrentThreadsAt_SERVER_Framework* obj, uint8_t concurrent_CoreId);
+			static void Thread_End(class LaunchEnableForConcurrentThreadsAt_SERVER_Framework*, uint8_t concurrent_CoreId);
 
 			static __int8 Get_coreId_To_Launch(class LaunchEnableForConcurrentThreadsAt_SERVER_Framework* obj);
 			static bool Get_Flag_Active(class LaunchEnableForConcurrentThreadsAt_SERVER_Framework* obj);
-			static bool Get_Flag_ConcurrentCoreState(class LaunchEnableForConcurrentThreadsAt_SERVER_Framework* obj, unsigned char concurrent_CoreId);
+			static bool Get_Flag_ConcurrentCoreState(class LaunchEnableForConcurrentThreadsAt_SERVER_Framework* obj, uint8_t concurrent_CoreId);
 			static bool Get_Flag_Idle(class LaunchEnableForConcurrentThreadsAt_SERVER_Framework* obj);
 			static bool Get_State_LaunchBit(class LaunchEnableForConcurrentThreadsAt_SERVER_Framework* obj);
-			static void Set_state_ConcurrentCore(class LaunchEnableForConcurrentThreadsAt_SERVER_Framework* obj, unsigned char concurrent_CoreId, bool value);
+			static void Set_state_ConcurrentCore(class LaunchEnableForConcurrentThreadsAt_SERVER_Framework* obj, uint8_t concurrent_CoreId, bool value);
 
 		private:
 			static class LaunchEnableForConcurrentThreadsAt_SERVER_Framework* Get_LaunchEnableForConcurrentThreadsAt_SERVER_Framework();

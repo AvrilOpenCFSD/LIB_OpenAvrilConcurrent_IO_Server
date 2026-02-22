@@ -1,6 +1,6 @@
 #pragma once
 
-namespace OpenAvril
+namespace OpenAvrilConcurrency
 {
 	class User_O
 	{

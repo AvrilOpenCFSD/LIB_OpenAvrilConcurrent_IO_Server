@@ -1,6 +1,6 @@
 #pragma once
 
-namespace OpenAvril
+namespace OpenAvrilConcurrency
 {
     class Algorithms
     {
@@ -28,7 +28,7 @@ namespace OpenAvril
         void create_ptr_User_Algorithms();
         void create_ptr_list_Of_ptr_Concurrent();
 	// get.
-        std::list<class OpenAvril::Concurrent*> get_list_Of_ptr_Concurrent();
+        std::list<class OpenAvrilConcurrency::Concurrent*> get_list_Of_ptr_Concurrent();
 	// set.
         void set_ptr_list_Of_ptr_Concurrent(std::list<class Concurrent*>* newList);
         void set_ptr_User_Algorithms(class User_Alg* user_Algorithms);

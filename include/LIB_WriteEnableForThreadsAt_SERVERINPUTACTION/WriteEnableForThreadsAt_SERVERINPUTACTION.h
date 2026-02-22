@@ -1,22 +1,38 @@
 #pragma once
 
-namespace OpenAvril
+namespace OpenAvrilConcurrencyLIB_WriteEnableForThreadsAt_SERVERINPUTACTION
 {
     class WriteEnableForThreadsAt_SERVERINPUTACTION
     {
+        // classes.
+
+        // registers.
+
+        // pointers.
+
     public:
+        // constructor.
         WriteEnableForThreadsAt_SERVERINPUTACTION();
+
+        // destructor.
         virtual ~WriteEnableForThreadsAt_SERVERINPUTACTION();
-        void Initialise_Control();
 
-        void Write_End(class WriteEnableForThreadsAt_SERVERINPUTACTION_Framework* obj, unsigned char coreId);
-        void Write_Start(class WriteEnableForThreadsAt_SERVERINPUTACTION_Framework* obj, unsigned char coreId);
-
-        class WriteEnableForThreadsAt_SERVERINPUTACTION_Global* Get_global();
-        class WriteEnableForThreadsAt_SERVERINPUTACTION_Control* Get_writeEnable_Control();
+        // public.
+        void initialise_Control(class WriteEnableForThreadsAt_SERVERINPUTACTION_Framework* obj);
+        void write_End(class WriteEnableForThreadsAt_SERVERINPUTACTION_Framework* obj, uint8_t coreId);
+        void write_Start(class WriteEnableForThreadsAt_SERVERINPUTACTION_Framework* obj, uint8_t coreId);
+        // get.
+        class WriteEnableForThreadsAt_SERVERINPUTACTION_Global* get_ptr_Global();
+        class WriteEnableForThreadsAt_SERVERINPUTACTION_Control* get_ptr_WriteEnable_Control();
+        // set.
 
     private:
-        static void Set_global(class WriteEnableForThreadsAt_SERVERINPUTACTION_Global* global);
-        static void Set_writeEnable_Control(class WriteEnableForThreadsAt_SERVERINPUTACTION_Control* writeEnableControl);
+        // private.
+        void create_ptr_Global();
+        void create_ptr_WriteEnable_Control();
+        // get.
+        // set.
+        static void set_ptr_Global(class WriteEnableForThreadsAt_SERVERINPUTACTION_Global* global);
+        static void set_ptr_WriteEnable_Control(class WriteEnableForThreadsAt_SERVERINPUTACTION_Control* writeEnableControl);
     };
 }

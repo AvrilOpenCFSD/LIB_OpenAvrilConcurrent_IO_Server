@@ -5,19 +5,19 @@
 // registers.
 
 // constructor.
-    OpenAvril::Input_Control::Input_Control()
+    OpenAvrilConcurrency::Input_Control::Input_Control()
     {
 
     }
 
 // destructor.
-    OpenAvril::Input_Control::~Input_Control()
+    OpenAvrilConcurrency::Input_Control::~Input_Control()
     {
 
     }
 
 // public.
-    void OpenAvril::Input_Control::Selectset_Input_Subset(OpenAvril::Framework_Server* obj, uint8_t praiseEventId)
+    void OpenAvrilConcurrency::Input_Control::Selectset_Input_Subset(OpenAvrilConcurrency::Framework_Server* obj, uint8_t praiseEventId)
     {
         switch (praiseEventId)
         {

@@ -1,7 +1,7 @@
 #pragma once
 
 
-namespace OpenAvril
+namespace OpenAvrilConcurrency
 {
     class LaunchEnableForConcurrentThreadsAt_SERVER_Global
     {
@@ -10,7 +10,7 @@ namespace OpenAvril
         ~LaunchEnableForConcurrentThreadsAt_SERVER_Global();
         bool Get_flag_core_ACTIVE();
         bool Get_flag_core_IDLE();
-        unsigned char Get_number_Implemented_Cores();
+        uint8_t Get_number_Implemented_Cores();
 
     private:
         static void Set_flag_core_ACTIVE(bool value);

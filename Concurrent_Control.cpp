@@ -5,19 +5,19 @@
 // registers.
 
 // constructor.
-	OpenAvril::Concurrent_Control::Concurrent_Control()
+	OpenAvrilConcurrency::Concurrent_Control::Concurrent_Control()
 	{
 
 	}
 
 // destructor.
-	OpenAvril::Concurrent_Control::~Concurrent_Control()
+	OpenAvrilConcurrency::Concurrent_Control::~Concurrent_Control()
 	{
 
 	}
 
 // public.
-	void OpenAvril::Concurrent_Control::selectset_Algorithm_Subset(OpenAvril::Framework_Server* obj, uint8_t praiseEventId, uint8_t concurrent_threadID)
+	void OpenAvrilConcurrency::Concurrent_Control::selectset_Algorithm_Subset(OpenAvrilConcurrency::Framework_Server* obj, uint8_t praiseEventId, uint8_t concurrent_threadID)
 	{
 		switch (praiseEventId)
 		{

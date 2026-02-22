@@ -1,6 +1,6 @@
 #pragma once
 
-namespace OpenAvril
+namespace OpenAvrilConcurrency
 {
 	class Praise0_Output
 	{

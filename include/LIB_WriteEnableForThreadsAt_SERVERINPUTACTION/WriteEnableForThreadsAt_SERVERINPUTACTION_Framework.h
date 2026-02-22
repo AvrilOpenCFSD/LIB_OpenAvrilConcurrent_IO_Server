@@ -1,15 +1,33 @@
 #pragma once
 
-namespace OpenAvril
+namespace OpenAvrilConcurrencyLIB_WriteEnableForThreadsAt_SERVERINPUTACTION
 {
     class WriteEnableForThreadsAt_SERVERINPUTACTION_Framework
     {
+// classes.
+
+// registers.
+
+// pointers.
+
     public:
+// constructor.
         WriteEnableForThreadsAt_SERVERINPUTACTION_Framework();
+
+// destructor.
         virtual ~WriteEnableForThreadsAt_SERVERINPUTACTION_Framework();
-        class WriteEnableForThreadsAt_SERVERINPUTACTION* Get_writeEnable();
+
+// public.
+        void initialise(class WriteEnableForThreadsAt_SERVERINPUTACTION_Framework* obj);
+    // get.
+        class WriteEnableForThreadsAt_SERVERINPUTACTION* get_ptr_WriteEnable();
+    // set.
 
     private:
-        static void Set_writeEnable(class WriteEnableForThreadsAt_SERVERINPUTACTION* writeEnable);
+// private.
+        void create_ptr_WriteEnable();
+    // get.
+    // set.
+        void set_ptr_WriteEnable(class WriteEnableForThreadsAt_SERVERINPUTACTION* writeEnable);
     };
 }

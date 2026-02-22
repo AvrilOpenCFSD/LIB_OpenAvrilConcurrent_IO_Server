@@ -1,6 +1,6 @@
 #pragma once
 
-namespace OpenAvril
+namespace OpenAvrilConcurrency
 {
     class LaunchEnableForConcurrentThreadsAt_SERVER
     {
@@ -8,8 +8,8 @@ namespace OpenAvril
         LaunchEnableForConcurrentThreadsAt_SERVER();
         virtual ~LaunchEnableForConcurrentThreadsAt_SERVER();
         void Initialise_Control();
-        void Thread_Start(class LaunchEnableForConcurrentThreadsAt_SERVER_Framework* obj, unsigned char concurrent_CoreId);
-        void Thread_End(class LaunchEnableForConcurrentThreadsAt_SERVER_Framework* obj, unsigned char concurrent_CoreId);
+        void Thread_Start(class LaunchEnableForConcurrentThreadsAt_SERVER_Framework* obj, uint8_t concurrent_CoreId);
+        void Thread_End(class LaunchEnableForConcurrentThreadsAt_SERVER_Framework* obj, uint8_t concurrent_CoreId);
 
         class LaunchEnableForConcurrentThreadsAt_SERVER_Global* Get_LaunchConcurrency_Global();
         class LaunchEnableForConcurrentThreadsAt_SERVER_Control* Get_Control_Of_LaunchConcurrency();
