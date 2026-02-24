@@ -17,7 +17,7 @@ namespace OpenAvrilConcurrency
 	public:
 		CLIBConcurrentServerIO(void);
 		static void* create_Program();
-		static void initalise_Programs(class Framework_Server* obj);
+		static void initalise_Program(class Framework_Server* obj);
 		static void flip_Input_DoubleBuffer(class Framework_Server* obj);
 		static bool get_flag_isStackLoaded_Server_InputAction(class Framework_Server* obj);
 		static bool get_flag_isLoaded_Stack_OutputSend(class Framework_Server* obj);

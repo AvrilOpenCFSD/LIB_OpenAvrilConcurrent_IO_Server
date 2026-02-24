@@ -16,7 +16,8 @@
 // constructor.
     OpenAvrilConcurrency::Execute::Execute()
     {
-        create_list_Of_Threads();
+        std::thread* newDEFAULT_Thread = new std::thread(NULL);
+        create_list_Of_Threads(newDEFAULT_Thread);
     }
 
 // desructor.
@@ -48,12 +49,10 @@
     }
     void OpenAvrilConcurrency::Execute::initialise_Threads(OpenAvrilConcurrency::Framework_Server* obj)
     {
-        std::list<std::thread*> _list_Of_Threads = { NULL, NULL, NULL, NULL };
-        create_ptr_list_Of_Threads();
-        auto temp = get_ptr_list_Of_Threads()->begin();
-        std::advance(temp, obj->get_ptr_Server()->get_ptr_Data()->get_ptr_Data_Control()->get_STATE_Of_WRITE_For_list_Of_doubleBuffer_Input());
         for (uint8_t threadID = 0; threadID < sizeof(_list_Of_Threads); threadID++)
         {
+            auto temp = get_ptr_list_Of_Threads()->begin();
+            std::advance(temp, threadID);
             *temp = new std::thread(obj->get_ptr_Server()->get_ptr_Algorithms()->get_ptr_Item_On_list_Of_ptr_Concurrent(threadID)->thread_Concurrency, obj, threadID);
             while (get_Item_On_ptr_list_Of_Threads(threadID) == NULL) {}
         }
@@ -84,10 +83,11 @@
     // set.
 
 // private.
-    void OpenAvrilConcurrency::Execute::create_list_Of_Threads()
+    void OpenAvrilConcurrency::Execute::create_list_Of_Threads(std::thread* newDEFAULT_Thread)
     {
-        std::list<std::thread*> _list_Of_Threads = { NULL, NULL, NULL, NULL };
+        std::list<std::thread*> _list_Of_Threads = { newDEFAULT_Thread, newDEFAULT_Thread, newDEFAULT_Thread, newDEFAULT_Thread };//NUMBER OF THREADS
         create_ptr_list_Of_Threads();
+        while (get_ptr_list_Of_Threads() == NULL) {}
     }
     void OpenAvrilConcurrency::Execute::create_ptr_list_Of_Threads()
     {

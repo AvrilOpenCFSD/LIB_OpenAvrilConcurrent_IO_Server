@@ -1,27 +1,49 @@
 #pragma once
 
-namespace OpenAvrilConcurrency
+namespace OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtSERVER
 {
     class LaunchEnableForConcurrentThreadsAt_SERVER
     {
-    public:
-        LaunchEnableForConcurrentThreadsAt_SERVER();
-        virtual ~LaunchEnableForConcurrentThreadsAt_SERVER();
-        void Initialise_Control();
-        void Thread_Start(class LaunchEnableForConcurrentThreadsAt_SERVER_Framework* obj, uint8_t concurrent_CoreId);
-        void Thread_End(class LaunchEnableForConcurrentThreadsAt_SERVER_Framework* obj, uint8_t concurrent_CoreId);
+// classes.
 
-        class LaunchEnableForConcurrentThreadsAt_SERVER_Global* Get_LaunchConcurrency_Global();
-        class LaunchEnableForConcurrentThreadsAt_SERVER_Control* Get_Control_Of_LaunchConcurrency();
+// registers.
+
+// pointer.
+
+    public:
+// constructor.
+        LaunchEnableForConcurrentThreadsAt_SERVER();
+
+// destructor.
+        virtual ~LaunchEnableForConcurrentThreadsAt_SERVER();
+
+// public.
+    // dynamic.
+        void initialise_Control(class LaunchEnableForConcurrentThreadsAt_SERVER_Framework* obj);
+        void thread_Start(class LaunchEnableForConcurrentThreadsAt_SERVER_Framework* obj, uint8_t concurrent_CoreId);
+        void thread_End(class LaunchEnableForConcurrentThreadsAt_SERVER_Framework* obj, uint8_t concurrent_CoreId);
+        // get.
+        class LaunchEnableForConcurrentThreadsAt_SERVER_Global* get_ptr_Global();
+        class LaunchEnableForConcurrentThreadsAt_SERVER_Control* get_ptr_LaunchConcurrency_Control();
+        // set.
+    // static.
+        // get.
+        // set.
 
     private:
-        static void Create_LaunchEnableForConcurrentThreadsAt_SERVER_Global();
-        static void Create_Control_Of_LaunchConcurrency();
-
-        static class LaunchEnableForConcurrentThreadsAt_SERVER_Global* Get__LaunchConcurrency_Global();
-        static class LaunchEnableForConcurrentThreadsAt_SERVER_Control* Get__Control_Of_LaunchConcurrency();
-
-        static void Set_LaunchConcurrency_Global(class LaunchEnableForConcurrentThreadsAt_SERVER_Global* global);
-        static void Set_Control_Of_LaunchConcurrency(class LaunchEnableForConcurrentThreadsAt_SERVER_Control* control);
+// private.
+    // dynamic.
+        void create_ptr_LaunchConcurrency_Control(class LaunchEnableForConcurrentThreadsAt_SERVER_Framework* obj);
+        // get.
+        // set.
+        
+    // static.
+        static void create_ptr_Global();
+        
+        // get.
+        static class LaunchEnableForConcurrentThreadsAt_SERVER_Global* Get_ptr_Global();
+        // set.
+        static void set_ptr_Global(class LaunchEnableForConcurrentThreadsAt_SERVER_Global* newClass);
+        static void set_ptr_LaunchConcurrency_Control(class LaunchEnableForConcurrentThreadsAt_SERVER_Control* newClass);
     };
 }

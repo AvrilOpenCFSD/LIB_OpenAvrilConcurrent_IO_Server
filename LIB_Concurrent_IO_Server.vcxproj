@@ -161,9 +161,9 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <None Include="cpp.hint" />
-    <None Include="LIBLaunchEnableForConcurrentThreadsAtSERVER.dll" />
-    <None Include="LIBWriteEnableForThreadsAtSERVERINPUTACTION.dll" />
-    <None Include="LIBWriteEnableForThreadsAtSERVEROUTPUTRECIEVE.dll" />
+    <None Include="LIB_LaunchEnableForConcurrentThreadsAt_SERVER.dll" />
+    <None Include="LIB_WriteEnableForThreadsAt_SERVERINPUTACTION.dll" />
+    <None Include="LIB_WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE.dll" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Algorithms.h" />
@@ -236,9 +236,9 @@
     <ClCompile Include="User_O.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <Library Include="lib\LIBLaunchEnableForConcurrentThreadsAtSERVER.lib" />
-    <Library Include="lib\LIBWriteEnableForThreadsAtSERVERINPUTACTION.lib" />
-    <Library Include="lib\LIBWriteEnableForThreadsAtSERVEROUTPUTRECIEVE.lib" />
+    <Library Include="lib\LIB_LaunchEnableForConcurrentThreadsAt_SERVER.lib" />
+    <Library Include="lib\LIB_WriteEnableForThreadsAt_SERVERINPUTACTION.lib" />
+    <Library Include="lib\LIB_WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE.lib" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets" />

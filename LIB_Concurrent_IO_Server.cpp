@@ -36,7 +36,7 @@
 	get_ptr_Framework_Server()->initialise_Program(get_ptr_Framework_Server());
 	return (void*)get_ptr_Framework_Server();;
 	}
-	void OpenAvrilConcurrency::CLIBConcurrentServerIO::initalise_Programs(OpenAvrilConcurrency::Framework_Server* obj)
+	void OpenAvrilConcurrency::CLIBConcurrentServerIO::initalise_Program(OpenAvrilConcurrency::Framework_Server* obj)
 	{
 	obj->initialise_Program(obj);
 	}

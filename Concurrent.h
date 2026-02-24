@@ -17,7 +17,8 @@ namespace OpenAvrilConcurrency
 
 // public.
         void do_Concurrent_Algorithm_For_PraiseEventId(class Framework_Server* obj, char playerId, uint8_t ptr_praiseEventId, class Object* ptr_Algorithm_Subset, class Object* ptr_Input_Subset, class Object* ptr_Output_Subset);
-        void initialise_Control();
+        void initialise(class Framework_Server* obj);
+
     // get.
         class Concurrent_Control* get_ptr_Concurrent_Control();
         class Object* get_ptr_Item_On_list_Of_ptr_Algorithms_Subset(uint8_t praiseID);
@@ -30,9 +31,12 @@ namespace OpenAvrilConcurrency
     private:
 // private.
         void create_ptr_Concurrent_Control();
-        void create_list_Of_ptr_Algorithms_Subset();
+        void create_list_Of_ptr_Algorithms_Subset(class Object* newDEFAULT_Object);
         void create_ptr_list_Of_ptr_Algorithms_Subset();
+        void initialise_Control();
+        void initialise_list_Of_ptr_Algorithms_Subset(class Framework_Server* obj);
     // get.
+        uint8_t get_Length_Of_list_Of_ptr_Algorithms_Subset();
     // set.
         void set_ptr_Concurrent_Control(class Concurrent_Control* newClass);
         void set_Algorithm_Subset(class Praise0_Algorithm* praise0_algorithm);

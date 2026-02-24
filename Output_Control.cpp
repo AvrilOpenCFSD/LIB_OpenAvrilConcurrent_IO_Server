@@ -17,7 +17,7 @@
 	}
 
 // public.
-	void OpenAvrilConcurrency::Output_Control::Selectset_Output_Subset(OpenAvrilConcurrency::Framework_Server* obj, uint8_t ptr_praiseEventId, uint8_t concurrent_threadID)
+	void OpenAvrilConcurrency::Output_Control::selectset_Output_Subset(OpenAvrilConcurrency::Framework_Server* obj, uint8_t ptr_praiseEventId, uint8_t concurrent_threadID)
 	{
 		switch (ptr_praiseEventId)
 		{

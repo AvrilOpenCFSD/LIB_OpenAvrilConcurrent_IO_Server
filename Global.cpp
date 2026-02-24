@@ -21,11 +21,16 @@
 
 // destructor.
     OpenAvrilConcurrency::Global::~Global()
-{
+    {
         
-}
+    }
 
 // public.
+    void OpenAvrilConcurrency::Global::initialise()
+    {
+        initialise_number_Of_Implemented_Cores();
+        initialise_number_Of_Praise_Events();
+    }
     // get.
     uint8_t OpenAvrilConcurrency::Global::get_number_Of_Implemented_Cores()
     {
@@ -40,11 +45,19 @@
 // private.
     void OpenAvrilConcurrency::Global::create_number_Of_Implemented_Cores()
     {
-        set_number_Of_Implemented_Cores(uint8_t(4));//NUMBER OF CONCURRENT THREADS
+        set_number_Of_Implemented_Cores(uint8_t(255));
     }
     void OpenAvrilConcurrency::Global::create_number_Of_Praise_Events()
     {
-        set_number_Of_Praise_Events(uint8_t(3));//NUMBER OF PRAISES
+        set_number_Of_Praise_Events(uint8_t(255));
+    }
+    void OpenAvrilConcurrency::Global::initialise_number_Of_Implemented_Cores()
+    {
+        set_number_Of_Implemented_Cores(uint8_t(4));//NUMBER OF THREADS
+    }
+    void OpenAvrilConcurrency::Global::initialise_number_Of_Praise_Events()
+    {
+        set_number_Of_Praise_Events(uint8_t(1));//NUMBER OF PRAISES
     }
     // get.
     // set.

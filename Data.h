@@ -16,7 +16,7 @@ namespace OpenAvrilConcurrency
         virtual ~Data();
 
 // public.
-        void initialise_Control(Data* data);
+        void initialise(class Framework_Server* obj);
     // get.
         class Input* get_doubleBuffer_Input_READ();
         class Input* get_doubleBuffer_Input_WRITE();
@@ -33,19 +33,34 @@ namespace OpenAvrilConcurrency
         void create_ptr_Data_Control();
         void create_ptr_User_I();
         void create_ptr_User_O();
-        void create_list_Of_buffer_Input_ReferenceForThread();
-        void create_list_Of_buffer_Output_ReferenceForThread();
-        void create_list_Of_doubleBuffer_Input();          
-        void create_list_Of_doubleBuffer_Output();
-        void create_vector_Of_stack_Of_InputPraise();
-        void create_vector_Of_stack_Of_OutputPraise();
+        void create_list_Of_buffer_Input_ReferenceForThread(class OpenAvrilConcurrency::Input* newDEFAULT_Input);
+        void create_list_Of_buffer_Output_ReferenceForThread(class OpenAvrilConcurrency::Output* newDEFAULT_Output);
+        void create_list_Of_doubleBuffer_Input(class OpenAvrilConcurrency::Input* newDEFAULT_Input);
+        void create_list_Of_doubleBuffer_Output(class OpenAvrilConcurrency::Output* newDEFAULT_Output);
+        void create_vector_Of_stack_Of_InputPraise(class OpenAvrilConcurrency::Input* newDEFAULT_Input);
+        void create_vector_Of_stack_Of_OutputPraise(class OpenAvrilConcurrency::Output* newDEFAULT_Output);
         void create_ptr_list_Of_buffer_Input_ReferenceForThread();
         void create_ptr_list_Of_buffer_Output_ReferenceForThread();
         void create_ptr_list_Of_doubleBuffer_Input();
         void create_ptr_list_Of_doubleBuffer_Output();
         void create_ptr_vector_Of_stack_Of_InputPraise();
         void create_ptr_vector_Of_stack_Of_OutputPraise();
+        void create_Registers_With_Input(class OpenAvrilConcurrency::Input* newDEFAULT_Input);
+        void create_Registers_With_Output(class OpenAvrilConcurrency::Output* newDEFAULT_Output);
+        void initialise_Control(Data* data);
+        void initialise_Item_On_list_Of_buffer_Input_ReferenceForThread(uint8_t concurrentThreadID, class OpenAvrilConcurrency::Input* newINITIALISED_Input);
+        void initialise_Item_On_list_Of_buffer_Output_ReferenceForThread(uint8_t concurrentThreadID, class OpenAvrilConcurrency::Output* newINITIALISED_Output);
+        void initialise_Item_On_list_Of_doubleBuffer_Input(uint8_t sideRW, class OpenAvrilConcurrency::Input* newINITIALISED_Input);
+        void initialise_Item_On_list_Of_doubleBuffer_Output(uint8_t sideRW, class OpenAvrilConcurrency::Output* newINITIALISED_Output);
+        void initialise_Item_On_vector_Of_stack_Of_InputPraise(uint8_t slot, class OpenAvrilConcurrency::Input* newINITIALISED_Input);
+        void initialise_Item_On_vector_Of_stack_Of_OutputPraise(uint8_t slot, class OpenAvrilConcurrency::Output* newINITIALISED_Output);
+        void initialise_Input_Registers(class OpenAvrilConcurrency::Input* newINITIALISED_Input);
+        void initialise_Registers_With_Output(class OpenAvrilConcurrency::Output* newINITIALISED_Output);
     // get.
+        uint8_t get_Length_Of_list_Of_buffer_Input_ReferenceForThread();
+        uint8_t get_Length_Of_list_Of_buffer_Output_ReferenceForThread();
+        uint8_t get_Length_Of_vector_Of_stack_Of_InputPraise();
+        uint8_t get_Length_Of_vector_Of_stack_Of_OutputPraise();
         std::list<class Input*>* get_ptr_list_Of_buffer_Input_ReferenceForThread();
         std::list<class Output*>* get_ptr_list_Of_buffer_Output_ReferenceForThread();
         std::list<class Input*>* get_ptr_list_Of_doubleBuffer_Input();

@@ -16,6 +16,7 @@ namespace OpenAvrilConcurrency
         virtual ~Input();
 
 // public.
+        void initialise(class Framework_Server* obj);
         void initialise_Control();
     // get.
         uint8_t get_in_praiseEventId();
@@ -28,10 +29,12 @@ namespace OpenAvrilConcurrency
         void create_ptr_Input_Control();
         void create_in_praiseEventId();
         void create_in_playerId();
-        void create_list_Of_Praise_In_Subsets();
+        void create_list_Of_Praise_In_Subsets(Object* newDEFAULT_Object);
         void create_ptr_list_Of_Praise_In_Subsets();
+        void initialise_list_Of_Praise_In_Subsets();
     // get.
-        uint8_t get_lenght_Of_list_Of_Praise_In_Subsets();
+        uint8_t get_Lenght_Of_list_Of_Praise_In_Subsets();
+        std::list<Object*>* get_ptr_list_Of_Praise_In_Subsets();
     // set.
         void set_in_praiseEventId(uint8_t praiseEventId);
         void set_in_playerId(uint8_t praiseEventId);

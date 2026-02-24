@@ -4,37 +4,40 @@ namespace OpenAvrilConcurrency
 {
     class Output
     {
-// calsses.
+        // calsses.
 
-// registers.
+        // registers.
 
     public:
-// constructor.
+        // constructor.
         Output();
 
-// destructor.
+        // destructor.
         virtual ~Output();
 
-// public.
+        // public.
+        void initialise(class Framework_Server* obj);
         void initialise_Control();
-    // get.
-        uint8_t get_out_praiseEventId();
-        uint8_t get_out_playerId();
+        // get.
+        uint8_t get_in_praiseEventId();
+        uint8_t get_in_playerId();
         class Output_Control* get_ptr_Output_Control();
-        class Object* get_ptr_Item_On_list_Of_Praise_Out_Subsets(uint8_t praiseID);
-    // set.
+        class Object* get_ptr_Item_On_list_Of_Praise_In_Subsets(uint8_t praiseID);
+        // set.
 
-// private.
+    // private.
         void create_ptr_Output_Control();
-        void create_out_praiseEventId();
-        void create_out_playerId();
-        void create_list_Of_Praise_Out_Subsets();
-        void create_ptr_list_Of_Praise_Out_Subsets();
-    // get.
-        uint8_t get_lenght_Of_list_Of_Praise_Out_Subsets();
-    // set.
-        void set_out_praiseEventId(uint8_t praiseEventId);
-        void set_out_playerId(uint8_t praiseEventId);
+        void create_in_praiseEventId();
+        void create_in_playerId();
+        void create_list_Of_Praise_In_Subsets(Object* newDEFAULT_Object);
+        void create_ptr_list_Of_Praise_In_Subsets();
+        void initialise_list_Of_Praise_In_Subsets();
+        // get.
+        uint8_t get_Lenght_Of_list_Of_Praise_In_Subsets();
+        std::list<Object*>* get_ptr_list_Of_Praise_In_Subsets();
+        // set.
+        void set_in_praiseEventId(uint8_t praiseEventId);
+        void set_in_playerId(uint8_t praiseEventId);
         void set_ptr_Output_Control(class Output_Control* newClass);
         void set_Subset_OutputBuffer(class Praise0_Output* value);
     };

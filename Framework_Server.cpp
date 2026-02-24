@@ -22,11 +22,10 @@
 // public.
 	void OpenAvrilConcurrency::Framework_Server::initialise_Program(OpenAvrilConcurrency::Framework_Server* obj)
 	{
-		for (uint8_t concurrentThreadID = 0; concurrentThreadID < (obj->get_ptr_Server()->get_ptr_Global()->get_number_Of_Implemented_Cores() - 1); concurrentThreadID++)
-		{
-			obj->get_ptr_Server()->get_ptr_Algorithms()->get_ptr_Item_On_list_Of_ptr_Concurrent(concurrentThreadID)->initialise_Control();
-		}
-		
+		obj->get_ptr_Server()->get_ptr_Global()->initialise();
+		obj->get_ptr_Server()->get_ptr_Algorithms()->initialise(obj);
+		obj->get_ptr_Server()->get_ptr_Data()->initialise(obj);
+		//todo:
 
 		std::cout << "entered => OpenAvrilConcurrency::Framework_Server::initialise_Program()" << std::endl;
 		obj->get_ptr_Server()->get_ptr_Execute()->initialise_Libraries();

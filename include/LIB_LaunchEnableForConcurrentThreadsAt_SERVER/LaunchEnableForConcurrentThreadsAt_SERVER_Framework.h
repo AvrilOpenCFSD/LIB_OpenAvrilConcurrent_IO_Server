@@ -1,17 +1,44 @@
 #pragma once
 
-namespace OpenAvrilConcurrency
+namespace OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtSERVER
 {
     class LaunchEnableForConcurrentThreadsAt_SERVER_Framework
     {
+// classes.
+
+// registers.
+
+// pointers.
+
     public:
+// constructor.
         LaunchEnableForConcurrentThreadsAt_SERVER_Framework();
+
+// destructor.
         virtual ~LaunchEnableForConcurrentThreadsAt_SERVER_Framework();
-        class LaunchEnableForConcurrentThreadsAt_SERVER* Get_LaunchEnableForConcurrentThread();
+
+// public.
+    // dynamic.
+        void initialise(class LaunchEnableForConcurrentThreadsAt_SERVER_Framework* obj);
+        // get.
+        class LaunchEnableForConcurrentThreadsAt_SERVER* get_ptr_LaunchConcurrency();
+        // set.
+    // static.
+        // get.
+        // set.
 
     private:
-        static void Create_LaunchEnableForConcurrentThreadsAt();
-        static class LaunchEnableForConcurrentThreadsAt_SERVER* Get__LaunchEnableForConcurrentThreadsAt();
-        static void Set_LaunchEnableForConcurrentThreadsAt(class LaunchEnableForConcurrentThreadsAt_SERVER* concurrentQue);
+// private.
+    // dynaminc.
+        // get.
+        // set.
+        void set_ptr_LaunchConcurrency(class LaunchEnableForConcurrentThreadsAt_SERVER* concurrentQue);
+
+    // static.
+        static void create_ptr_LaunchConcurrency();
+        // get.
+        static class LaunchEnableForConcurrentThreadsAt_SERVER* Get_ptr_LaunchConcurrency();
+        // set.
+        static void Set_ptr_LaunchConcurrency(class LaunchEnableForConcurrentThreadsAt_SERVER* concurrentQue);
     };
 }

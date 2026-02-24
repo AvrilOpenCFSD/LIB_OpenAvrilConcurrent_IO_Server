@@ -14,10 +14,11 @@
 // constructor.
     OpenAvrilConcurrency::Input::Input()
     {
-        create_ptr_Input_Control();
         create_in_praiseEventId();
         create_in_playerId();
-        create_list_Of_Praise_In_Subsets();
+        Object* newDEFAULT_Object;
+        create_list_Of_Praise_In_Subsets(newDEFAULT_Object);
+        delete newDEFAULT_Object;
     }
 
 // destructor.
@@ -28,11 +29,15 @@
     }
 
 // public.
-    void OpenAvrilConcurrency::Input::initialise_Control()
+    void OpenAvrilConcurrency::Input::initialise(class OpenAvrilConcurrency::Framework_Server* obj)
     {
-        set_ptr_Input_Control(new class OpenAvrilConcurrency::Input_Control());
-        while (get_ptr_Input_Control() == NULL) {}
+        initialise_Control();
+        Object* newDEFAULT_Objcet;
+        create_list_Of_Praise_In_Subsets(newDEFAULT_Objcet);
+        initialise_list_Of_Praise_In_Subsets();
+        delete newDEFAULT_Objcet;
     }
+    
     // get.
     uint8_t OpenAvrilConcurrency::Input::get_in_praiseEventId()
     {
@@ -68,31 +73,41 @@
     {
         set_in_playerId(255);
     }
-    void OpenAvrilConcurrency::Input::create_list_Of_Praise_In_Subsets()
+    void OpenAvrilConcurrency::Input::create_list_Of_Praise_In_Subsets(OpenAvrilConcurrency::Object* newDEFAULT_Object)
     {
-        std::list<OpenAvrilConcurrency::Object*> _list_Of_Praise_In_Subsets = { NULL };
-        std::list<OpenAvrilConcurrency::Object*>* _ptr_list_Of_Praise_In_Subsets = new std::list<class OpenAvrilConcurrency::Object*>(1);//NUMBER OF PRAISES.
-        while(_ptr_list_Of_Praise_In_Subsets == NULL) { }
-        for (uint8_t praiseID = 0; praiseID < sizeof(_list_Of_Praise_In_Subsets); praiseID++)
-        {
-            while (get_ptr_Item_On_list_Of_Praise_In_Subsets(praiseID) == NULL) {}
-            auto temp1 = _ptr_list_Of_Praise_In_Subsets->begin();
-            std::advance(temp1, praiseID);
-            auto temp2 = _list_Of_Praise_In_Subsets.begin();
-            std::advance(temp2, praiseID);
-            temp2 = temp1;
-        }
+        std::list<OpenAvrilConcurrency::Object*> _list_Of_Praise_In_Subsets = { NULL };//NUMBER OF PRAISES.
         create_ptr_list_Of_Praise_In_Subsets();
-        set_Subset_InputBuffer(new class OpenAvrilConcurrency::Praise0_Input());
+        while(get_ptr_list_Of_Praise_In_Subsets() == NULL) {}
+        for (uint8_t praiseID = 0; praiseID < get_Lenght_Of_list_Of_Praise_In_Subsets(); praiseID++)
+        {
+            auto temp = _ptr_list_Of_Praise_In_Subsets->begin();
+            std::advance(temp, praiseID);
+            *temp = newDEFAULT_Object;
+            while (get_ptr_Item_On_list_Of_Praise_In_Subsets(praiseID) == NULL) {}
+        }
     }
     void OpenAvrilConcurrency::Input::create_ptr_list_Of_Praise_In_Subsets()
     {
         _ptr_list_Of_Praise_In_Subsets = &_list_Of_Praise_In_Subsets;
     }
+    void OpenAvrilConcurrency::Input::initialise_Control()
+    {
+        set_ptr_Input_Control(new class OpenAvrilConcurrency::Input_Control());
+        while (get_ptr_Input_Control() == NULL) {}
+    }
+    void OpenAvrilConcurrency::Input::initialise_list_Of_Praise_In_Subsets()
+    {
+        set_Subset_InputBuffer(new class OpenAvrilConcurrency::Praise0_Input());
+    }
+
     // get.
-    uint8_t OpenAvrilConcurrency::Input::get_lenght_Of_list_Of_Praise_In_Subsets()
+    uint8_t OpenAvrilConcurrency::Input::get_Lenght_Of_list_Of_Praise_In_Subsets()
     {
         return sizeof(_list_Of_Praise_In_Subsets);
+    }
+    std::list<OpenAvrilConcurrency::Object*>* OpenAvrilConcurrency::Input::get_ptr_list_Of_Praise_In_Subsets()
+    {
+        return _ptr_list_Of_Praise_In_Subsets;
     }
     // set.
     void OpenAvrilConcurrency::Input::set_in_praiseEventId(uint8_t value)
@@ -107,10 +122,10 @@
     {
         _ptr_Input_Control = newClass;
     }
-    void OpenAvrilConcurrency::Input::set_Subset_InputBuffer(OpenAvrilConcurrency::Praise0_Input* praise0_value)
+    void OpenAvrilConcurrency::Input::set_Subset_InputBuffer(OpenAvrilConcurrency::Praise0_Input* praise0_Input)
     {
         auto temp = _ptr_list_Of_Praise_In_Subsets->begin();
         std::advance(temp, 0);
-        *temp = reinterpret_cast<OpenAvrilConcurrency::Object*>(praise0_value);
+        *temp = reinterpret_cast<OpenAvrilConcurrency::Object*>(praise0_Input);
         while(*temp == NULL) { }
     }

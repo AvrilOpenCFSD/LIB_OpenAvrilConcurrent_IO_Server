@@ -1,10 +1,10 @@
 #pragma once
 
-namespace OpenAvrilConcurrencyLIB_WriteEnableForThreadsAt_SERVERINPUTACTION
+namespace OpenAvrilCLIDWriteEnableForThreadsAtSERVERINPUTACTION
 {
     class WriteEnableForThreadsAt_SERVERINPUTACTION_Global
     {
-        // classes.
+// classes.
 
 // registers.
 
@@ -18,33 +18,46 @@ namespace OpenAvrilConcurrencyLIB_WriteEnableForThreadsAt_SERVERINPUTACTION
         ~WriteEnableForThreadsAt_SERVERINPUTACTION_Global();
 
 // public.
-    // get.
+    // dynamic.
+        void initialise_Item_Of_2bit_flag_write_IDLE(class WriteEnableForThreadsAt_SERVERINPUTACTION_Framework* obj, uint8_t slot, bool newINITIALISED_FlagBit);
+        void initialise_Item_Of_2bit_flag_write_WAIT(class WriteEnableForThreadsAt_SERVERINPUTACTION_Framework* obj, uint8_t slot, bool newINITIALISED_FlagBit);
+        void initialise_Item_Of_2bit_flag_write_WRITE(class WriteEnableForThreadsAt_SERVERINPUTACTION_Framework* obj, uint8_t slot, bool newINITIALISED_FlagBit);
+        void initialise_number_Of_Implemented_Threads(uint8_t* newValue);
+        // get.
         std::list<bool>* get_ptr_2bit_flag_write_IDLE();
         std::list<bool>* get_ptr_2bit_flag_write_WAIT();
         std::list<bool>* get_ptr_2bit_flag_write_WRITE();
         uint8_t get_number_Of_Implemented_Threads();
-    // set.
+        // set.
+    // static.
+        // get.
+        // set.
 
 // private.
-        void create_2bit_flag_write_IDLE();
-        void create_2bit_flag_write_WAIT();
-        void create_2bit_flag_write_WRITE();
-        void create_number_Of_Implemented_Threads();
-        void create_ptr_2bit_flag_write_IDLE();
-        void create_ptr_2bit_flag_write_WAIT();
-        void create_ptr_2bit_flag_write_WRITE();
-    // get.
-        std::list<bool> get_2bit_flag_write_IDLE();
-        std::list<bool> get_2bit_flag_write_WAIT();
-        std::list<bool> get_2bit_flag_write_WRITE();
-    // set.
-        void set_Item_Of_2bit_flag_write_IDLE(uint8_t slot, bool newValue);
-        void set_Item_Of_2bit_flag_write_WAIT(uint8_t slot, bool newValue);
-        void set_Item_Of_2bit_flag_write_WRITE(uint8_t slot, bool newValue);
-        void set_ptr_2bit_flag_write_IDLE(std::list<bool>* newPtr);
-        void set_ptr_2bit_flag_write_WAIT(std::list<bool>* newPtr);
-        void set_ptr_2bit_flag_write_WRITE(std::list<bool>* newPtr);
-        void set_number_Of_Implemented_Threads(uint8_t newValue);
+    // dynamic.
+        // get.
+        // set.
+    // static.
+        static void create_2bit_flag_write_IDLE(bool newDEAFULT_FlagBit);
+        static void create_2bit_flag_write_WAIT(bool newDEAFULT_FlagBit);
+        static void create_2bit_flag_write_WRITE(bool newDEAFULT_FlagBit);
+        static void create_number_Of_Implemented_Threads(uint8_t* newDEFAULT_Value);
+        static void create_ptr_2bit_flag_write_IDLE();
+        static void create_ptr_2bit_flag_write_WAIT();
+        static void create_ptr_2bit_flag_write_WRITE();
+        // get.
+        static std::list<bool>* Get_ptr_2bit_flag_write_IDLE();
+        static std::list<bool>* Get_ptr_2bit_flag_write_WAIT();
+        static std::list<bool>* Get_ptr_2bit_flag_write_WRITE();
+        static uint8_t* get_ptr_number_Of_Implemented_Threads();
+        // set.
+        static void set_Item_Of_2bit_flag_write_IDLE(uint8_t slot, bool newValue);
+        static void set_Item_Of_2bit_flag_write_WAIT(uint8_t slot, bool newValue);
+        static void set_Item_Of_2bit_flag_write_WRITE(uint8_t slot, bool newValue);
+        static void set_ptr_2bit_flag_write_IDLE(std::list<bool>* newPtr);
+        static void set_ptr_2bit_flag_write_WAIT(std::list<bool>* newPtr);
+        static void set_ptr_2bit_flag_write_WRITE(std::list<bool>* newPtr);
+        static void set_number_Of_Implemented_Threads(uint8_t newValue);
     };
 }
 

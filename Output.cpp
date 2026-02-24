@@ -6,39 +6,44 @@
 // registers.
     uint8_t _out_praiseEventId = NULL;
     uint8_t _out_playerId = NULL;
-    std::list<OpenAvrilConcurrency::Object*> _list_Of_Praise_Out_Subsets = { NULL };
+    std::list<OpenAvrilConcurrency::Object*> _list_Of_Praise_In_Subsets = { NULL };
 
 // pointers.
-    std::list<OpenAvrilConcurrency::Object*>* _ptr_list_Of_Praise_Out_Subsets = NULL;
+    std::list<OpenAvrilConcurrency::Object*>* _ptr_list_Of_Praise_In_Subsets = NULL;
 
-    // constructor.
+// constructor.
     OpenAvrilConcurrency::Output::Output()
     {
-        create_ptr_Output_Control();
-        create_out_praiseEventId();
-        create_out_playerId();
-        create_list_Of_Praise_Out_Subsets();
+        create_in_praiseEventId();
+        create_in_playerId();
+        Object* newDEFAULT_Object;
+        create_list_Of_Praise_In_Subsets(newDEFAULT_Object);
+        delete newDEFAULT_Object;
     }
 
-    // destructor.
+// destructor.
     OpenAvrilConcurrency::Output::~Output()
     {
         delete _ptr_Output_Control;
-        delete _ptr_list_Of_Praise_Out_Subsets;
+        delete _ptr_list_Of_Praise_In_Subsets;
     }
 
-    // public.
-    void OpenAvrilConcurrency::Output::initialise_Control()
+// public.
+    void OpenAvrilConcurrency::Output::initialise(class OpenAvrilConcurrency::Framework_Server* obj)
     {
-        set_ptr_Output_Control(new class OpenAvrilConcurrency::Output_Control());
-        while (get_ptr_Output_Control() == NULL) {}
+        initialise_Control();
+        Object* newDEFAULT_Objcet;
+        create_list_Of_Praise_In_Subsets(newDEFAULT_Objcet);
+        initialise_list_Of_Praise_In_Subsets();
+        delete newDEFAULT_Objcet;
     }
+
     // get.
-    uint8_t OpenAvrilConcurrency::Output::get_out_praiseEventId()
+    uint8_t OpenAvrilConcurrency::Output::get_in_praiseEventId()
     {
         return _out_praiseEventId;
     }
-    uint8_t OpenAvrilConcurrency::Output::get_out_playerId()
+    uint8_t OpenAvrilConcurrency::Output::get_in_playerId()
     {
         return _out_playerId;
     }
@@ -46,60 +51,70 @@
     {
         return _ptr_Output_Control;
     }
+    class OpenAvrilConcurrency::Object* OpenAvrilConcurrency::Output::get_ptr_Item_On_list_Of_Praise_In_Subsets(uint8_t praiseID)
+    {
+        auto temp = _ptr_list_Of_Praise_In_Subsets->begin();
+        std::advance(temp, praiseID);
+        return *temp;
+    }
     // set.
 
-// private.
+    // private.
     void OpenAvrilConcurrency::Output::create_ptr_Output_Control()
     {
         set_ptr_Output_Control(new class OpenAvrilConcurrency::Output_Control());
         while (get_ptr_Output_Control() == NULL) {}
     }
-    void OpenAvrilConcurrency::Output::create_out_praiseEventId()
+    void OpenAvrilConcurrency::Output::create_in_praiseEventId()
     {
-        set_out_praiseEventId(255);
+        set_in_praiseEventId(255);
     }
-    void OpenAvrilConcurrency::Output::create_out_playerId()
+    void OpenAvrilConcurrency::Output::create_in_playerId()
     {
-        set_out_playerId(255);
+        set_in_playerId(255);
     }
-    void OpenAvrilConcurrency::Output::create_list_Of_Praise_Out_Subsets()
+    void OpenAvrilConcurrency::Output::create_list_Of_Praise_In_Subsets(OpenAvrilConcurrency::Object* newDEFAULT_Object)
     {
-        std::list<OpenAvrilConcurrency::Object*> _list_Of_Praise_Out_Subsets = { NULL };
-        std::list<OpenAvrilConcurrency::Object*>* _ptr_list_Of_Praise_Out_Subsets = new std::list<class OpenAvrilConcurrency::Object*>(1);//NUMBER OF PRAISES.
-        while (_ptr_list_Of_Praise_Out_Subsets == NULL) {}
-        for (uint8_t praiseID = 0; praiseID < sizeof(_list_Of_Praise_Out_Subsets); praiseID++)
+        std::list<OpenAvrilConcurrency::Object*> _list_Of_Praise_In_Subsets = { NULL };//NUMBER OF PRAISES.
+        create_ptr_list_Of_Praise_In_Subsets();
+        while (get_ptr_list_Of_Praise_In_Subsets() == NULL) {}
+        for (uint8_t praiseID = 0; praiseID < get_Lenght_Of_list_Of_Praise_In_Subsets(); praiseID++)
         {
-            while (get_ptr_Item_On_list_Of_Praise_Out_Subsets(praiseID) == NULL) {}
-            auto temp1 = _ptr_list_Of_Praise_Out_Subsets->begin();
-            std::advance(temp1, praiseID);
-            auto temp2 = _list_Of_Praise_Out_Subsets.begin();
-            std::advance(temp2, praiseID);
-            temp2 = temp1;
+            auto temp = _ptr_list_Of_Praise_In_Subsets->begin();
+            std::advance(temp, praiseID);
+            *temp = newDEFAULT_Object;
+            while (get_ptr_Item_On_list_Of_Praise_In_Subsets(praiseID) == NULL) {}
         }
-        create_ptr_list_Of_Praise_Out_Subsets();
+    }
+    void OpenAvrilConcurrency::Output::create_ptr_list_Of_Praise_In_Subsets()
+    {
+        _ptr_list_Of_Praise_In_Subsets = &_list_Of_Praise_In_Subsets;
+    }
+    void OpenAvrilConcurrency::Output::initialise_Control()
+    {
+        set_ptr_Output_Control(new class OpenAvrilConcurrency::Output_Control());
+        while (get_ptr_Output_Control() == NULL) {}
+    }
+    void OpenAvrilConcurrency::Output::initialise_list_Of_Praise_In_Subsets()
+    {
         set_Subset_OutputBuffer(new class OpenAvrilConcurrency::Praise0_Output());
     }
-    void OpenAvrilConcurrency::Output::create_ptr_list_Of_Praise_Out_Subsets()
-    {
-        _ptr_list_Of_Praise_Out_Subsets = &_list_Of_Praise_Out_Subsets;
-    }
+
     // get.
-    uint8_t OpenAvrilConcurrency::Output::get_lenght_Of_list_Of_Praise_Out_Subsets()
+    uint8_t OpenAvrilConcurrency::Output::get_Lenght_Of_list_Of_Praise_In_Subsets()
     {
-        return sizeof(_list_Of_Praise_Out_Subsets);
+        return sizeof(_list_Of_Praise_In_Subsets);
     }
-    class OpenAvrilConcurrency::Object* OpenAvrilConcurrency::Output::get_ptr_Item_On_list_Of_Praise_Out_Subsets(uint8_t praiseID)
+    std::list<OpenAvrilConcurrency::Object*>* OpenAvrilConcurrency::Output::get_ptr_list_Of_Praise_In_Subsets()
     {
-        auto temp = _ptr_list_Of_Praise_Out_Subsets->begin();
-        std::advance(temp, praiseID);
-        return *temp;
+        return _ptr_list_Of_Praise_In_Subsets;
     }
     // set.
-    void OpenAvrilConcurrency::Output::set_out_praiseEventId(uint8_t value)
+    void OpenAvrilConcurrency::Output::set_in_praiseEventId(uint8_t value)
     {
         _out_praiseEventId = value;
     }
-    void OpenAvrilConcurrency::Output::set_out_playerId(uint8_t value)
+    void OpenAvrilConcurrency::Output::set_in_playerId(uint8_t value)
     {
         _out_playerId = value;
     }
@@ -107,10 +122,10 @@
     {
         _ptr_Output_Control = newClass;
     }
-    void OpenAvrilConcurrency::Output::set_Subset_OutputBuffer(OpenAvrilConcurrency::Praise0_Output* praise0_value)
+    void OpenAvrilConcurrency::Output::set_Subset_OutputBuffer(OpenAvrilConcurrency::Praise0_Output* praise0_Output)
     {
-        auto temp = _ptr_list_Of_Praise_Out_Subsets->begin();
+        auto temp = _ptr_list_Of_Praise_In_Subsets->begin();
         std::advance(temp, 0);
-        *temp = reinterpret_cast<OpenAvrilConcurrency::Object*>(praise0_value);
+        *temp = reinterpret_cast<OpenAvrilConcurrency::Object*>(praise0_Output);
         while (*temp == NULL) {}
     }
