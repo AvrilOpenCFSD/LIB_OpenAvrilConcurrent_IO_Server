@@ -1,5 +1,29 @@
 #include "pch.h"
+// classes.
 
+// registers.
+
+// pointers.
+
+// constructor.
+
+// destructor.
+
+// public.
+    // dynamic.
+        // get.
+        // set.
+    // static.
+        // get.
+        // set.
+
+// private.
+    // dynamic.
+        // get.
+        // set.
+    // static.
+        // get.
+        // set.
 // calsses.
     OpenAvrilConcurrency::Input_Control* _ptr_Input_Control = NULL;
 

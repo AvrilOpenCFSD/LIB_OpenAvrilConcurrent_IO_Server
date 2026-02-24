@@ -1,5 +1,29 @@
 #include "pch.h"
+// classes.
 
+// registers.
+
+// pointers.
+
+// constructor.
+
+// destructor.
+
+// public.
+    // dynamic.
+        // get.
+        // set.
+    // static.
+        // get.
+        // set.
+
+// private.
+    // dynamic.
+        // get.
+        // set.
+    // static.
+        // get.
+        // set.
 // classes.
     OpenAvrilConcurrency::Execute_Control* _ptr_Execute_Control = NULL;
 

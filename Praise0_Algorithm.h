@@ -4,6 +4,32 @@ namespace OpenAvrilConcurrency
 {
     class Praise0_Algorithm
     {
+// classes.
+
+// registers.
+
+// pointers.
+
+// constructor.
+
+// destructor.
+
+// public.
+	// dynamic.
+		// get.
+		// set.
+	// static.
+		// get.
+		// set.
+
+// private.
+	// dynamic.
+		// get.
+		// set.
+	// static.
+		// get.
+		// set.
+
     public:
         Praise0_Algorithm();
         virtual ~Praise0_Algorithm();

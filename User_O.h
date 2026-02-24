@@ -10,6 +10,34 @@ namespace OpenAvrilConcurrency
 
 // pointers.
 
+// constructor.
+
+// destructor.
+
+// public.
+	// dynamic.
+		// get.
+		// set.
+	// static.
+		// get.
+		// set.
+
+// private.
+	// dynamic.
+		// get.
+		// set.
+	// static.
+		// get.
+		// set.
+
+
+
+// classes.
+
+// registers.
+
+// pointers.
+
 	public:
 // constructor.
 		User_O();

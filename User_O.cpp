@@ -1,4 +1,30 @@
 #include "pch.h"
+// classes.
+
+// registers.
+
+// pointers.
+
+// constructor.
+
+// destructor.
+
+// public.
+	// dynamic.
+		// get.
+		// set.
+	// static.
+		// get.
+		// set.
+
+// private.
+	// dynamic.
+		// get.
+		// set.
+	// static.
+		// get.
+		// set.
+		
 // calsses.
 	class OpenAvrilConcurrency::Praise0_Output* ptr_Praise0_Output = NULL;
 

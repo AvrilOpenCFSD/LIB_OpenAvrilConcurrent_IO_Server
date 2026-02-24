@@ -1,5 +1,29 @@
 #include "pch.h"
+// classes.
 
+// registers.
+
+// pointers.
+
+// constructor.
+
+// destructor.
+
+// public.
+    // dynamic.
+        // get.
+        // set.
+    // static.
+        // get.
+        // set.
+
+// private.
+    // dynamic.
+        // get.
+        // set.
+    // static.
+        // get.
+        // set.
 // classes.
     class OpenAvrilConcurrency::Algorithms* _ptr_Algorithms = NULL;
     class OpenAvrilConcurrency::Data* _ptr_Data = NULL;

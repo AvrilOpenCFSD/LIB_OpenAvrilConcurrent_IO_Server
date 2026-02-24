@@ -5,6 +5,34 @@
 #include "LIB_Concurrent_IO_Server.h"
 
 // classes.
+
+// registers.
+
+// pointers.
+
+// constructor.
+
+// destructor.
+
+// public.
+	// dynamic.
+		// get.
+		// set.
+	// static.
+		// get.
+		// set.
+
+// private.
+	// dynamic.
+		// get.
+		// set.
+	// static.
+		// get.
+		// set.
+
+
+
+// classes.
 	class OpenAvrilConcurrency::Framework_Server* _ptr_Framework_Server;
 
 // registers.

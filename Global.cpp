@@ -9,6 +9,37 @@
 // classes.
 
 // registers.
+
+// pointers.
+
+// constructor.
+
+// destructor.
+
+// public.
+    // dynamic.
+        // get.
+        // set.
+    // static.
+        // get.
+        // set.
+
+// private.
+    // dynamic.
+        // get.
+        // set.
+    // static.
+        // get.
+        // set.
+
+
+
+
+
+
+// classes.
+
+// registers.
     uint8_t _number_Of_Implemented_Cores = NULL;
     uint8_t _number_Of_Praise_Events = NULL;
 
