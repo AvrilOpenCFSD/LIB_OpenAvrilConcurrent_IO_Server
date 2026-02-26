@@ -43,7 +43,7 @@ namespace OpenAvrilConcurrency
         virtual ~Input_Control();
 
 // public.
-        void select_And_Aet_Input_Subset(class Framework_Server* obj, uint8_t ptr_praiseEventId);
+        void select_And_Set_Input_Subset(class Framework_Server* obj, uint8_t ptr_praiseEventId);
     // get.
     // set.
 

@@ -6,48 +6,18 @@
 
 namespace OpenAvrilCLIDWriteEnableForThreadsAtSERVEROUTPUTRECIEVE
 {
-	class LIBWRITEENABLEFORTHREADSATSERVEROUTPUTRECIEVE_API CLIDWriteEnableForThreadsAtSERVEROUTPUTRECIEVE 
+	class LIBWRITEENABLEFORTHREADSATSERVEROUTPUTRECIEVE_API CLIDWriteEnableForThreadsAtSERVEROUTPUTRECIEVE
 	{
-// classes.
-
-// registers.
-
-// pointers.
-
-// constructor.
-
-// destructor.
-
-// public.
-	// dynamic.
-		// get.
-		// set.
-	// static.
-		// get.
-		// set.
-
-// private.
-	// dynamic.
-		// get.
-		// set.
-	// static.
-		// get.
-		// set.
-// classes.
-
-// registers.
-
-// pointers.
-
 	public:
-// constructor.
+		// constructor.
 		CLIDWriteEnableForThreadsAtSERVEROUTPUTRECIEVE();
 
-// destructor.
+		// destructor.
 
-// public.
-	// dynamic.
-		static void* create_Program();
+		// public.
+			// dynamic.
+		//static void* generate_Program();//ToDO: uncomment for C#.
+		static OpenAvrilCLIDWriteEnableForThreadsAtSERVEROUTPUTRECIEVE::WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE_Framework* generate_Program();//ToDO: uncomment for C++.
 		static void write_End(class WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE_Framework* obj, uint8_t coreId);
 		static void write_Start(class WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE_Framework* obj, uint8_t coreId);
 		// get.
@@ -58,13 +28,18 @@ namespace OpenAvrilCLIDWriteEnableForThreadsAtSERVEROUTPUTRECIEVE
 		// set.
 
 	private:
-// private.
-	// dynamic.
+		// private.
+			// dynamic.
+				// get.
+				// set.
+			// static.
+		static void create_Framework();
 		// get.
+		static class WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE_Framework* stat_get_ptr_Framework();
 		// set.
-	// static.
-		// get.
-		// set.
-		static void set_ptr_Framework(class WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE_Framework* writeEnable);
+		static void stat_set_ptr_Framework(class WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE_Framework* newPtr);
+		// pointers.
+			// classes.
+			// registers.
 	};
 }

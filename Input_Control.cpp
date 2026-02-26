@@ -41,7 +41,7 @@
     }
 
 // public.
-    void OpenAvrilConcurrency::Input_Control::select_And_Aet_Input_Subset(OpenAvrilConcurrency::Framework_Server* obj, uint8_t praiseEventId)
+    void OpenAvrilConcurrency::Input_Control::select_And_Set_Input_Subset(OpenAvrilConcurrency::Framework_Server* obj, uint8_t praiseEventId)
     {
         switch (praiseEventId)
         {

@@ -63,11 +63,11 @@
     }
 
     // get.
-    uint8_t OpenAvrilConcurrency::Output::get_in_praiseEventId()
+    uint8_t OpenAvrilConcurrency::Output::get_out_praiseEventId()
     {
         return _out_praiseEventId;
     }
-    uint8_t OpenAvrilConcurrency::Output::get_in_playerId()
+    uint8_t OpenAvrilConcurrency::Output::get_out_playerId()
     {
         return _out_playerId;
     }

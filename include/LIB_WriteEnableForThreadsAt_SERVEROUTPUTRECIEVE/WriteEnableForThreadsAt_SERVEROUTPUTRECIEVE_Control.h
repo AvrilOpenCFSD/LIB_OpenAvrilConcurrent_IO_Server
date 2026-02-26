@@ -4,94 +4,93 @@ namespace OpenAvrilCLIDWriteEnableForThreadsAtSERVEROUTPUTRECIEVE
 {
     class WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE_Control
     {
-// classes.
-
-// registers.
-
-// pointers.
-
     public:
 // constructor.
         WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE_Control(class WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE_Global* global);
 
 // destructor.
         ~WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE_Control();
+
 // public.
-    // dynamic.
+    // dynamin.  
+        void initialise_flag_praisingWrite(bool* newDEAFULT_bool);
+        void initialise_Item_On_list_Of_2ibt_flag_WriteState(uint8_t concurrentThreadID, std::array<bool, 2>* newINITIALISED_boolList);
+        void initialise_Item_On_list_Of_WriteActive_Count_For_ThreadId(uint8_t concurrentThreadID, uint32_t* newINITIALISED_uint32_t);
+        void initialise_Item_On_list_Of_WriteIdle_Count_For_ThreadId(uint8_t concurrentThreadID, uint32_t* newINITIALISED_uint32_t);
+        void initialise_Item_On_list_Of_WriteWait_Count_For_ThreadId(uint8_t concurrentThreadID, uint32_t* newINITIALISED_uint32_t);
+        void initialise_new_writeCycle_Try_ThreadId_Index(uint8_t* newINITIALISED_uint8_t);
+        void initialise_Item_On_QUE_List_Of_ThreadToWrite(uint8_t slotID, uint8_t* newINITIALISED_uint8_t);
+        void initialise_writeCycle_Try_ThreadId_Index(uint8_t* newINITIALISED_uint8_t);
         void writeEnable_Activate(class WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE_Framework* obj, uint8_t coreId);
         void writeEnable_SortQue(class WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE_Framework* obj);
         void writeEnable_Request(class WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE_Framework* obj, uint8_t coreId);
         void writeQue_Update(class WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE_Framework* obj);
-        void initialise_flag_praisingWrite(class WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE_Framework* obj, bool newDEAFULT_bool);
-        void initialise_Item_On_list_Of_2ibt_flag_WriteState(class WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE_Framework* obj, uint8_t slot, std::list<bool>* newINITIALISED_boolList);
-        void initialise_Item_On_list_Of_WriteActive_Count_For_ThreadId(class WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE_Framework* obj, uint8_t concurrentThreadID, uint32_t* newINITIALISED_uint32_t);
-        void initialise_Item_On_list_Of_WriteIdle_Count_For_ThreadId(class WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE_Framework* obj, uint8_t concurrentThreadID, uint32_t* newINITIALISED_uint32_t);
-        void initialise_Item_On_list_Of_WriteWait_Count_For_ThreadId(class WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE_Framework* obj, uint8_t concurrentThreadID, uint32_t* newINITIALISED_uint32_t);
-        void initialise_new_writeCycle_Try_ThreadId_Index(class WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE_Framework* obj, uint8_t* newINITIALISED_uint8_t);
-        void initialise_Item_On_QUE_List_Of_ThreadToWrite(class WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE_Framework* obj, uint8_t slotID, uint8_t* newINITIALISED_uint8_t);
-        void initialise_writeCycle_Try_ThreadId_Index(class WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE_Framework* obj, uint8_t* newINITIALISED_uint8_t);
         // get.
         bool get_flag_praisingWrite();
-        std::list<bool> get_Item_On_list_Of_2ibt_flag_WriteState(class WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE_Framework* obj, uint8_t concurrentThreadID);
-        uint32_t get_Item_On_list_Of_WriteActive_Count_For_ThreadId(class WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE_Framework* obj, uint8_t concurrentThreadID);
-        uint32_t get_Item_On_list_Of_WriteIdle_Count_For_ThreadId(class WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE_Framework* obj, uint8_t concurrentThreadID);
-        uint32_t get_Item_On_list_Of_WriteWait_Count_For_ThreadId(class WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE_Framework* obj, uint8_t concurrentThreadID);
-        uint8_t get_Item_On_QUE_List_Of_ThreadToWrite(class WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE_Framework* obj, uint8_t slotID);
+        std::array<bool, 2> get_Item_On_list_Of_2ibt_flag_WriteState(uint8_t concurrentThreadID);
+        uint32_t get_Item_On_list_Of_WriteActive_Count_For_ThreadId(uint8_t concurrentThreadID);
+        uint32_t get_Item_On_list_Of_WriteIdle_Count_For_ThreadId(uint8_t concurrentThreadID);
+        uint32_t get_Item_On_list_Of_WriteWait_Count_For_ThreadId(uint8_t concurrentThreadID);
         uint8_t get_new_writeCycle_Try_ThreadId_Index();
-        std::list<std::list<bool>>* get_ptr_list_Of_2ibt_flag_WriteState();
-        std::list<uint32_t>* get_ptr_list_Of_WriteActive_Count_For_ThreadId();
-        std::list<uint32_t>* get_ptr_list_Of_WriteIdle_Count_For_ThreadId();
-        std::list<uint32_t>* get_ptr_list_Of_WriteWait_Count_For_ThreadId();
-        std::list<uint8_t>* get_ptr_QUE_List_Of_ThreadToWrite();
+        uint8_t get_Item_On_QUE_List_Of_ThreadToWrite(uint8_t slotID);
         uint8_t get_writeCycle_Try_ThreadId_Index();
         // set.
-        void set_flag_praisingWrite(bool newFlag);
-        void set_Item_On_list_Of_2ibt_flag_WriteState(class WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE_Framework* obj, uint8_t concurrentThreadID, std::list<bool> newState);
-        void set_Item_On_list_Of_WriteActive_Count_For_ThreadId(class WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE_Framework* obj, uint8_t concurrentThreadID, uint32_t newCount);
-        void set_Item_On_list_Of_WriteIdle_Count_For_ThreadId(class WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE_Framework* obj, uint8_t concurrentThreadID, uint32_t newCount);
-        void set_Item_On_list_Of_WriteWait_Count_For_ThreadId(class WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE_Framework* obj, uint8_t concurrentThreadID, uint32_t newCount);
-        void set_Item_On_QUE_List_Of_ThreadToWrite(class WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE_Framework* obj, uint8_t slotID, uint8_t concurrentThreadID);
-        void set_new_writeCycle_Try_ThreadId_Index(uint8_t newValue);
-        void set_writeCycle_Try_ThreadId_Index(uint8_t newValue);
+        void set_flag_praisingWrite(bool newBoolValue);
+        void set_Item_On_list_Of_2ibt_flag_WriteState(uint8_t concurrentThreadID, std::array<bool, 2> new2bitState);
+        void set_Item_On_list_Of_WriteActive_Count_For_ThreadId(uint8_t concurrentThreadID, uint32_t newCount);
+        void set_Item_On_list_Of_WriteIdle_Count_For_ThreadId(uint8_t concurrentThreadID, uint32_t newCount);
+        void set_Item_On_list_Of_WriteWait_Count_For_ThreadId(uint8_t concurrentThreadID, uint32_t newCount);
+        void set_new_writeCycle_Try_ThreadId_Index(uint8_t newID);
+        void set_Item_On_QUE_List_Of_ThreadToWrite(uint8_t slotID, uint8_t newID);
+        void set_writeCycle_Try_ThreadId_Index(uint8_t newID);
     // static.
         // get.
         // set.
 
     private:
 // private.
-    // dynamic.
+    // dynamin.
         void dynamicStagger(class WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE_Framework* obj, uint8_t coreId);
-        void writeEnable_ShiftQueValues(class WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE_Framework* obj, uint8_t concurrent_ThreadId_A, uint8_t concurrent_ThreadId_B);
+        void writeEnable_ShiftQueValues(class WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE_Framework* obj, uint8_t coreId_A, uint8_t coreId_B);
         // get.
         // set.
     // static.
-        static void create_flag_praisingWrite(bool newDEAFULT_bool);
-        static void create_list_Of_2ibt_flag_WriteState(bool newDEAFULT_bool);
+        static void create_flag_praisingWrite(bool* newDEFAULT_bool);
+        static void create_list_Of_2ibt_flag_WriteState(std::array<bool, 2>* newDEFAULT_boolList);
         static void create_list_Of_WriteActive_Count_For_ThreadId(uint32_t* newDEFAULT_uint32_t);
         static void create_list_Of_WriteIdle_Count_For_ThreadId(uint32_t* newDEFAULT_uint32_t);
         static void create_list_Of_WriteWait_Count_For_ThreadId(uint32_t* newDEFAULT_uint32_t);
         static void create_new_writeCycle_Try_ThreadId_Index(uint8_t* newDEFAULT_uint8_t);
         static void create_QUE_List_Of_ThreadToWrite(uint8_t* newDEFAULT_uint8_t);
         static void create_writeCycle_Try_ThreadId_Index(uint8_t* newDEFAULT_uint8_t);
-        static void create_ptr_list_Of_2ibt_flag_WriteState();
-        static void create_ptr_list_Of_WriteActive_Count_For_ThreadId();
-        static void create_ptr_list_Of_WriteIdle_Count_For_ThreadId();
-        static void create_ptr_list_Of_WriteWait_Count_For_ThreadId();
-        static void create_ptr_QUE_List_Of_ThreadToWrite();
         // get.
-        static std::list<std::list<bool>>* Get_ptr_list_Of_2ibt_flag_WriteState();
-        static std::list<uint32_t>* Get_ptr_list_Of_WriteActive_Count_For_ThreadId();
-        static std::list<uint32_t>* Get_ptr_list_Of_WriteIdle_Count_For_ThreadId();
-        static std::list<uint32_t>* Get_ptr_list_Of_WriteWait_Count_For_ThreadId();
-        static std::list<uint8_t>* Get_ptr_QUE_List_Of_ThreadToWrite();
+        static bool* stat_get_ptr_flag_praisingWrite();
+        static std::list<std::array<bool, 2>>* stat_get_ptr_list_Of_2ibt_flag_WriteState();
+        static std::list<uint32_t>* stat_get_ptr_list_Of_WriteActive_Count_For_ThreadId();
+        static std::list<uint32_t>* stat_get_ptr_list_Of_WriteIdle_Count_For_ThreadId();
+        static std::list<uint32_t>* stat_get_ptr_list_Of_WriteWait_Count_For_ThreadId();
+        static uint8_t* stat_get_ptr_new_writeCycle_Try_ThreadId_Index();
+        static std::list<uint8_t>* stat_get_ptr_QUE_List_Of_ThreadToWrite();
+        static uint8_t* stat_get_ptr_writeCycle_Try_ThreadId_Index();
         // set.
-        static void Set_flag_praisingWrite(bool newFlag);
-        static void set_ptr_list_Of_2ibt_flag_WriteState(std::list<std::list<bool>>* newPtr);
-        static void set_ptr_list_Of_WriteActive_Count_For_ThreadId(std::list<uint32_t>* newPtr);
-        static void set_ptr_list_Of_WriteIdle_Count_For_ThreadId(std::list<uint32_t>* newPtr);
-        static void set_ptr_list_Of_WriteWait_Count_For_ThreadId(std::list<uint32_t>* newPtr);
-        static void set_ptr_QUE_List_Of_ThreadToWrite(std::list<uint8_t>* newPtr);
-        static void Set_new_writeCycle_Try_ThreadId_Index(uint8_t newValue);
-        static void Set_writeCycle_Try_ThreadId_Index(uint8_t newValue);
+        static void stat_set_flag_praisingWrite(bool newFlag);
+        static void stat_set_Item_On_list_Of_2ibt_flag_WriteState(uint8_t concurrentThreadID, std::array<bool, 2> new2bitState);
+        static void stat_set_Item_On_list_Of_WriteActive_Count_For_ThreadId(uint8_t concurrentThreadID, uint32_t newCount);
+        static void stat_set_Item_On_list_Of_WriteIdle_Count_For_ThreadId(uint8_t concurrentThreadID, uint32_t newCount);
+        static void stat_set_Item_On_list_Of_WriteWait_Count_For_ThreadId(uint8_t concurrentThreadID, uint32_t newCount);
+        static void stat_set_new_writeCycle_Try_ThreadId_Index(uint8_t newValue);
+        static void stat_set_Item_On_QUE_List_Of_ThreadToWrite(uint8_t slotID, uint8_t concurrentThreadID);
+        static void stat_set_writeCycle_Try_ThreadId_Index(uint8_t newValue);
+    // pointers.
+        // classes.
+        // registers.
+        static bool* _ptr_flag_praisingWrite;
+        static std::list<std::array<bool, 2>>* _ptr_list_Of_2ibt_flag_WriteState;
+        static std::list<uint32_t>* _ptr_list_Of_WriteActive_Count_For_ThreadId;
+        static std::list<uint32_t>* _ptr_list_Of_WriteIdle_Count_For_ThreadId;
+        static std::list<uint32_t>* _ptr_list_Of_WriteWait_Count_For_ThreadId;
+        static uint8_t* _ptr_new_writeCycle_Try_ThreadId_Index;
+        static std::list<uint8_t>* _ptr_QUE_List_Of_ThreadToWrite;
+        static uint8_t* _ptr_writeCycle_Try_ThreadId_Index;
     };
 }

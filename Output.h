@@ -46,8 +46,8 @@ namespace OpenAvrilConcurrency
         void initialise(class Framework_Server* obj);
         void initialise_Control();
         // get.
-        uint8_t get_in_praiseEventId();
-        uint8_t get_in_playerId();
+        uint8_t get_out_praiseEventId();
+        uint8_t get_out_playerId();
         class Output_Control* get_ptr_Output_Control();
         class Object* get_ptr_Item_On_list_Of_Praise_In_Subsets(uint8_t praiseID);
         // set.
@@ -60,7 +60,6 @@ namespace OpenAvrilConcurrency
         void create_ptr_list_Of_Praise_In_Subsets();
         void initialise_list_Of_Praise_In_Subsets();
         // get.
-        uint8_t get_Lenght_Of_list_Of_Praise_In_Subsets();
         std::list<Object*>* get_ptr_list_Of_Praise_In_Subsets();
         // set.
         void set_in_praiseEventId(uint8_t praiseEventId);

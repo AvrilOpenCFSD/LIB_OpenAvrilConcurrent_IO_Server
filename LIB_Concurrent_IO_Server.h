@@ -6,85 +6,52 @@
 
 namespace OpenAvrilConcurrency
 {
-	class LIBSERVERIOCONCURRNECY_API CLIBConcurrentServerIO {
-// classes.
-
-// registers.
-
-// pointers.
-
+	class LIBSERVERIOCONCURRNECY_API CLIBConcurrentServerIO 
+	{
+	public:
 // constructor.
+		CLIBConcurrentServerIO(void);
 
 // destructor.
 
 // public.
 	// dynamic.
-		// get.
-		// set.
-	// static.
-		// get.
-		// set.
-
-// private.
-	// dynamic.
-		// get.
-		// set.
-	// static.
-		// get.
-		// set.
-	public:
-		CLIBConcurrentServerIO(void);
-		static void* create_Program();
+		static void* generate_Program();
 		static void initalise_Program(class Framework_Server* obj);
 		static void flip_Input_DoubleBuffer(class Framework_Server* obj);
 		static bool get_flag_isStackLoaded_Server_InputAction(class Framework_Server* obj);
 		static bool get_flag_isLoaded_Stack_OutputSend(class Framework_Server* obj);
 		static bool get_flag_IsInitialised_OpenAvrilConcurrencyConcurrency(class Framework_Server* obj);
-		static void* get_program_WriteEnableStack_ServerInputAction();
-		static void* get_program_WriteEnableStack_ServerOutputRecieve();
+		static void* get_program_WriteEnableStack_ServerInputAction(class Framework_Server* obj);
+		static void* get_program_WriteEnableStack_ServerOutputRecieve(class Framework_Server* obj);
 		static void pop_From_Stack_Of_Output(class Framework_Server* obj);
 		static void push_To_Stack_Of_Input(class Framework_Server* obj);
 		static void select_set_Intput_Subset(class Framework_Server* obj, uint8_t praiseEventId);
-	// Praise Event Id
+		// Praise Event Id
 		static uint8_t get_PraiseEventId(class Framework_Server* obj);
 		static void set_PraiseEventId(class Framework_Server* obj, uint8_t value);
-// TODO: add your methods here.
-	// Praise 0 Data
+	// TODO: add your methods here.
+		// Praise 0 Data
 
-	// Praise 1 Data
+		// Praise 1 Data
 
-	// Praise 0 Data
+		// Praise 0 Data
+		
+		// get.
+		// set.
+	// static.
+		// get.
+		// set.
 
 	private:
 // private.
-	// get.
-		static class Framework_Server* get_ptr_Framework_Server();
-	// set.
-		static void set_ptr_Framework_Server(class Framework_Server* newClass);
+	// dynamic.
+		// get.
+		// set.
+	// static.
+		// get.
+		static class Framework_Server* stat_get_ptr_Framework_Server();
+		// set.
+		static void stat_set_ptr_Framework_Server(class Framework_Server* newClass);
 	};
 }
-// classes.
-
-// registers.
-
-// pointers.
-
-// constructor.
-
-// destructor.
-
-// public.
-	// dynamic.
-		// get.
-		// set.
-	// static.
-		// get.
-		// set.
-
-// private.
-	// dynamic.
-		// get.
-		// set.
-	// static.
-		// get.
-		// set.

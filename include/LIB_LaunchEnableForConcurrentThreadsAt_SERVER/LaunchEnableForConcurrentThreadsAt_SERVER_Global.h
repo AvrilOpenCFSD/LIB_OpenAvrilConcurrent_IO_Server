@@ -4,12 +4,6 @@ namespace OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtSERVER
 {
     class LaunchEnableForConcurrentThreadsAt_SERVER_Global
     {
-// classes.
-
-// registers.
-
-// pointer.
-
     public:
 // constructor.
         LaunchEnableForConcurrentThreadsAt_SERVER_Global();
@@ -41,12 +35,19 @@ namespace OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtSERVER
         static void create_flag_core_IDLE(bool* newDEFAULT_Flag);
         static void create_number_Implemented_Threads(uint8_t* newDEFAULT_Value);
         // get.
-        static bool* get_ptr_flag_core_ACTIVE();
-        static bool* get_ptr_flag_core_IDLE();
-        static uint8_t* get_ptr_number_Implemented_Threads();
+        static bool* stat_get_ptr_flag_core_ACTIVE();
+        static bool* stat_get_ptr_flag_core_IDLE();
+        static uint8_t* stat_get_ptr_number_Implemented_Threads();
         // set.
-        static void set_flag_core_ACTIVE(bool value);
-        static void set_flag_core_IDLE(bool value);
-        static void set_number_Implemented_Threads(uint8_t coreId);
+        static void stat_set_flag_core_ACTIVE(bool value);
+        static void stat_set_flag_core_IDLE(bool value);
+        static void stat_set_number_Implemented_Threads(uint8_t coreId);
+    // pointers.
+        // classes.
+        // registers.
+        static bool* _ptr_flag_core_ACTIVE;
+        static bool* _ptr_flag_core_IDLE;
+        static uint8_t* _ptr_number_Implemented_Threads;
+
     };
 }
