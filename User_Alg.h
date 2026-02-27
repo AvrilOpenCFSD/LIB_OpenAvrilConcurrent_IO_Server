@@ -4,40 +4,6 @@ namespace OpenAvrilConcurrency
 {
 	class User_Alg
 	{
-// classes.
-
-// registers.
-
-// pointers.
-
-// constructor.
-
-// destructor.
-
-// public.
-	// dynamic.
-		// get.
-		// set.
-	// static.
-		// get.
-		// set.
-
-// private.
-	// dynamic.
-		// get.
-		// set.
-	// static.
-		// get.
-		// set.
-
-
-
-// classes.
-
-// registers.
-
-// pointers.
-
 	public:
 // constructor.
 		User_Alg();
@@ -46,16 +12,25 @@ namespace OpenAvrilConcurrency
 		virtual ~User_Alg();
 
 // public.
-	// get.
-		class Praise0_Algorithm* get_Praise0_Algorithm();
-	// set.
+	// dynamic.
+		// get.
+		class Praise0_Algorithm* get_ptr_Praise0_Algorithm();
+		// set.
+	// static.
+		// get.
+		// set.
 
 	private:
 // private.
-		void create_Praise0_Algorithm();
-	// get.
-	// set.
-		void set_Praise0_Algorithm(class Praise0_Algorithm* praise0_A);
+	// dynamic.
+		// get.
+		// set.
+	// static.
+		void create_ptr_Praise0_Algorithm();
+		// get.
+		class Praise0_Algorithm* stat_get_ptr_Praise0_Algorithm();
+		// set.
+		void stat_set_ptr_Praise0_Algorithm(class Praise0_Algorithm* praise0_A);
 	};
 }
 

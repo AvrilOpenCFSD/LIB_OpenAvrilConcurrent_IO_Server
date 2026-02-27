@@ -4,12 +4,6 @@ namespace OpenAvrilConcurrency
 {
     class Algorithms
     {
-// classes.
-
-// registers.
-
-// pointers.
-
     public:
 // constructor.
         Algorithms();

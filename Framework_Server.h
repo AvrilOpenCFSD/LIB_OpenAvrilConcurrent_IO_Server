@@ -5,12 +5,6 @@ namespace OpenAvrilConcurrency
     class Framework_Server
     {
     public:
-// classes.
-
-// registers.
-
-// pointers.
-
 // constructor.
         Framework_Server();
 

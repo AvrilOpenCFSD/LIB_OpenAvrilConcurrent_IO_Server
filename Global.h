@@ -5,12 +5,6 @@ namespace OpenAvrilConcurrency
     class Global
     {
     public:
-// classes.
-
-// registers.
-
-// pointers.
-
 // constructor.
         Global();
 

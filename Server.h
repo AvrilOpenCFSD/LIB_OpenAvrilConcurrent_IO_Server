@@ -5,12 +5,6 @@ namespace OpenAvrilConcurrency
     class Server
     {
     public:
-// classes.
-
-// registers.
-
-// pointers.
-
 // constructor.
         Server();
 
