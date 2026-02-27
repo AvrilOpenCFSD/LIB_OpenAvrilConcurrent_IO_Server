@@ -14,7 +14,7 @@
         create_ptr_Global();
         create_ptr_Algorithms();
         create_ptr_Data();
-        stat_get_ptr_Data()->initialise_Control(stat_get_ptr_Global());
+        stat_get_ptr_Data()->initialise_Control();
         create_ptr_Execute();
         stat_get_ptr_Execute()->initialise_Control(stat_get_ptr_Global());
     }

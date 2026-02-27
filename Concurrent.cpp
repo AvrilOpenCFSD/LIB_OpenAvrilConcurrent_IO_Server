@@ -2,7 +2,7 @@
 
 // pointers.
     // classes.
-    OpenAvrilConcurrency::Concurrent_Control* ptr_Concurrent_Control = NULL;
+    OpenAvrilConcurrency::Concurrent_Control* _ptr_Concurrent_Control = NULL;
     // registers.
     std::list<class OpenAvrilConcurrency::Object*>* _ptr_list_Of_ptr_Algorithms_Subset = NULL;
 
@@ -18,7 +18,7 @@
 // destructor.
     OpenAvrilConcurrency::Concurrent::~Concurrent()
     {
-        delete ptr_Concurrent_Control;
+        delete _ptr_Concurrent_Control;
         delete _ptr_list_Of_ptr_Algorithms_Subset;
     }
 
@@ -137,13 +137,13 @@
     }
     void OpenAvrilConcurrency::Concurrent::create_ptr_Concurrent_Control()
     {
-        OpenAvrilConcurrency::Concurrent_Control* ptr_Concurrent_Control = new class OpenAvrilConcurrency::Concurrent_Control();
+        OpenAvrilConcurrency::Concurrent_Control* _ptr_Concurrent_Control = new class OpenAvrilConcurrency::Concurrent_Control();
         while (stat_get_ptr_Concurrent_Control() == NULL) {}
     }
         // get.
     OpenAvrilConcurrency::Concurrent_Control* OpenAvrilConcurrency::Concurrent::stat_get_ptr_Concurrent_Control()
     {
-        return stat_get_ptr_Concurrent_Control();
+        return _ptr_Concurrent_Control;
     }
     OpenAvrilConcurrency::Object* OpenAvrilConcurrency::Concurrent::stat_get_ptr_Item_On_ptr_list_Of_ptr_Algorithms_Subset(uint8_t praiseID)
     {

@@ -2,7 +2,7 @@
 
 namespace OpenAvrilConcurrency
 {
-    class Data_Control
+    class User_O
     {
 // classes.
 

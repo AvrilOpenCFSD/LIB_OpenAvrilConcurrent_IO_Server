@@ -37,5 +37,10 @@ namespace OpenAvrilConcurrency
         // set.
         static void stat_set_number_Of_Implemented_Cores(uint8_t* newValue);
         static void stat_set_number_Of_Praise_Events(uint8_t* newValue);
+    // pointers.
+        // classes.
+        // registers.
+        static uint8_t* _ptr_number_Of_Implemented_Cores;
+        static uint8_t* _ptr_number_Of_Praise_Events;
     };
 }

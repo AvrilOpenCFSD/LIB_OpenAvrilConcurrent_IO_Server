@@ -53,5 +53,9 @@ namespace OpenAvrilConcurrency
 		static class Framework_Server* stat_get_ptr_Framework_Server();
 		// set.
 		static void stat_set_ptr_Framework_Server(class Framework_Server* newClass);
+	// pointers.
+		// classes.
+		static OpenAvrilConcurrency::Framework_Server* _ptr_Framework_Server;
+		// registers.
 	};
 }

@@ -40,6 +40,39 @@
 		}
 		delete newINITIALISED_Concurrent;
 
+		OpenAvrilConcurrency::Input* newINITIALISED_Input = new class OpenAvrilConcurrency::Input();
+		while (newINITIALISED_Input == NULL) {}
+		newINITIALISED_Input->initialise_Control();
+		for (uint8_t concurrentThreadID = 0; concurrentThreadID < sizeof(); concurrentThreadID++)
+		{
+			initialise_Item_On_list_Of_buffer_Input_ReferenceForThread(concurrentThreadID, newINITIALISED_Input);
+		}
+		for (uint8_t sideID = 0; sideID < uint8_t(2); sideID++)
+		{
+			initialise_Item_On_list_Of_doubleBuffer_Input(sideID, newINITIALISED_Input);
+		}
+		for (uint8_t slotID = 0; slotID < get_Length_Of_vector_Of_stack_Of_InputPraise(); slotID++)
+		{
+			initialise_Item_On_vector_Of_stack_Of_InputPraise(slotID, newINITIALISED_Input);
+		}
+		delete newINITIALISED_Input;
+
+		OpenAvrilConcurrency::Output* newINITIALISED_Output = new class OpenAvrilConcurrency::Output();
+		while (newINITIALISED_Output == NULL) {}
+		newINITIALISED_Output->initialise_Control();
+		for (uint8_t concurrentThreadID = 0; concurrentThreadID < get_Length_Of_list_Of_buffer_Output_ReferenceForThread(); concurrentThreadID++)
+		{
+			initialise_Item_On_list_Of_doubleBuffer_Output(concurrentThreadID, newINITIALISED_Output);
+		}
+		for (uint8_t sideID = 0; sideID < uint8_t(2); sideID++)
+		{
+			initialise_Item_On_list_Of_doubleBuffer_Output(sideID, newINITIALISED_Output);
+		}
+		for (uint8_t slotID = 0; slotID < get_Length_Of_vector_Of_stack_Of_OutputPraise(); slotID++)
+		{
+			initialise_Item_On_vector_Of_stack_Of_OutputPraise(slotID, newINITIALISED_Output);
+		}
+		delete newINITIALISED_Output;
 		//todo:
 		obj->get_ptr_Server()->get_ptr_Data()->initialise(obj);
 
