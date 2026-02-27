@@ -1,46 +1,22 @@
 #include "pch.h"
-// classes.
-
-// registers.
 
 // pointers.
-
-// constructor.
-
-// destructor.
-
-// public.
-    // dynamic.
-        // get.
-        // set.
-    // static.
-        // get.
-        // set.
-
-// private.
-    // dynamic.
-        // get.
-        // set.
-    // static.
-        // get.
-        // set.
-// classes.
+    // classes.
     class OpenAvrilConcurrency::Algorithms* _ptr_Algorithms = NULL;
     class OpenAvrilConcurrency::Data* _ptr_Data = NULL;
     class OpenAvrilConcurrency::Execute* _ptr_Execute = NULL;
     class OpenAvrilConcurrency::Global* _ptr_Global = NULL;
-
-// registers.
+    // registers.
 
 // constructor.
     OpenAvrilConcurrency::Server::Server()
     {
-		create_ptr_Global();
-		create_ptr_Algorithms();
-		create_ptr_Data();
-        get_ptr_Data()->initialise_Control(get_ptr_Data());
-		create_ptr_Execute();
-        get_ptr_Execute()->initialise_Control(get_ptr_Global()->get_number_Of_Implemented_Cores());
+        create_ptr_Global();
+        create_ptr_Algorithms();
+        create_ptr_Data();
+        stat_get_ptr_Data()->initialise_Control(stat_get_ptr_Global());
+        create_ptr_Execute();
+        stat_get_ptr_Execute()->initialise_Control(stat_get_ptr_Global());
     }
 
 // destructor.
@@ -53,61 +29,85 @@
     }
 
 // public.
+    // dynamic.
+        // get.
+        OpenAvrilConcurrency::Algorithms* OpenAvrilConcurrency::Server::get_ptr_Algorithms()
+        {
+            return stat_get_ptr_Algorithms();
+        }
+        OpenAvrilConcurrency::Data* OpenAvrilConcurrency::Server::get_ptr_Data()
+        {
+            return stat_get_ptr_Data();
+        }
+        OpenAvrilConcurrency::Execute* OpenAvrilConcurrency::Server::get_ptr_Execute()
+        {
+            return stat_get_ptr_Execute();
+        }
+        OpenAvrilConcurrency::Global* OpenAvrilConcurrency::Server::get_ptr_Global()
+        {
+            return stat_get_ptr_Global();
+        }
+        // set.
+    // static.
+        // get.
+        // set.
+
+// private.
+    // dynamic.
+        // get.
+        // set.
+    // static.
     void OpenAvrilConcurrency::Server::create_ptr_Algorithms()
     {
-		set_ptr_Algorithms(new class OpenAvrilConcurrency::Algorithms());
-        while (get_ptr_Algorithms() == NULL) { }
+        stat_set_ptr_Algorithms(new class OpenAvrilConcurrency::Algorithms());
+        while (stat_get_ptr_Algorithms() == NULL) {}
     }
     void OpenAvrilConcurrency::Server::create_ptr_Data()
     {
-		set_ptr_Data(new class OpenAvrilConcurrency::Data());
-		while (get_ptr_Data() == NULL) {}
+        stat_set_ptr_Data(new class OpenAvrilConcurrency::Data());
+        while (stat_get_ptr_Data() == NULL) {}
     }
     void OpenAvrilConcurrency::Server::create_ptr_Execute()
     {
-		set_ptr_Execute(new class OpenAvrilConcurrency::Execute());
-		while (get_ptr_Execute() == NULL) {}
+        stat_set_ptr_Execute(new class OpenAvrilConcurrency::Execute());
+        while (stat_get_ptr_Execute() == NULL) {}
     }
     void OpenAvrilConcurrency::Server::create_ptr_Global()
     {
-		set_ptr_Global(new class OpenAvrilConcurrency::Global());
-		while (get_ptr_Global() == NULL) {}
+        stat_set_ptr_Global(new class OpenAvrilConcurrency::Global());
+        while (stat_get_ptr_Global() == NULL) {}
     }
-    // get.
-    OpenAvrilConcurrency::Algorithms* OpenAvrilConcurrency::Server::get_ptr_Algorithms()
+        // get.
+    OpenAvrilConcurrency::Algorithms* OpenAvrilConcurrency::Server::stat_get_ptr_Algorithms()
     {
         return _ptr_Algorithms;
     }
-    OpenAvrilConcurrency::Data* OpenAvrilConcurrency::Server::get_ptr_Data()
+    OpenAvrilConcurrency::Data* OpenAvrilConcurrency::Server::stat_get_ptr_Data()
     {
         return _ptr_Data;
     }
-    OpenAvrilConcurrency::Execute* OpenAvrilConcurrency::Server::get_ptr_Execute()
+    OpenAvrilConcurrency::Execute* OpenAvrilConcurrency::Server::stat_get_ptr_Execute()
     {
         return _ptr_Execute;
     }
-    OpenAvrilConcurrency::Global* OpenAvrilConcurrency::Server::get_ptr_Global()
+    OpenAvrilConcurrency::Global* OpenAvrilConcurrency::Server::stat_get_ptr_Global()
     {
         return _ptr_Global;
     }
-    // set.
-
-// private.
-    // get.
-    // set.
-    void OpenAvrilConcurrency::Server::set_ptr_Algorithms(OpenAvrilConcurrency::Algorithms* algorithms)
+        // set.
+    void OpenAvrilConcurrency::Server::stat_set_ptr_Algorithms(OpenAvrilConcurrency::Algorithms* algorithms)
     {
-        _ptr_Algorithms = algorithms;
+        *_ptr_Algorithms = *algorithms;
     }
-    void OpenAvrilConcurrency::Server::set_ptr_Data(OpenAvrilConcurrency::Data* data)
+    void OpenAvrilConcurrency::Server::stat_set_ptr_Data(OpenAvrilConcurrency::Data* data)
     {
-        _ptr_Data = data;
+        *_ptr_Data = *data;
     }
-    void OpenAvrilConcurrency::Server::set_ptr_Execute(OpenAvrilConcurrency::Execute* execute)
+    void OpenAvrilConcurrency::Server::stat_set_ptr_Execute(OpenAvrilConcurrency::Execute* execute)
     {
-        _ptr_Execute = execute;
+        *_ptr_Execute = *execute;
     }
-    void OpenAvrilConcurrency::Server::set_ptr_Global(OpenAvrilConcurrency::Global* global)
+    void OpenAvrilConcurrency::Server::stat_set_ptr_Global(OpenAvrilConcurrency::Global* global)
     {
-        _ptr_Global = global;
+        *_ptr_Global = *global;
     }

@@ -94,5 +94,5 @@
 		// set.
 	void OpenAvrilConcurrency::CLIBConcurrentServerIO::stat_set_ptr_Framework_Server(OpenAvrilConcurrency::Framework_Server* newClass)
 	{
-		_ptr_Framework_Server = newClass;
+		*_ptr_Framework_Server = *newClass;
 	}

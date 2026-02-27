@@ -4,6 +4,7 @@ namespace OpenAvrilConcurrency
 {
     class Framework_Server
     {
+    public:
 // classes.
 
 // registers.
@@ -11,52 +12,31 @@ namespace OpenAvrilConcurrency
 // pointers.
 
 // constructor.
-
-// destructor.
-
-// public.
-    // dynamic.
-        // get.
-        // set.
-    // static.
-        // get.
-        // set.
-
-// private.
-    // dynamic.
-        // get.
-        // set.
-    // static.
-        // get.
-        // set.
-
-
-
-
-
-
-// calsses.
-
-// registers.
-
-    public:
-// constructor.
         Framework_Server();
 
 // destructor.
         virtual ~Framework_Server();
 
 // public.
+    // dynamic.
         void initialise_Program(class Framework_Server* obj);
-    // get.
+        // get.
         class Server* get_ptr_Server();
-    // set.
+        // set.
+    // static.
+        // get.
+        // set.
 
     private:
 // private.
+    // dynamic.
+        // get.
+        // set.
+    // static.
         void create_ptr_Server();
-    // get.
-    // set.
-        void set_ptr_Server(class Server* server);
+        // get.
+        class Server* stat_get_ptr_Server();
+        // set.
+        void stat_set_ptr_Server(class Server* server);
     };
 }

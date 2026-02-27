@@ -6,43 +6,12 @@
         ADDER
     };
 
-// classes.
-
-// registers.
-
 // pointers.
-
-// constructor.
-
-// destructor.
-
-// public.
-    // dynamic.
-        // get.
-        // set.
-    // static.
-        // get.
-        // set.
-
-// private.
-    // dynamic.
-        // get.
-        // set.
-    // static.
-        // get.
-        // set.
-
-
-
-
-
-
-// classes.
-
-// registers.
-    uint8_t _number_Of_Implemented_Cores = NULL;
-    uint8_t _number_Of_Praise_Events = NULL;
-
+    // classes.
+    // registers.
+    uint8_t* _ptr_number_Of_Implemented_Cores = NULL;
+    uint8_t* _ptr_number_Of_Praise_Events = NULL;
+    
 // constructor.
     OpenAvrilConcurrency::Global::Global()
     {
@@ -53,50 +22,66 @@
 // destructor.
     OpenAvrilConcurrency::Global::~Global()
     {
-        
+        delete _ptr_number_Of_Implemented_Cores;
+        delete _ptr_number_Of_Praise_Events;
     }
 
 // public.
-    void OpenAvrilConcurrency::Global::initialise()
+    // dynamic.
+    void OpenAvrilConcurrency::Global::initialise_number_Of_Implemented_Cores(uint8_t* newINITIALISED_Value)
     {
-        initialise_number_Of_Implemented_Cores();
-        initialise_number_Of_Praise_Events();
+        stat_set_number_Of_Implemented_Cores(newINITIALISED_Value);
     }
-    // get.
+    void OpenAvrilConcurrency::Global::initialise_number_Of_Praise_Events(uint8_t* newINITIALISED_Value)
+    {
+        stat_set_number_Of_Praise_Events(newINITIALISED_Value);
+    }
+        // get.
     uint8_t OpenAvrilConcurrency::Global::get_number_Of_Implemented_Cores()
     {
-        return _number_Of_Implemented_Cores;
+        return stat_get_number_Of_Implemented_Cores();
     }
-    uint8_t OpenAvrilConcurrency::Global::get_number_Of_Praise_Events()
+    uint8_t OpenAvrilConcurrency::Global::_get_number_Of_Praise_Events()
     {
-        return 0;
+        return stat_get_number_Of_Praise_Events();
     }
-    // set.
+        // set.
+    // static.
+        // get.
+        // set.
 
 // private.
-    void OpenAvrilConcurrency::Global::create_number_Of_Implemented_Cores()
+    // dynamic.
+        // get.
+        // set.
+    // static.
+    void OpenAvrilConcurrency::Global::create_number_Of_Implemented_Cores(uint8_t* newDEFAULT_Value)
     {
-        set_number_Of_Implemented_Cores(uint8_t(255));
+        stat_set_number_Of_Implemented_Cores(new uint8_t(UINT8_MAX));
+        while(stat_get_number_Of_Implemented_Cores() == NULL) { }
+        stat_set_number_Of_Implemented_Cores(newDEFAULT_Value);
     }
-    void OpenAvrilConcurrency::Global::create_number_Of_Praise_Events()
+    void OpenAvrilConcurrency::Global::create_number_Of_Praise_Events(uint8_t* newDEFAULT_Value)
     {
-        set_number_Of_Praise_Events(uint8_t(255));
+        stat_set_number_Of_Implemented_Cores(new uint8_t(UINT8_MAX));
+        while (stat_get_number_Of_Praise_Events() == NULL) {}
+        stat_set_number_Of_Praise_Events(newDEFAULT_Value);
     }
-    void OpenAvrilConcurrency::Global::initialise_number_Of_Implemented_Cores()
+        // get.
+    uint8_t OpenAvrilConcurrency::Global::stat_get_number_Of_Implemented_Cores()
     {
-        set_number_Of_Implemented_Cores(uint8_t(4));//NUMBER OF THREADS
+        return *_ptr_number_Of_Implemented_Cores;
     }
-    void OpenAvrilConcurrency::Global::initialise_number_Of_Praise_Events()
+    uint8_t OpenAvrilConcurrency::Global::stat_get_number_Of_Praise_Events()
     {
-        set_number_Of_Praise_Events(uint8_t(1));//NUMBER OF PRAISES
+        return *_ptr_number_Of_Praise_Events;
     }
-    // get.
-    // set.
-    void OpenAvrilConcurrency::Global::set_number_Of_Implemented_Cores(uint8_t newValue)
-{
-    _number_Of_Implemented_Cores = newValue;
-}
-    void OpenAvrilConcurrency::Global::set_number_Of_Praise_Events(uint8_t newValue)
-{
-    _number_Of_Praise_Events = newValue;
-}
+        // set.
+    void OpenAvrilConcurrency::Global::stat_set_number_Of_Implemented_Cores(uint8_t* newValue)
+    {
+        *_ptr_number_Of_Implemented_Cores = *newValue;
+    }
+    void OpenAvrilConcurrency::Global::stat_set_number_Of_Praise_Events(uint8_t* newValue)
+    {
+        *_ptr_number_Of_Praise_Events = *newValue;
+    }
