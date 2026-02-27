@@ -52,6 +52,22 @@
     {
         stat_set_ptr_side_To_Write_For_array_Of_doubleBuffer_Output(!stat_get_ptr_side_To_Write_For_array_Of_doubleBuffer_Output());
     }
+    void OpenAvrilConcurrency::Data_Control::initialise_ptr_flag_isLoaded_Stack_InputAction(bool* newINITIALISED_Bool)
+    {
+        stat_set_ptr_flag_isLoaded_Stack_InputAction(newINITIALISED_Bool);
+    }
+    void OpenAvrilConcurrency::Data_Control::initialise_ptr_flag_isLoaded_Stack_OutputSend(bool* newINITIALISED_Bool)
+    {
+        stat_set_ptr_flag_isLoaded_Stack_OutputSend(newINITIALISED_Bool);
+    }
+    void OpenAvrilConcurrency::Data_Control::initialise_ptr_side_To_Write_For_array_Of_doubleBuffer_Input(uint8_t side, bool* newINITIALISED_Bool)
+    {
+        stat_set_ptr_side_To_Write_For_array_Of_doubleBuffer_Input(side, newINITIALISED_Bool);
+    }
+    void OpenAvrilConcurrency::Data_Control::initialise_ptr_side_To_Write_For_array_Of_doubleBuffer_Output(uint8_t side, bool* newINITIALISED_Bool)
+    {
+        stat_set_ptr_side_To_Write_For_array_Of_doubleBuffer_Output(side, newINITIALISED_Bool);
+    }
     void OpenAvrilConcurrency::Data_Control::pop_From_Stack_Of_Input(OpenAvrilConcurrency::Data* data, uint8_t concurrentThreadID)
     {
         class OpenAvrilConcurrency::Input* referenceForCore = data->get_ptr_Item_Of_list_Of_ptr_array_Of_buffer_Input_ReferenceForThread(concurrentThreadID);

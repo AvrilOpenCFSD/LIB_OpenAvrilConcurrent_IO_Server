@@ -43,6 +43,10 @@
     {
         create_ptr_Concurrent_Control();
     }
+    void OpenAvrilConcurrency::Concurrent::initialise_Item_On_ptr_list_Of_ptr_Algorithms_Subset(uint8_t praiseID, Object* newINITIALISED_Object)
+    {
+        stat_set_Item_On_ptr_list_Of_ptr_Algorithms_Subset(praiseID, newINITIALISED_Object);
+    }
         // get.
     OpenAvrilConcurrency::Concurrent_Control* OpenAvrilConcurrency::Concurrent::get_ptr_Concurrent_Control()
     {
@@ -130,10 +134,6 @@
         std::list<class Object*>* _ptr_list_Of_ptr_Algorithms_Subset = new std::list<class Object*>();
         while(stat_get_ptr_list_Of_ptr_Algorithms_Subset() == NULL) {}
         *_ptr_list_Of_ptr_Algorithms_Subset = { newDEFAULT_Object };//NUMBER OF PRAISES.
-        for (uint8_t praiseID = 0; praiseID < sizeof(*stat_get_ptr_list_Of_ptr_Algorithms_Subset()); praiseID++)
-        {
-            while(stat_get_ptr_Item_On_ptr_list_Of_ptr_Algorithms_Subset(praiseID) == NULL) {}
-        }
     }
     void OpenAvrilConcurrency::Concurrent::create_ptr_Concurrent_Control()
     {
