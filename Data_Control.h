@@ -2,38 +2,8 @@
 
 namespace OpenAvrilConcurrency
 {
-    class User_O
+    class Data_Control
     {
-// classes.
-
-// registers.
-
-// pointers.
-
-// constructor.
-
-// destructor.
-
-// public.
-    // dynamic.
-        // get.
-        // set.
-    // static.
-        // get.
-        // set.
-
-// private.
-    // dynamic.
-        // get.
-        // set.
-    // static.
-        // get.
-        // set.
-
-// classes.
-
-// registers.
-
     public:
 // constructor.
         Data_Control();
@@ -42,33 +12,48 @@ namespace OpenAvrilConcurrency
         virtual ~Data_Control();
 
 // public.
+    // dynamic.
         uint8_t boolToInt(bool bufferSide);
         void flip_Input_DoubleBuffer();
         void flip_Output_DoubleBuffer();
-        void Pop_From_Stack_Of_Input(class OpenAvrilConcurrency::Data* obj, uint8_t concurrentThreadID);
+        void pop_From_Stack_Of_Input(class OpenAvrilConcurrency::Data* obj, uint8_t concurrentThreadID);
         void pop_From_Stack_Of_Output(class OpenAvrilConcurrency::Data* obj);
         void push_To_Stack_Of_Input(class OpenAvrilConcurrency::Data* obj);
         void push_To_Stack_Of_Output(class OpenAvrilConcurrency::Data* obj, uint8_t concurrentThreadID);
-    // get.
-        bool get_flag_isLoaded_Stack_InputAction();
-        bool get_flag_isLoaded_Stack_OutputSend();
-        uint8_t get_STATE_Of_READ_For_list_Of_doubleBuffer_Input();
-        uint8_t get_STATE_Of_READ_For_list_Of_doubleBuffer_Output();
-        uint8_t get_STATE_Of_WRITE_For_list_Of_doubleBuffer_Input();
-        uint8_t get_STATE_Of_WRITE_For_list_Of_doubleBuffer_Output();
-    // set.
-        void set_flag_isLoaded_Stack_InputAction(bool value);
-        void set_flag_isLoaded_Stack_OutputSend(bool value);
+        // get.
+        bool get_ptr_flag_isLoaded_Stack_InputAction();
+        bool get_ptr_flag_isLoaded_Stack_OutputSend();
+        uint8_t get_STATE_Of_READ_For_array_Of_doubleBuffer_Input();
+        uint8_t get_STATE_Of_READ_For_array_Of_doubleBuffer_Output();
+        uint8_t get_STATE_Of_WRITE_For_array_Of_doubleBuffer_Input();
+        uint8_t get_STATE_Of_WRITE_For_array_Of_doubleBuffer_Output();
+        // set.
+        void set_ptr_flag_isLoaded_Stack_InputAction(bool value);
+        void set_ptr_flag_isLoaded_Stack_OutputSend(bool value);
+    // static.
+        // get.
+        // set.
 
     private:
 // private.
-        void create_flag_isLoaded_Stack_InputAction();
-        void create_flag_isLoaded_Stack_OutputSend();
-        void create_side_To_Write_For_list_Of_doubleBuffer_Input();
-        void create_side_To_Write_For_list_Of_doubleBuffer_Output();
-    // get.
-    // set.
-        void set_STATE_Of_WRITE_For_list_Of_doubleBuffer_Input(bool value);
-        void set_STATE_Of_WRITE_For_list_Of_doubleBuffer_Output(bool value);
+    // dynamic.
+    
+        // get.
+        // set.
+    // static.
+        void create_ptr_flag_isLoaded_Stack_InputAction(bool* newDEFAULT_Bool);
+        void create_ptr_flag_isLoaded_Stack_OutputSend(bool* newDEFAULT_Bool);
+        void create_ptr_side_To_Write_For_array_Of_doubleBuffer_Input(bool* newDEFAULT_Bool);
+        void create_ptr_side_To_Write_For_array_Of_doubleBuffer_Output(bool* newDEFAULT_Bool);
+        // get.
+        bool* stat_get_ptr_flag_isLoaded_Stack_InputAction();
+        bool* stat_get_ptr_flag_isLoaded_Stack_OutputSend();
+        bool* stat_get_ptr_side_To_Write_For_array_Of_doubleBuffer_Input();
+        bool* stat_get_ptr_side_To_Write_For_array_Of_doubleBuffer_Output();
+        // set.
+        void stat_set_ptr_flag_isLoaded_Stack_InputAction(bool* newPtr);
+        void stat_set_ptr_flag_isLoaded_Stack_OutputSend(bool* newPtr);
+        void stat_set_ptr_side_To_Write_For_array_Of_doubleBuffer_Input(uint8_t side, bool* newPtr);
+        void stat_set_ptr_side_To_Write_For_array_Of_doubleBuffer_Output(uint8_t side, bool* newPtr);
     };
 }

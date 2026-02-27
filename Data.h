@@ -20,18 +20,20 @@ namespace OpenAvrilConcurrency
         void initialise_Item_On_array_Of_doubleBuffer_Output(uint8_t sideRW, class OpenAvrilConcurrency::Output* newINITIALISED_Output);
         void initialise_Item_On_vector_Of_stack_Of_InputPraise(uint8_t slot, class OpenAvrilConcurrency::Input* newINITIALISED_Input);
         void initialise_Item_On_vector_Of_stack_Of_OutputPraise(uint8_t slot, class OpenAvrilConcurrency::Output* newINITIALISED_Output);
-        void initialise_Input_Registers(class OpenAvrilConcurrency::Input* newINITIALISED_Input);
-        void initialise_Registers_With_Output(class OpenAvrilConcurrency::Output* newINITIALISED_Output);
         // get.
         class Input* get_ptr_array_Of_doubleBuffer_Input_READ();
         class Input* get_ptr_array_Of_doubleBuffer_Input_WRITE();
-        class Output* get_ptr_array_Of_doubleBuffer_OutputREAD();
-        class Output* get_ptr_array_Of_doubleBuffer_OutputWRITE();
+        class Output* get_ptr_array_Of_doubleBuffer_Output_READ();
+        class Output* get_ptr_array_Of_doubleBuffer_Output_WRITE();
         class Data_Control* get_ptr_Data_Control();
         class Input* get_ptr_Item_Of_list_Of_ptr_array_Of_buffer_Input_ReferenceForThread(uint8_t threadID);
         class Output* get_ptr_Item_Of_list_Of_ptr_array_Of_buffer_Output_ReferenceForThread(uint8_t threadID);
         class Input* get_ptr_Item_On_vector_Of_stack_Of_InputPraise(uint8_t slot);
         class Output* get_ptr_Item_On_vector_Of_stack_Of_OutputPraise(uint8_t slot);
+        class std::array<class OpenAvrilConcurrency::Input*, 3>* get_ptr_array_Of_buffer_Input_ReferenceForThread();
+        class std::array<class OpenAvrilConcurrency::Output*, 3>* get_ptr_array_Of_buffer_Output_ReferenceForThread();
+        class std::vector<class OpenAvrilConcurrency::Input*>* get_ptr_vector_Of_stack_Of_InputPraise();
+        class std::vector<class OpenAvrilConcurrency::Output*>* get_ptr_vector_Of_stack_Of_OutputPraise();
         class User_I* get_ptr_User_I();
         class User_O* get_ptr_User_O();
         // set.

@@ -99,11 +99,11 @@
     {
         return stat_get_ptr_array_Of_doubleBuffer_Input_WRITE();
     }
-    OpenAvrilConcurrency::Output* OpenAvrilConcurrency::Data::get_ptr_array_Of_doubleBuffer_OutputREAD()
+    OpenAvrilConcurrency::Output* OpenAvrilConcurrency::Data::get_ptr_array_Of_doubleBuffer_Output_READ()
     {
         return stat_ptr_array_Of_doubleBuffer_Output_READ();
     }
-    OpenAvrilConcurrency::Output* OpenAvrilConcurrency::Data::get_ptr_array_Of_doubleBuffer_OutputWRITE()
+    OpenAvrilConcurrency::Output* OpenAvrilConcurrency::Data::get_ptr_array_Of_doubleBuffer_Output_WRITE()
     {
         return stat_ptr_array_Of_doubleBuffer_Output_WRITE();
     }
@@ -119,19 +119,35 @@
     {
         return stat_get_ptr_Item_Of_list_Of_ptr_array_Of_buffer_Output_ReferenceForThread(threadID);
     }
-    class OpenAvrilConcurrency::Input* OpenAvrilConcurrency::Data::get_ptr_Item_On_vector_Of_stack_Of_InputPraise(uint8_t slot)
+    OpenAvrilConcurrency::Input* OpenAvrilConcurrency::Data::get_ptr_Item_On_vector_Of_stack_Of_InputPraise(uint8_t slot)
     {
         return stat_get_ptr_Item_On_vector_Of_stack_Of_InputPraise(slot);
     }
-    class OpenAvrilConcurrency::Output* OpenAvrilConcurrency::Data::get_ptr_Item_On_vector_Of_stack_Of_OutputPraise(uint8_t slot)
+    OpenAvrilConcurrency::Output* OpenAvrilConcurrency::Data::get_ptr_Item_On_vector_Of_stack_Of_OutputPraise(uint8_t slot)
     {
         return stat_get_ptr_Item_On_vector_Of_stack_Of_OutputPraise(slot);
     }
-    class OpenAvrilConcurrency::User_I* OpenAvrilConcurrency::Data::get_ptr_User_I()
+    std::array<class OpenAvrilConcurrency::Input*, 3>* OpenAvrilConcurrency::Data::get_ptr_array_Of_buffer_Input_ReferenceForThread()
+    {
+        return _ptr_array_Of_buffer_Input_ReferenceForThread;
+    }
+    std::array<class OpenAvrilConcurrency::Output*, 3>* OpenAvrilConcurrency::Data::get_ptr_array_Of_buffer_Output_ReferenceForThread()
+    {
+        return _ptr_array_Of_buffer_Output_ReferenceForThread;
+    }
+    std::vector<class OpenAvrilConcurrency::Input*>* OpenAvrilConcurrency::Data::get_ptr_vector_Of_stack_Of_InputPraise()
+    {
+        return _ptr_vector_Of_stack_Of_InputPraise;
+    }
+    std::vector<class OpenAvrilConcurrency::Output*>* OpenAvrilConcurrency::Data::get_ptr_vector_Of_stack_Of_OutputPraise()
+    {
+        return _ptr_vector_Of_stack_Of_OutputPraise;
+    }
+    OpenAvrilConcurrency::User_I* OpenAvrilConcurrency::Data::get_ptr_User_I()
     {
         return stat_get_ptr_User_I();
     }
-    class OpenAvrilConcurrency::User_O* OpenAvrilConcurrency::Data::get_ptr_User_O()
+    OpenAvrilConcurrency::User_O* OpenAvrilConcurrency::Data::get_ptr_User_O()
     {
         return stat_get_ptr_User_O();
     }
