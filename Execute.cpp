@@ -40,7 +40,7 @@
     OpenAvrilConcurrency::Execute::Execute()
     {
         std::thread* newDEFAULT_Thread = new std::thread(NULL);
-        create_list_Of_Threads(newDEFAULT_Thread);
+        stat_create_list_Of_Threads(newDEFAULT_Thread);
     }
 
 // desructor.
@@ -106,13 +106,13 @@
     // set.
 
 // private.
-    void OpenAvrilConcurrency::Execute::create_list_Of_Threads(std::thread* newDEFAULT_Thread)
+    void OpenAvrilConcurrency::Execute::stat_create_list_Of_Threads(std::thread* newDEFAULT_Thread)
     {
         std::list<std::thread*> _list_Of_Threads = { newDEFAULT_Thread, newDEFAULT_Thread, newDEFAULT_Thread, newDEFAULT_Thread };//NUMBER OF THREADS
-        create_ptr_list_Of_Threads();
+        stat_create_ptr_list_Of_Threads();
         while (get_ptr_list_Of_Threads() == NULL) {}
     }
-    void OpenAvrilConcurrency::Execute::create_ptr_list_Of_Threads()
+    void OpenAvrilConcurrency::Execute::stat_create_ptr_list_Of_Threads()
     {
         set_ptr_list_Of_Threads();
     }

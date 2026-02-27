@@ -1,63 +1,51 @@
 #include "pch.h"
-// classes.
-
-// registers.
 
 // pointers.
-
-// constructor.
-
-// destructor.
-
-// public.
-	// dynamic.
-		// get.
-		// set.
-	// static.
-		// get.
-		// set.
-
-// private.
-	// dynamic.
-		// get.
-		// set.
-	// static.
-		// get.
-		// set.
-// calsses.
-
-// registers.
-	OpenAvrilConcurrency::Praise0_Input* ptr_Praise0_Input = NULL;
-
+	// classes.
+	OpenAvrilConcurrency::Praise0_Input* _ptr_Praise0_Input = NULL;
+	// registers.
+	
 // constructor.
 	OpenAvrilConcurrency::User_I::User_I()
 	{
-		create_Praise0_Input();
+		stat_create_ptr_Praise0_Input();
 	}
 
 // destructor.
 	OpenAvrilConcurrency::User_I::~User_I()
 	{
-		delete ptr_Praise0_Input;
+		delete _ptr_Praise0_Input;
 	}
 
 // public.
-	// get.
-	OpenAvrilConcurrency::Praise0_Input* OpenAvrilConcurrency::User_I::get_Praise0_Input()
+	// dynamic.
+		// get.
+	OpenAvrilConcurrency::Praise0_Input* OpenAvrilConcurrency::User_I::get_ptr_Praise0_Input()
 	{
-		return ptr_Praise0_Input;
+		return _ptr_Praise0_Input;
 	}
-	// set.
+		// set.
+	// static.
+		// get.
+		// set.
 
 // private.
-	void OpenAvrilConcurrency::User_I::create_Praise0_Input()
+	// dynamic.
+		// get.
+		// set.
+	// static.
+	void OpenAvrilConcurrency::User_I::stat_create_ptr_Praise0_Input()
 	{
-		set_Praise0_Input(new class OpenAvrilConcurrency::Praise0_Input());
-		while (get_Praise0_Input() == NULL) {}
+		stat_set_ptr_Praise0_Input(new class OpenAvrilConcurrency::Praise0_Input());
+		while (get_create_ptr_Praise0_Input() == NULL) {}
 	}
-	// get.
-	// set.
-	void OpenAvrilConcurrency::User_I::set_Praise0_Input(OpenAvrilConcurrency::Praise0_Input* praise0_I)
+		// get.
+	OpenAvrilConcurrency::Praise0_Input* OpenAvrilConcurrency::User_I::get_create_ptr_Praise0_Input()
 	{
-		ptr_Praise0_Input = praise0_I;
+		return _ptr_Praise0_Input;
+	}
+		// set.
+	void OpenAvrilConcurrency::User_I::stat_set_ptr_Praise0_Input(OpenAvrilConcurrency::Praise0_Input* praise0_I)
+	{
+		*_ptr_Praise0_Input = *praise0_I;
 	}

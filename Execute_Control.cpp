@@ -36,8 +36,8 @@
 // constructor.
 	OpenAvrilConcurrency::Execute_Control::Execute_Control(uint8_t number_Implemented_Cores)
 	{
-		create_flag_is_SystemInitialised();
-		create_list_Of_flag_ThreadInitialised();
+		stat_create_flag_is_SystemInitialised();
+		stat_create_list_Of_flag_ThreadInitialised();
 	}
 
 // destructor.
@@ -81,17 +81,17 @@
 	}
 
 // private.
-	void OpenAvrilConcurrency::Execute_Control::create_flag_is_SystemInitialised()
+	void OpenAvrilConcurrency::Execute_Control::stat_create_flag_is_SystemInitialised()
 	{
 		set_flag_is_SystemInitialised(new bool(false));
 	}
-	void OpenAvrilConcurrency::Execute_Control::create_list_Of_flag_ThreadInitialised()
+	void OpenAvrilConcurrency::Execute_Control::stat_create_list_Of_flag_ThreadInitialised()
 	{
 		bool newTemp = new bool(false);
 		std::list<bool> _list_Of_flag_ThreadInitialised = { newTemp, newTemp, newTemp, newTemp };//NUMBER OF CONCURRENT THREADS
-		create_ptr_list_Of_flag_ThreadInitialised();
+		stat_create_ptr_list_Of_flag_ThreadInitialised();
 	}
-	void OpenAvrilConcurrency::Execute_Control::create_ptr_list_Of_flag_ThreadInitialised()
+	void OpenAvrilConcurrency::Execute_Control::stat_create_ptr_list_Of_flag_ThreadInitialised()
 	{
 		std::list<bool>* _ptr_list_Of_flag_ThreadInitialised = new std::list<bool>;
 		while (get_ptr_list_Of_flag_ThreadInitialised() == NULL) {}

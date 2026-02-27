@@ -16,21 +16,21 @@
 // constructor.
     OpenAvrilConcurrency::Data::Data()
     {
-        create_ptr_User_I();
-        create_ptr_User_O();
+        stat_create_ptr_User_I();
+        stat_create_ptr_User_O();
        
         OpenAvrilConcurrency::Input* newDEFAULT_Input = new class OpenAvrilConcurrency::Input();
         while (newDEFAULT_Input == NULL) {}
-        create_ptr_array_Of_buffer_Input_ReferenceForThread(newDEFAULT_Input);
-        create_ptr_array_Of_doubleBuffer_Input(newDEFAULT_Input);
-        create_ptr_vector_Of_stack_Of_InputPraise(newDEFAULT_Input);
+        stat_create_ptr_array_Of_buffer_Input_ReferenceForThread(newDEFAULT_Input);
+        stat_create_ptr_array_Of_doubleBuffer_Input(newDEFAULT_Input);
+        stat_create_ptr_vector_Of_stack_Of_InputPraise(newDEFAULT_Input);
         delete newDEFAULT_Input;
         
         OpenAvrilConcurrency::Output* newDEFAULT_output = new class OpenAvrilConcurrency::Output();
         while (newDEFAULT_output == NULL) {}
-        create_ptr_array_Of_buffer_Output_ReferenceForThread(newDEFAULT_output);
-        create_ptr_array_Of_doubleBuffer_Output(newDEFAULT_output);
-        create_ptr_vector_Of_stack_Of_OutputPraise(newDEFAULT_output);
+        stat_create_ptr_array_Of_buffer_Output_ReferenceForThread(newDEFAULT_output);
+        stat_create_ptr_array_Of_doubleBuffer_Output(newDEFAULT_output);
+        stat_create_ptr_vector_Of_stack_Of_OutputPraise(newDEFAULT_output);
         delete newDEFAULT_output;
     }
 
@@ -52,7 +52,7 @@
     // dynamic.
     void OpenAvrilConcurrency::Data::initialise_Control()
     {
-        create_ptr_Data_Control();
+        stat_create_ptr_Data_Control();
     }
     void OpenAvrilConcurrency::Data::initialise_Item_On_array_Of_ptr_array_Of_buffer_Input_ReferenceForThread(uint8_t concurrentThreadID, OpenAvrilConcurrency::Input* newINITIALISED_Input)
     {
@@ -161,54 +161,54 @@
         // get.
         // set.
     // static.
-    void OpenAvrilConcurrency::Data::create_ptr_array_Of_doubleBuffer_Input(OpenAvrilConcurrency::Input* newDEFAULT_Input)
+    void OpenAvrilConcurrency::Data::stat_create_ptr_array_Of_doubleBuffer_Input(OpenAvrilConcurrency::Input* newDEFAULT_Input)
     {
         std::array<class OpenAvrilConcurrency::Input*, 2>* _ptr_array_Of_doubleBuffer_Input = new std::array<class OpenAvrilConcurrency::Input*, 2>();
         while (stat_get_ptr_doubleBuffer_Input() == NULL) {}
         *_ptr_array_Of_doubleBuffer_Input = { newDEFAULT_Input, newDEFAULT_Input };
     }
-    void OpenAvrilConcurrency::Data::create_ptr_array_Of_doubleBuffer_Output(OpenAvrilConcurrency::Output* newDEFAULT_Output)
+    void OpenAvrilConcurrency::Data::stat_create_ptr_array_Of_doubleBuffer_Output(OpenAvrilConcurrency::Output* newDEFAULT_Output)
     {
         std::array<class OpenAvrilConcurrency::Output*, 2>* _ptr_array_Of_doubleBuffer_Output = new std::array<class OpenAvrilConcurrency::Output*, 2>();
         while (stat_get_ptr_array_Of_doubleBuffer_Output() == NULL) {}
         *_ptr_array_Of_doubleBuffer_Output = { newDEFAULT_Output, newDEFAULT_Output };
     }
-    void OpenAvrilConcurrency::Data::create_ptr_Data_Control()
+    void OpenAvrilConcurrency::Data::stat_create_ptr_Data_Control()
     {
         stat_set_ptr_Data_Control(new class OpenAvrilConcurrency::Data_Control());
         while (stat_get_ptr_Data_Control() == NULL) {}
 
     }
-    void OpenAvrilConcurrency::Data::create_ptr_array_Of_buffer_Input_ReferenceForThread(OpenAvrilConcurrency::Input* newDEFAULT_Input)
+    void OpenAvrilConcurrency::Data::stat_create_ptr_array_Of_buffer_Input_ReferenceForThread(OpenAvrilConcurrency::Input* newDEFAULT_Input)
     {
         std::array<class OpenAvrilConcurrency::Input*, 3>* _ptr_array_Of_doubleBuffer_Input = new std::array<class OpenAvrilConcurrency::Input*, 3>();//NUMBER Of CONCURRENT THREADS.
         while (stat_get_ptr_buffer_Input_ReferenceForThread() == NULL) {}
         *_ptr_array_Of_doubleBuffer_Input = { newDEFAULT_Input, newDEFAULT_Input, newDEFAULT_Input };//NUMBER OF CONCURRENT THREADS.
     }
-    void OpenAvrilConcurrency::Data::create_ptr_array_Of_buffer_Output_ReferenceForThread(OpenAvrilConcurrency::Output* newDEFAULT_Output)
+    void OpenAvrilConcurrency::Data::stat_create_ptr_array_Of_buffer_Output_ReferenceForThread(OpenAvrilConcurrency::Output* newDEFAULT_Output)
     {
         std::array<class OpenAvrilConcurrency::Output*, 3>* _ptr_array_Of_doubleBuffer_Output = new std::array<class OpenAvrilConcurrency::Output*, 3>();//NUMBER OF CONCURRENT THREADS.
         while (stat_get_ptr_buffer_Output_ReferenceForThread() == NULL) {}
         *_ptr_array_Of_doubleBuffer_Output = { newDEFAULT_Output, newDEFAULT_Output, newDEFAULT_Output };//NUMBER OF CONCURRENT THREADS.
     }
-    void OpenAvrilConcurrency::Data::create_ptr_vector_Of_stack_Of_InputPraise(OpenAvrilConcurrency::Input* newDEFAULT_Input)
+    void OpenAvrilConcurrency::Data::stat_create_ptr_vector_Of_stack_Of_InputPraise(OpenAvrilConcurrency::Input* newDEFAULT_Input)
     {
         std::vector<class OpenAvrilConcurrency::Input*>* _ptr_vector_Of_stack_Of_InputPraise = new std::vector<class OpenAvrilConcurrency::Input*>();
         while (stat_get_ptr_vector_stack_Of_InputPraise() == NULL) { }
         *_ptr_vector_Of_stack_Of_InputPraise = { newDEFAULT_Input };
     }
-    void OpenAvrilConcurrency::Data::create_ptr_vector_Of_stack_Of_OutputPraise(OpenAvrilConcurrency::Output* newDEFAULT_Output)
+    void OpenAvrilConcurrency::Data::stat_create_ptr_vector_Of_stack_Of_OutputPraise(OpenAvrilConcurrency::Output* newDEFAULT_Output)
     {
         std::vector<class OpenAvrilConcurrency::Output*>* _ptr_vector_Of_stack_Of_OutputPraise = new std::vector<class OpenAvrilConcurrency::Output*>();
         while (stat_get_ptr_vector_stack_Of_OutputPraise() == NULL) { }
         *_ptr_vector_Of_stack_Of_OutputPraise = { newDEFAULT_Output };
     }
-    void OpenAvrilConcurrency::Data::create_ptr_User_I()
+    void OpenAvrilConcurrency::Data::stat_create_ptr_User_I()
     {
         stat_set_ptr_User_I(new class OpenAvrilConcurrency::User_I());
         while (stat_get_ptr_User_I() == NULL) {}
     }
-    void OpenAvrilConcurrency::Data::create_ptr_User_O()
+    void OpenAvrilConcurrency::Data::stat_create_ptr_User_O()
     {
         stat_set_ptr_User_O(new class OpenAvrilConcurrency::User_O());
         while (stat_get_ptr_User_O() == NULL) {}

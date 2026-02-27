@@ -33,7 +33,7 @@ namespace OpenAvrilConcurrency
 		Praise0_Output();
 		virtual ~Praise0_Output();
 
-		void create_output_Value();
+		void stat_create_output_Value();
 
 		double get_output_Value();
 

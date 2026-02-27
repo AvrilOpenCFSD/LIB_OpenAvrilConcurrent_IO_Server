@@ -28,10 +28,10 @@ namespace OpenAvrilConcurrency
         // get.
         // set.
     // static.
-        static void create_ptr_Algorithms();
-        static void create_ptr_Data();
-        static void create_ptr_Execute();
-        static void create_ptr_Global();
+        static void stat_create_ptr_Algorithms();
+        static void stat_create_ptr_Data();
+        static void stat_create_ptr_Execute();
+        static void stat_create_ptr_Global();
         // get.
         static class Algorithms* stat_get_ptr_Algorithms();
         static class Data* stat_get_ptr_Data();

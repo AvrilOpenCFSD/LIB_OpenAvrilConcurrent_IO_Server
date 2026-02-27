@@ -27,7 +27,7 @@ namespace OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtSERVER
         // get.
         // set.
     // static.
-        static void create_ptr_LaunchConcurrency();
+        static void stat_create_ptr_LaunchConcurrency();
         // get.
         static class LaunchEnableForConcurrentThreadsAt_SERVER* stat_get_ptr_LaunchConcurrency();
         // set.

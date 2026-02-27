@@ -9,7 +9,7 @@
 	OpenAvrilConcurrency::User_Alg::User_Alg()
 	{
 		std::cout << "entered => User_Alg()" << std::endl;
-		create_ptr_Praise0_Algorithm();
+		stat_create_ptr_Praise0_Algorithm();
 		std::cout << "exiting => User_Alg()" << std::endl;
 	}
 
@@ -36,7 +36,7 @@
 		// get.
 		// set.
 	// static.
-	void OpenAvrilConcurrency::User_Alg::create_ptr_Praise0_Algorithm()
+	void OpenAvrilConcurrency::User_Alg::stat_create_ptr_Praise0_Algorithm()
 	{
 		stat_set_ptr_Praise0_Algorithm(new class OpenAvrilConcurrency::Praise0_Algorithm());
 		while (stat_get_ptr_Praise0_Algorithm() == NULL) {}

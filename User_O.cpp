@@ -35,7 +35,7 @@
 // constructor.
 	OpenAvrilConcurrency::User_O::User_O()
 	{
-		create_Praise0_Output();
+		stat_create_Praise0_Output();
 	}
 
 // destructor.
@@ -53,7 +53,7 @@
 	// set.
 
 // private.
-	void OpenAvrilConcurrency::User_O::create_Praise0_Output()
+	void OpenAvrilConcurrency::User_O::stat_create_Praise0_Output()
 	{
 		set_Praise0_Output(new class OpenAvrilConcurrency::Praise0_Output());
 		while (get_Praise0_Output() == NULL) {}

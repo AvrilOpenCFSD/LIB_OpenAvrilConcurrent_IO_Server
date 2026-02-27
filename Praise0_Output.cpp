@@ -28,7 +28,7 @@
 
 	OpenAvrilConcurrency::Praise0_Output::Praise0_Output()
 	{
-		create_output_Value();
+		stat_create_output_Value();
 	}
 
 	OpenAvrilConcurrency::Praise0_Output::~Praise0_Output()
@@ -36,7 +36,7 @@
 
 	}
 
-	void OpenAvrilConcurrency::Praise0_Output::create_output_Value()
+	void OpenAvrilConcurrency::Praise0_Output::stat_create_output_Value()
 	{
 
 	}

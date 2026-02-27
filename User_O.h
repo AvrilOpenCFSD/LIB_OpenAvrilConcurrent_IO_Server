@@ -52,7 +52,7 @@ namespace OpenAvrilConcurrency
 
 	private:
 // private.
-		void create_Praise0_Output();
+		void stat_create_Praise0_Output();
 	// get.
 	// set.
 		void set_Praise0_Output(class Praise0_Output* praise0_O);

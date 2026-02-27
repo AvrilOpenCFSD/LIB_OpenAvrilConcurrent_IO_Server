@@ -32,10 +32,10 @@ namespace OpenAvrilCLIDWriteEnableForThreadsAtSERVERINPUTACTION
         // get.
         // set.
     // static.
-        static void create_2bit_flag_write_IDLE(std::array<bool, 2>* newDEAFULT_FlagSet);
-        static void create_2bit_flag_write_WAIT(std::array<bool, 2>* newDEAFULT_FlagSet);
-        static void create_2bit_flag_write_WRITE(std::array<bool, 2>* newDEAFULT_FlagSet);
-        static void create_number_Of_Implemented_Threads(uint8_t* newDEFAULT_Value);
+        static void stat_create_2bit_flag_write_IDLE(std::array<bool, 2>* newDEAFULT_FlagSet);
+        static void stat_create_2bit_flag_write_WAIT(std::array<bool, 2>* newDEAFULT_FlagSet);
+        static void stat_create_2bit_flag_write_WRITE(std::array<bool, 2>* newDEAFULT_FlagSet);
+        static void stat_create_number_Of_Implemented_Threads(uint8_t* newDEFAULT_Value);
         // get.
         static std::array<bool, 2>* stat_get_ptr_2bit_flag_write_IDLE();
         static std::array<bool, 2>* stat_get_ptr_2bit_flag_write_WAIT();

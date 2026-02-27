@@ -29,8 +29,8 @@ namespace OpenAvrilConcurrency
         // get.
         // set.
     // static.
-        static void create_number_Of_Implemented_Cores(uint8_t* newDEFAULT_Value);
-        static void create_number_Of_Praise_Events(uint8_t* newDEFAULT_Value);
+        static void stat_create_number_Of_Implemented_Cores(uint8_t* newDEFAULT_Value);
+        static void stat_create_number_Of_Praise_Events(uint8_t* newDEFAULT_Value);
         // get.
         static  uint8_t stat_get_number_Of_Implemented_Cores();
         static uint8_t stat_get_number_Of_Praise_Events();

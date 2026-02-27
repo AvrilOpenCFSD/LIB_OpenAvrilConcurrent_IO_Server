@@ -37,12 +37,12 @@
 	
 	}
 
-	void OpenAvrilConcurrency::Praise0_Input::create_input_Value_A()
+	void OpenAvrilConcurrency::Praise0_Input::stat_create_input_Value_A()
 	{
 		set_input_Value_A(double(0.0));
 	}
 
-	void OpenAvrilConcurrency::Praise0_Input::create_input_Value_B()
+	void OpenAvrilConcurrency::Praise0_Input::stat_create_input_Value_B()
 	{
 		set_input_Value_B(double(0.0));
 	}

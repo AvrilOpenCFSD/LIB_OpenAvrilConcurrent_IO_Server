@@ -47,15 +47,15 @@ namespace OpenAvrilConcurrency
         // get.
         // set.
     // static.
-        static void create_ptr_array_Of_doubleBuffer_Input(Input* newDEFAULT_Input);
-        static void create_ptr_array_Of_doubleBuffer_Output(Output* newDEFAULT_Input);
-        static void create_ptr_Data_Control();
-        static void create_ptr_array_Of_buffer_Input_ReferenceForThread(Input* newDEFAULT_Input);
-        static void create_ptr_array_Of_buffer_Output_ReferenceForThread(Output* newDEFAULT_Output;
-        static void create_ptr_vector_Of_stack_Of_InputPraise(Input* newDEFAULT_Input);
-        static void create_ptr_vector_Of_stack_Of_OutputPraise(Output* newDEFAULT_Output);
-        static void create_ptr_User_I();
-        static  void create_ptr_User_O();
+        static void stat_create_ptr_array_Of_doubleBuffer_Input(Input* newDEFAULT_Input);
+        static void stat_create_ptr_array_Of_doubleBuffer_Output(Output* newDEFAULT_Input);
+        static void stat_create_ptr_Data_Control();
+        static void stat_create_ptr_array_Of_buffer_Input_ReferenceForThread(Input* newDEFAULT_Input);
+        static void stat_create_ptr_array_Of_buffer_Output_ReferenceForThread(Output* newDEFAULT_Output;
+        static void stat_create_ptr_vector_Of_stack_Of_InputPraise(Input* newDEFAULT_Input);
+        static void stat_create_ptr_vector_Of_stack_Of_OutputPraise(Output* newDEFAULT_Output);
+        static void stat_create_ptr_User_I();
+        static  void stat_create_ptr_User_O();
         // get.
         static class Input* stat_get_ptr_array_Of_doubleBuffer_Input_READ();
         static class Input* stat_get_ptr_array_Of_doubleBuffer_Input_WRITE();

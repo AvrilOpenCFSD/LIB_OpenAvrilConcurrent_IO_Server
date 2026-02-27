@@ -55,9 +55,9 @@ namespace OpenAvrilConcurrency
 
     private:
 // private.
-        void create_flag_is_SystemInitialised();
-        void create_list_Of_flag_ThreadInitialised();
-        void create_ptr_list_Of_flag_ThreadInitialised();
+        void stat_create_flag_is_SystemInitialised();
+        void stat_create_list_Of_flag_ThreadInitialised();
+        void stat_create_ptr_list_Of_flag_ThreadInitialised();
     // get.
     // set.
         void set_flag_is_SystemInitialised(bool newFlag);

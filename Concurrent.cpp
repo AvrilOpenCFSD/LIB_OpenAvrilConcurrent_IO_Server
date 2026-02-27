@@ -11,7 +11,7 @@
     {
         std::cout << "entered => OpenAvrilConcurrency::Concurrent::Concurrent()" << std::endl;
         Object* newDEFAULT_Object;
-        create_list_Of_ptr_list_Of_ptr_Algorithms_Subset(newDEFAULT_Object);
+        stat_create_list_Of_ptr_list_Of_ptr_Algorithms_Subset(newDEFAULT_Object);
         delete newDEFAULT_Object;
     }
 
@@ -41,7 +41,7 @@
     }
     void OpenAvrilConcurrency::Concurrent::initialise_Control()
     {
-        create_ptr_Concurrent_Control();
+        stat_create_ptr_Concurrent_Control();
     }
     void OpenAvrilConcurrency::Concurrent::initialise_Item_On_ptr_list_Of_ptr_Algorithms_Subset(uint8_t praiseID, Object* newINITIALISED_Object)
     {
@@ -129,13 +129,13 @@
         // get.
         // set.
     // static.
-    void OpenAvrilConcurrency::Concurrent::create_list_Of_ptr_list_Of_ptr_Algorithms_Subset(OpenAvrilConcurrency::Object* newDEFAULT_Object)
+    void OpenAvrilConcurrency::Concurrent::stat_create_list_Of_ptr_list_Of_ptr_Algorithms_Subset(OpenAvrilConcurrency::Object* newDEFAULT_Object)
     {
         std::list<class Object*>* _ptr_list_Of_ptr_Algorithms_Subset = new std::list<class Object*>();
         while(stat_get_ptr_list_Of_ptr_Algorithms_Subset() == NULL) {}
         *_ptr_list_Of_ptr_Algorithms_Subset = { newDEFAULT_Object };//NUMBER OF PRAISES.
     }
-    void OpenAvrilConcurrency::Concurrent::create_ptr_Concurrent_Control()
+    void OpenAvrilConcurrency::Concurrent::stat_create_ptr_Concurrent_Control()
     {
         OpenAvrilConcurrency::Concurrent_Control* _ptr_Concurrent_Control = new class OpenAvrilConcurrency::Concurrent_Control();
         while (stat_get_ptr_Concurrent_Control() == NULL) {}

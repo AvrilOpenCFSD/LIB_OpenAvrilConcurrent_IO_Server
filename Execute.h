@@ -57,8 +57,8 @@ namespace OpenAvrilConcurrency
 
     private:
 // privte.
-        void create_list_Of_Threads(std::thread* newDEFAULT_Thread);
-        void create_ptr_list_Of_Threads();
+        void stat_create_list_Of_Threads(std::thread* newDEFAULT_Thread);
+        void stat_create_ptr_list_Of_Threads();
     // get.
         std::list<std::thread*> get_list_Of_Threads();
         std::list<std::thread*>* get_ptr_list_Of_Threads();

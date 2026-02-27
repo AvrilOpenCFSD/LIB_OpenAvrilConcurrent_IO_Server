@@ -15,8 +15,8 @@
 // constructor.
     OpenAvrilConcurrency::Global::Global()
     {
-        create_number_Of_Implemented_Cores();
-        create_number_Of_Praise_Events();
+        stat_create_number_Of_Implemented_Cores();
+        stat_create_number_Of_Praise_Events();
     }
 
 // destructor.
@@ -55,13 +55,13 @@
         // get.
         // set.
     // static.
-    void OpenAvrilConcurrency::Global::create_number_Of_Implemented_Cores(uint8_t* newDEFAULT_Value)
+    void OpenAvrilConcurrency::Global::stat_create_number_Of_Implemented_Cores(uint8_t* newDEFAULT_Value)
     {
         stat_set_number_Of_Implemented_Cores(new uint8_t(UINT8_MAX));
         while(stat_get_number_Of_Implemented_Cores() == NULL) { }
         stat_set_number_Of_Implemented_Cores(newDEFAULT_Value);
     }
-    void OpenAvrilConcurrency::Global::create_number_Of_Praise_Events(uint8_t* newDEFAULT_Value)
+    void OpenAvrilConcurrency::Global::stat_create_number_Of_Praise_Events(uint8_t* newDEFAULT_Value)
     {
         stat_set_number_Of_Implemented_Cores(new uint8_t(UINT8_MAX));
         while (stat_get_number_Of_Praise_Events() == NULL) {}

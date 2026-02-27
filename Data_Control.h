@@ -45,19 +45,19 @@ namespace OpenAvrilConcurrency
         // get.
         // set.
     // static.
-        void create_ptr_flag_isLoaded_Stack_InputAction(bool* newINITIALISED_Bool);
-        void create_ptr_flag_isLoaded_Stack_OutputSend(bool* newINITIALISED_Bool);
-        void create_ptr_side_To_Write_For_array_Of_doubleBuffer_Input(bool* newINITIALISED_Bool);
-        void create_ptr_side_To_Write_For_array_Of_doubleBuffer_Output(bool* newINITIALISED_Bool);
+        static void stat_create_ptr_flag_isLoaded_Stack_InputAction(bool* newINITIALISED_Bool);
+        static void stat_create_ptr_flag_isLoaded_Stack_OutputSend(bool* newINITIALISED_Bool);
+        static void stat_create_ptr_side_To_Write_For_array_Of_doubleBuffer_Input(bool* newINITIALISED_Bool);
+        static void stat_create_ptr_side_To_Write_For_array_Of_doubleBuffer_Output(bool* newINITIALISED_Bool);
         // get.
-        bool* stat_get_ptr_flag_isLoaded_Stack_InputAction();
-        bool* stat_get_ptr_flag_isLoaded_Stack_OutputSend();
-        bool* stat_get_ptr_side_To_Write_For_array_Of_doubleBuffer_Input();
-        bool* stat_get_ptr_side_To_Write_For_array_Of_doubleBuffer_Output();
+        static bool* stat_get_ptr_flag_isLoaded_Stack_InputAction();
+        static bool* stat_get_ptr_flag_isLoaded_Stack_OutputSend();
+        static bool* stat_get_ptr_side_To_Write_For_array_Of_doubleBuffer_Input();
+        static bool* stat_get_ptr_side_To_Write_For_array_Of_doubleBuffer_Output();
         // set.
-        void stat_set_ptr_flag_isLoaded_Stack_InputAction(bool* newPtr);
-        void stat_set_ptr_flag_isLoaded_Stack_OutputSend(bool* newPtr);
-        void stat_set_ptr_side_To_Write_For_array_Of_doubleBuffer_Input(uint8_t side, bool* newPtr);
-        void stat_set_ptr_side_To_Write_For_array_Of_doubleBuffer_Output(uint8_t side, bool* newPtr);
+        static void stat_set_ptr_flag_isLoaded_Stack_InputAction(bool* newPtr);
+        static void stat_set_ptr_flag_isLoaded_Stack_OutputSend(bool* newPtr);
+        static void stat_set_ptr_side_To_Write_For_array_Of_doubleBuffer_Input(uint8_t side, bool* newPtr);
+        static void stat_set_ptr_side_To_Write_For_array_Of_doubleBuffer_Output(uint8_t side, bool* newPtr);
     };
 }

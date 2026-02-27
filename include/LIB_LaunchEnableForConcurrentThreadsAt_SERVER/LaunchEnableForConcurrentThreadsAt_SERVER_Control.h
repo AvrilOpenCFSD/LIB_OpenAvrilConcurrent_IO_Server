@@ -58,13 +58,13 @@ namespace OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtSERVER
         // get.
         // set.
     // static.
-        static void create_concurrentCycle_Try_CoreId_Index(uint8_t* newDEFAULT_Value);
-        static void create_flag_praisinglaunch(bool* newDEFAULT_Flagbit);
-        static void create_list_Of_launchActive_Count_For_ThreadID(uint32_t* newDEFAULT_Value);
-        static void create_list_Of_launchIdle_Count_For_ThreadID(uint32_t* newDEFAULT_Value);
-        static void create_list_Of_STATE_For_ConcurrentCore(bool* newDEFAULT_FlagBit);
-        static void create_list_for_Que_Of_CoreTolaunch();
-        static void create_new_concurrentCycle_Try_CoreId_Index(uint8_t* newDEFAULT_Value);
+        static void stat_create_concurrentCycle_Try_CoreId_Index(uint8_t* newDEFAULT_Value);
+        static void stat_create_flag_praisinglaunch(bool* newDEFAULT_Flagbit);
+        static void stat_create_list_Of_launchActive_Count_For_ThreadID(uint32_t* newDEFAULT_Value);
+        static void stat_create_list_Of_launchIdle_Count_For_ThreadID(uint32_t* newDEFAULT_Value);
+        static void stat_create_list_Of_STATE_For_ConcurrentCore(bool* newDEFAULT_FlagBit);
+        static void stat_create_list_for_Que_Of_CoreTolaunch();
+        static void stat_create_new_concurrentCycle_Try_CoreId_Index(uint8_t* newDEFAULT_Value);
         // get.
         static uint8_t* stat_ptr_get_concurrentCycle_Try_CoreId_Index();
         static bool* stat_ptr_get_flag_praisinglaunch();

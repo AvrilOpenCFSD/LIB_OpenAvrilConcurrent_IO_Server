@@ -28,8 +28,8 @@ namespace OpenAvrilConcurrency
         // get.
         // set.
     // static.
-        static  void create_ptr_list_Of_ptr_Concurrent(class Concurrent* newDEFAULT_Concurrent);
-        static void create_ptr_User_Algorithms();
+        static  void stat_create_ptr_list_Of_ptr_Concurrent(class Concurrent* newDEFAULT_Concurrent);
+        static void stat_create_ptr_User_Algorithms();
         // get.
         static class Concurrent* stat_get_Item_On_list_Of_ptr_Concurrent(uint8_t concurrentThreadID);
         std::list<class Concurrent*>* stat_get_ptr_list_Of_ptr_Concurrent();

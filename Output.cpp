@@ -38,10 +38,10 @@
 // constructor.
     OpenAvrilConcurrency::Output::Output()
     {
-        create_in_praiseEventId();
-        create_in_playerId();
+        stat_create_in_praiseEventId();
+        stat_create_in_playerId();
         Object* newDEFAULT_Object;
-        create_list_Of_Praise_In_Subsets(newDEFAULT_Object);
+        stat_create_list_Of_Praise_In_Subsets(newDEFAULT_Object);
         delete newDEFAULT_Object;
     }
 
@@ -57,7 +57,7 @@
     {
         initialise_Control();
         Object* newDEFAULT_Objcet;
-        create_list_Of_Praise_In_Subsets(newDEFAULT_Objcet);
+        stat_create_list_Of_Praise_In_Subsets(newDEFAULT_Objcet);
         initialise_list_Of_Praise_In_Subsets();
         delete newDEFAULT_Objcet;
     }
@@ -84,23 +84,23 @@
     // set.
 
     // private.
-    void OpenAvrilConcurrency::Output::create_ptr_Output_Control()
+    void OpenAvrilConcurrency::Output::stat_create_ptr_Output_Control()
     {
         set_ptr_Output_Control(new class OpenAvrilConcurrency::Output_Control());
         while (get_ptr_Output_Control() == NULL) {}
     }
-    void OpenAvrilConcurrency::Output::create_in_praiseEventId()
+    void OpenAvrilConcurrency::Output::stat_create_in_praiseEventId()
     {
         set_in_praiseEventId(255);
     }
-    void OpenAvrilConcurrency::Output::create_in_playerId()
+    void OpenAvrilConcurrency::Output::stat_create_in_playerId()
     {
         set_in_playerId(255);
     }
-    void OpenAvrilConcurrency::Output::create_list_Of_Praise_In_Subsets(OpenAvrilConcurrency::Object* newDEFAULT_Object)
+    void OpenAvrilConcurrency::Output::stat_create_list_Of_Praise_In_Subsets(OpenAvrilConcurrency::Object* newDEFAULT_Object)
     {
         std::list<OpenAvrilConcurrency::Object*> _list_Of_Praise_In_Subsets = { NULL };//NUMBER OF PRAISES.
-        create_ptr_list_Of_Praise_In_Subsets();
+        stat_create_ptr_list_Of_Praise_In_Subsets();
         while (get_ptr_list_Of_Praise_In_Subsets() == NULL) {}
         for (uint8_t praiseID = 0; praiseID < get_Lenght_Of_list_Of_Praise_In_Subsets(); praiseID++)
         {
@@ -110,7 +110,7 @@
             while (get_ptr_Item_On_list_Of_Praise_In_Subsets(praiseID) == NULL) {}
         }
     }
-    void OpenAvrilConcurrency::Output::create_ptr_list_Of_Praise_In_Subsets()
+    void OpenAvrilConcurrency::Output::stat_create_ptr_list_Of_Praise_In_Subsets()
     {
         _ptr_list_Of_Praise_In_Subsets = &_list_Of_Praise_In_Subsets;
     }

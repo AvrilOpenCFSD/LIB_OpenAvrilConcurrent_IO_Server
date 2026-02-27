@@ -55,14 +55,14 @@ namespace OpenAvrilCLIDWriteEnableForThreadsAtSERVEROUTPUTRECIEVE
         // get.
         // set.
     // static.
-        static void create_flag_praisingWrite(bool* newDEFAULT_bool);
-        static void create_list_Of_2ibt_flag_WriteState(std::array<bool, 2>* newDEFAULT_boolList);
-        static void create_list_Of_WriteActive_Count_For_ThreadId(uint32_t* newDEFAULT_uint32_t);
-        static void create_list_Of_WriteIdle_Count_For_ThreadId(uint32_t* newDEFAULT_uint32_t);
-        static void create_list_Of_WriteWait_Count_For_ThreadId(uint32_t* newDEFAULT_uint32_t);
-        static void create_new_writeCycle_Try_ThreadId_Index(uint8_t* newDEFAULT_uint8_t);
-        static void create_QUE_List_Of_ThreadToWrite(uint8_t* newDEFAULT_uint8_t);
-        static void create_writeCycle_Try_ThreadId_Index(uint8_t* newDEFAULT_uint8_t);
+        static void stat_create_flag_praisingWrite(bool* newDEFAULT_bool);
+        static void stat_create_list_Of_2ibt_flag_WriteState(std::array<bool, 2>* newDEFAULT_boolList);
+        static void stat_create_list_Of_WriteActive_Count_For_ThreadId(uint32_t* newDEFAULT_uint32_t);
+        static void stat_create_list_Of_WriteIdle_Count_For_ThreadId(uint32_t* newDEFAULT_uint32_t);
+        static void stat_create_list_Of_WriteWait_Count_For_ThreadId(uint32_t* newDEFAULT_uint32_t);
+        static void stat_create_new_writeCycle_Try_ThreadId_Index(uint8_t* newDEFAULT_uint8_t);
+        static void stat_create_QUE_List_Of_ThreadToWrite(uint8_t* newDEFAULT_uint8_t);
+        static void stat_create_writeCycle_Try_ThreadId_Index(uint8_t* newDEFAULT_uint8_t);
         // get.
         static bool* stat_get_ptr_flag_praisingWrite();
         static std::list<std::array<bool, 2>>* stat_get_ptr_list_Of_2ibt_flag_WriteState();

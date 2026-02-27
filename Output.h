@@ -53,11 +53,11 @@ namespace OpenAvrilConcurrency
         // set.
 
     // private.
-        void create_ptr_Output_Control();
-        void create_in_praiseEventId();
-        void create_in_playerId();
-        void create_list_Of_Praise_In_Subsets(Object* newDEFAULT_Object);
-        void create_ptr_list_Of_Praise_In_Subsets();
+        void stat_create_ptr_Output_Control();
+        void stat_create_in_praiseEventId();
+        void stat_create_in_playerId();
+        void stat_create_list_Of_Praise_In_Subsets(Object* newDEFAULT_Object);
+        void stat_create_ptr_list_Of_Praise_In_Subsets();
         void initialise_list_Of_Praise_In_Subsets();
         // get.
         std::list<Object*>* get_ptr_list_Of_Praise_In_Subsets();

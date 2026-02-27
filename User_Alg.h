@@ -26,7 +26,7 @@ namespace OpenAvrilConcurrency
 		// get.
 		// set.
 	// static.
-		static void create_ptr_Praise0_Algorithm();
+		static void stat_create_ptr_Praise0_Algorithm();
 		// get.
 		static class Praise0_Algorithm* stat_get_ptr_Praise0_Algorithm();
 		// set.

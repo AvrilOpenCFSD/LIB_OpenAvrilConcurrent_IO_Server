@@ -9,7 +9,7 @@
 	OpenAvrilConcurrency::Framework_Server::Framework_Server()
 	{
 		std::cout << "entered => Framework_Server::Framework_Server()" << std::endl;
-		create_ptr_Server();
+		stat_create_ptr_Server();
 		std::cout << "Created => Created Server Assembly()" << std::endl;
 	}
 
@@ -106,7 +106,7 @@
 		// get.
 		// set.
 	// static.
-	void OpenAvrilConcurrency::Framework_Server::create_ptr_Server()
+	void OpenAvrilConcurrency::Framework_Server::stat_create_ptr_Server()
 	{
 		stat_set_ptr_Server(new class OpenAvrilConcurrency::Server());
 		while (stat_get_ptr_Server() == NULL) {}

@@ -30,8 +30,8 @@ namespace OpenAvrilCLIDWriteEnableForThreadsAtSERVERINPUTACTION
         // get.
         // set.
     // static.
-        static void create_ptr_Global();
-        static void create_ptr_WriteEnable_Control();
+        static void stat_create_ptr_Global();
+        static void stat_create_ptr_WriteEnable_Control();
         // get.
         static class WriteEnableForThreadsAt_SERVERINPUTACTION_Global* stat_get_ptr_Global();
         static class WriteEnableForThreadsAt_SERVERINPUTACTION_Control* stat_get_ptr_WriteEnable_Control();

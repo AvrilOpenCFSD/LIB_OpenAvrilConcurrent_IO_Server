@@ -13,10 +13,10 @@
     OpenAvrilConcurrency::Data_Control::Data_Control()
     {
         bool* newDEFAULT_Bool = new bool(true);
-        create_ptr_flag_isLoaded_Stack_InputAction(newDEFAULT_Bool);
-        create_ptr_flag_isLoaded_Stack_OutputSend(newDEFAULT_Bool);
-        create_ptr_side_To_Write_For_array_Of_doubleBuffer_Input(newDEFAULT_Bool);
-        create_ptr_side_To_Write_For_array_Of_doubleBuffer_Output(newDEFAULT_Bool);
+        stat_create_ptr_flag_isLoaded_Stack_InputAction(newDEFAULT_Bool);
+        stat_create_ptr_flag_isLoaded_Stack_OutputSend(newDEFAULT_Bool);
+        stat_create_ptr_side_To_Write_For_array_Of_doubleBuffer_Input(newDEFAULT_Bool);
+        stat_create_ptr_side_To_Write_For_array_Of_doubleBuffer_Output(newDEFAULT_Bool);
         delete newDEFAULT_Bool;
     }
 
@@ -170,25 +170,25 @@
         // get.
         // set.
     // static.
-    void OpenAvrilConcurrency::Data_Control::create_ptr_flag_isLoaded_Stack_InputAction(bool* newDEFAULT_Bool)
+    void OpenAvrilConcurrency::Data_Control::stat_create_ptr_flag_isLoaded_Stack_InputAction(bool* newDEFAULT_Bool)
     {
         bool* _ptr_flag_isLoaded_Stack_InputAction = new bool(true);
         while (stat_get_ptr_flag_isLoaded_Stack_InputAction() == NULL) {}
         *_ptr_flag_isLoaded_Stack_InputAction = *newDEFAULT_Bool;
     }
-    void OpenAvrilConcurrency::Data_Control::create_ptr_flag_isLoaded_Stack_OutputSend(bool* newDEFAULT_Bool)
+    void OpenAvrilConcurrency::Data_Control::stat_create_ptr_flag_isLoaded_Stack_OutputSend(bool* newDEFAULT_Bool)
     {
         bool* _ptr_flag_isLoaded_Stack_OutputSend = new bool(true);
         while (stat_get_ptr_flag_isLoaded_Stack_OutputSend() == NULL) {}
         *_ptr_flag_isLoaded_Stack_OutputSend = *newDEFAULT_Bool;
     }
-    void OpenAvrilConcurrency::Data_Control::create_ptr_side_To_Write_For_array_Of_doubleBuffer_Input(bool* newDEFAULT_Bool)
+    void OpenAvrilConcurrency::Data_Control::stat_create_ptr_side_To_Write_For_array_Of_doubleBuffer_Input(bool* newDEFAULT_Bool)
     {
         bool* _ptr_side_To_Write_For_array_Of_doubleBuffer_Input = new bool(true);
         while (stat_get_ptr_side_To_Write_For_array_Of_doubleBuffer_Input() == NULL) {}
         *_ptr_side_To_Write_For_array_Of_doubleBuffer_Input = *newDEFAULT_Bool;
     }
-    void OpenAvrilConcurrency::Data_Control::create_ptr_side_To_Write_For_array_Of_doubleBuffer_Output(bool* newDEFAULT_Bool)
+    void OpenAvrilConcurrency::Data_Control::stat_create_ptr_side_To_Write_For_array_Of_doubleBuffer_Output(bool* newDEFAULT_Bool)
     {
         bool* _ptr_side_To_Write_For_array_Of_doubleBuffer_Output = new bool(true);
         while (stat_get_ptr_side_To_Write_For_array_Of_doubleBuffer_Output() == NULL) {}

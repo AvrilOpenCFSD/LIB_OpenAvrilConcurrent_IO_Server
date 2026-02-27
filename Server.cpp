@@ -11,11 +11,11 @@
 // constructor.
     OpenAvrilConcurrency::Server::Server()
     {
-        create_ptr_Global();
-        create_ptr_Algorithms();
-        create_ptr_Data();
+        stat_create_ptr_Global();
+        stat_create_ptr_Algorithms();
+        stat_create_ptr_Data();
         stat_get_ptr_Data()->initialise_Control();
-        create_ptr_Execute();
+        stat_create_ptr_Execute();
         stat_get_ptr_Execute()->initialise_Control(stat_get_ptr_Global());
     }
 
@@ -57,22 +57,22 @@
         // get.
         // set.
     // static.
-    void OpenAvrilConcurrency::Server::create_ptr_Algorithms()
+    void OpenAvrilConcurrency::Server::stat_create_ptr_Algorithms()
     {
         stat_set_ptr_Algorithms(new class OpenAvrilConcurrency::Algorithms());
         while (stat_get_ptr_Algorithms() == NULL) {}
     }
-    void OpenAvrilConcurrency::Server::create_ptr_Data()
+    void OpenAvrilConcurrency::Server::stat_create_ptr_Data()
     {
         stat_set_ptr_Data(new class OpenAvrilConcurrency::Data());
         while (stat_get_ptr_Data() == NULL) {}
     }
-    void OpenAvrilConcurrency::Server::create_ptr_Execute()
+    void OpenAvrilConcurrency::Server::stat_create_ptr_Execute()
     {
         stat_set_ptr_Execute(new class OpenAvrilConcurrency::Execute());
         while (stat_get_ptr_Execute() == NULL) {}
     }
-    void OpenAvrilConcurrency::Server::create_ptr_Global()
+    void OpenAvrilConcurrency::Server::stat_create_ptr_Global()
     {
         stat_set_ptr_Global(new class OpenAvrilConcurrency::Global());
         while (stat_get_ptr_Global() == NULL) {}

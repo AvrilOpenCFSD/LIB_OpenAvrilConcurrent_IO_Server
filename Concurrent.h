@@ -32,8 +32,8 @@ namespace OpenAvrilConcurrency
         // get.
         // set.
     // static.
-        static void create_list_Of_ptr_list_Of_ptr_Algorithms_Subset(class Object* newDEFAULT_Object);
-        static void create_ptr_Concurrent_Control();
+        static void stat_create_list_Of_ptr_list_Of_ptr_Algorithms_Subset(class Object* newDEFAULT_Object);
+        static void stat_create_ptr_Concurrent_Control();
         // get.
         static class Concurrent_Control* stat_get_ptr_Concurrent_Control();
         static class Object* stat_get_ptr_Item_On_ptr_list_Of_ptr_Algorithms_Subset(uint8_t praiseID);

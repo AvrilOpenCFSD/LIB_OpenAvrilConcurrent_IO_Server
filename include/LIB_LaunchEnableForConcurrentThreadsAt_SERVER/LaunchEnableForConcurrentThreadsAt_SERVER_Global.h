@@ -31,9 +31,9 @@ namespace OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtSERVER
         // get.
         // set.
     // static.
-        static void create_flag_core_ACTIVE(bool* newDEFAULT_Flag);
-        static void create_flag_core_IDLE(bool* newDEFAULT_Flag);
-        static void create_number_Implemented_Threads(uint8_t* newDEFAULT_Value);
+        static void stat_create_flag_core_ACTIVE(bool* newDEFAULT_Flag);
+        static void stat_create_flag_core_IDLE(bool* newDEFAULT_Flag);
+        static void stat_create_number_Implemented_Threads(uint8_t* newDEFAULT_Value);
         // get.
         static bool* stat_get_ptr_flag_core_ACTIVE();
         static bool* stat_get_ptr_flag_core_IDLE();
