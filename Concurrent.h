@@ -4,37 +4,6 @@ namespace OpenAvrilConcurrency
 {
     class Concurrent
     {
-// classes.
-
-// registers.
-
-// pointers.
-
-// constructor.
-
-// destructor.
-
-// public.
-    // dynamic.
-        // get.
-        // set.
-    // static.
-        // get.
-        // set.
-
-// private.
-    // dynamic.
-        // get.
-        // set.
-    // static.
-        // get.
-        // set.
-
-
-// calsses.
-
-// registers.
-
     public:
 // constructor.
         Concurrent();
@@ -43,29 +12,33 @@ namespace OpenAvrilConcurrency
         virtual ~Concurrent();
 
 // public.
+    // dynamic.
         void do_Concurrent_Algorithm_For_PraiseEventId(class Framework_Server* obj, char playerId, uint8_t ptr_praiseEventId, class Object* ptr_Algorithm_Subset, class Object* ptr_Input_Subset, class Object* ptr_Output_Subset);
-        void initialise(class Framework_Server* obj);
-
-    // get.
+        void initialise_Control();
+        void initialise_list_Of_ptr_Algorithms_Subset(class Framework_Server* obj);
+        // get.
         class Concurrent_Control* get_ptr_Concurrent_Control();
-        class Object* get_ptr_Item_On_list_Of_ptr_Algorithms_Subset(uint8_t praiseID);
+        class Object* get_ptr_Item_On_ptr_list_Of_ptr_Algorithms_Subset(uint8_t praiseID);
         std::list<class Object*>* get_ptr_list_Of_ptr_Algorithms_Subset();
-    // set.
-
+        // set.
     // static.
         static void thread_Concurrency(class Framework_Server* obj, uint8_t concurrent_threadID);
+        // get.
+        // set.
 
     private:
 // private.
-        void create_ptr_Concurrent_Control();
-        void create_list_Of_ptr_Algorithms_Subset(class Object* newDEFAULT_Object);
-        void create_ptr_list_Of_ptr_Algorithms_Subset();
-        void initialise_Control();
-        void initialise_list_Of_ptr_Algorithms_Subset(class Framework_Server* obj);
-    // get.
-        uint8_t get_Length_Of_list_Of_ptr_Algorithms_Subset();
-    // set.
-        void set_ptr_Concurrent_Control(class Concurrent_Control* newClass);
-        void set_Algorithm_Subset(class Praise0_Algorithm* praise0_algorithm);
+    // dynamic.
+        // get.
+        // set.
+    // static.
+        static void create_list_Of_ptr_list_Of_ptr_Algorithms_Subset(class Object* newDEFAULT_Object);
+        static void create_ptr_Concurrent_Control();
+        // get.
+        static class Concurrent_Control* stat_get_ptr_Concurrent_Control();
+        static class Object* stat_get_ptr_Item_On_ptr_list_Of_ptr_Algorithms_Subset(uint8_t praiseID);
+        static std::list<class Object*>* stat_get_ptr_list_Of_ptr_Algorithms_Subset();
+        // set.
+        static void stat_set_Item_On_ptr_list_Of_ptr_Algorithms_Subset(uint8_t praiseID, class Object* newDEFAULT_Object);
     };
 }
