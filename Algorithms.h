@@ -39,7 +39,7 @@ namespace OpenAvrilConcurrency
         static  void stat_set_ptr_User_Algorithms(class User_Alg* newClass);
     // pointers.
         // classes.
-        static class User_Alg* _ptr_User_AlgorithmsL;
+        static class User_Alg* _ptr_User_Algorithms;
         // registers.
         static std::list<class Concurrent*>* _ptr_list_Of_ptr_Concurrent;
     };

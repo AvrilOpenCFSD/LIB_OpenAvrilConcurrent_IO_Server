@@ -2,7 +2,7 @@
 
 // pointers.
 	// classes.
-	OpenAvrilConcurrency::Server* _ptr_Server = NULL;
+	OpenAvrilConcurrency::Server* OpenAvrilConcurrency::Framework_Server::_ptr_Server = NULL;
 	// registers.
 
 // constructor.

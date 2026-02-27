@@ -9,8 +9,8 @@
 // pointers.
     // classes.
     // registers.
-    uint8_t* _ptr_number_Of_Implemented_Cores = NULL;
-    uint8_t* _ptr_number_Of_Praise_Events = NULL;
+    uint8_t* OpenAvrilConcurrency::Global::_ptr_number_Of_Implemented_Cores = NULL;
+    uint8_t* OpenAvrilConcurrency::Global::_ptr_number_Of_Praise_Events = NULL;
     
 // constructor.
     OpenAvrilConcurrency::Global::Global()

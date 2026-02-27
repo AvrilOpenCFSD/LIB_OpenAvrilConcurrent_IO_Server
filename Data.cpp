@@ -2,16 +2,16 @@
 
 // pointers.
     // classes.
-    class OpenAvrilConcurrency::Data_Control* _ptr_Data_Control = NULL;
-    class OpenAvrilConcurrency::User_I* _ptr_User_I = NULL;
-    class OpenAvrilConcurrency::User_O* _ptr_User_O = NULL;
+    class OpenAvrilConcurrency::Data_Control* OpenAvrilConcurrency::Data::_ptr_Data_Control = NULL;
+    class OpenAvrilConcurrency::User_I* OpenAvrilConcurrency::Data::_ptr_User_I = NULL;
+    class OpenAvrilConcurrency::User_O* OpenAvrilConcurrency::Data::_ptr_User_O = NULL;
     // registers.
-    std::array<class OpenAvrilConcurrency::Input*, 3>* _ptr_array_Of_buffer_Input_ReferenceForThread = NULL;//NUMBER OF CONCURRENT THREADS.
-    std::array<class OpenAvrilConcurrency::Output*, 3>* _ptr_array_Of_buffer_Output_ReferenceForThread = NULL;//NUMBER OF CONCURRENT THREADS.
-    std::array<class OpenAvrilConcurrency::Input*, 2>* _ptr_array_Of_doubleBuffer_Input = NULL;
-    std::array<class OpenAvrilConcurrency::Output*, 2>* _ptr_array_Of_doubleBuffer_Output = NULL;
-    std::vector<class OpenAvrilConcurrency::Input*>* _ptr_vector_Of_stack_Of_InputPraise = NULL;
-    std::vector<class OpenAvrilConcurrency::Output*>* _ptr_vector_Of_stack_Of_OutputPraise = NULL;
+    std::array<class OpenAvrilConcurrency::Input*, 3>* OpenAvrilConcurrency::Data::_ptr_array_Of_buffer_Input_ReferenceForThread = NULL;//NUMBER OF CONCURRENT THREADS.
+    std::array<class OpenAvrilConcurrency::Output*, 3>* OpenAvrilConcurrency::Data::_ptr_array_Of_buffer_Output_ReferenceForThread = NULL;//NUMBER OF CONCURRENT THREADS.
+    std::array<class OpenAvrilConcurrency::Input*, 2>* OpenAvrilConcurrency::Data::_ptr_array_Of_doubleBuffer_Input = NULL;
+    std::array<class OpenAvrilConcurrency::Output*, 2>* OpenAvrilConcurrency::Data::_ptr_array_Of_doubleBuffer_Output = NULL;
+    std::vector<class OpenAvrilConcurrency::Input*>* OpenAvrilConcurrency::Data::_ptr_vector_Of_stack_Of_InputPraise = NULL;
+    std::vector<class OpenAvrilConcurrency::Output*>* OpenAvrilConcurrency::Data::_ptr_vector_Of_stack_Of_OutputPraise = NULL;
 
 // constructor.
     OpenAvrilConcurrency::Data::Data()

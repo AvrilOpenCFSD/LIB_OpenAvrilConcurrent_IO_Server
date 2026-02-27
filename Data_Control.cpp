@@ -3,10 +3,10 @@
 // pointers.
     // classes.
     // registers.
-    bool* _ptr_flag_isLoaded_Stack_InputAction = NULL;
-    bool* _ptr_flag_isLoaded_Stack_OutputSend = NULL;
-    bool* _ptr_side_To_Write_For_array_Of_doubleBuffer_Input = NULL;
-    bool* _ptr_side_To_Write_For_array_Of_doubleBuffer_Output = NULL;
+    bool* OpenAvrilConcurrency::Data_Control::_ptr_flag_isLoaded_Stack_InputAction = NULL;
+    bool* OpenAvrilConcurrency::Data_Control::_ptr_flag_isLoaded_Stack_OutputSend = NULL;
+    bool* OpenAvrilConcurrency::Data_Control::_ptr_side_To_Write_For_array_Of_doubleBuffer_Input = NULL;
+    bool* OpenAvrilConcurrency::Data_Control::_ptr_side_To_Write_For_array_Of_doubleBuffer_Output = NULL;
 
     
 // constructor.
@@ -33,16 +33,16 @@
     // dynamic.
     uint8_t OpenAvrilConcurrency::Data_Control::boolToInt(bool bufferSide)
     {
-        uint8_t temp = new uint8_t(UINT8_MAX);
+        uint8_t* temp = new uint8_t(UINT8_MAX);
         if (bufferSide)
         {
-            temp = 1;
+            *temp = 1;
         }
         else
         {
-            temp = 0;
+            *temp = 0;
         }
-        return temp;
+        return *temp;
     }
     void OpenAvrilConcurrency::Data_Control::flip_Input_DoubleBuffer()
     {

@@ -2,9 +2,9 @@
 
 // pointers.
     // classes.
-    class OpenAvrilConcurrency::User_Alg* _ptr_User_Algorithms = NULL;
+    class OpenAvrilConcurrency::User_Alg* OpenAvrilConcurrency::Algorithms::_ptr_User_Algorithms = NULL;
     // registers.
-    std::list<class OpenAvrilConcurrency::Concurrent*>* _ptr_list_Of_ptr_Concurrent = NULL;
+    std::list<class OpenAvrilConcurrency::Concurrent*>* OpenAvrilConcurrency::Algorithms::_ptr_list_Of_ptr_Concurrent = NULL;
 
 // constructor.
     OpenAvrilConcurrency::Algorithms::Algorithms()

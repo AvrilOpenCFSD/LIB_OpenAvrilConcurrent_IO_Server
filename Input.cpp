@@ -1,9 +1,14 @@
 #include "pch.h"
-// classes.
-
-// registers.
 
 // pointers.
+    // calsses.
+    OpenAvrilConcurrency::Input_Control* _ptr_Input_Control = NULL;
+    // registers.
+    uint8_t* _ptr_in_praiseEventId = NULL;
+    uint8_t* _ptr_in_playerId = NULL;
+    std::list<OpenAvrilConcurrency::Object*>* _ptr_list_Of_Praise_In_Subsets = { NULL };
+
+
 
 // constructor.
 
@@ -24,13 +29,7 @@
     // static.
         // get.
         // set.
-// calsses.
-    OpenAvrilConcurrency::Input_Control* _ptr_Input_Control = NULL;
 
-// registers.
-    uint8_t _in_praiseEventId = NULL;
-    uint8_t _in_playerId = NULL;
-    std::list<OpenAvrilConcurrency::Object*> _list_Of_Praise_In_Subsets = { NULL };
 
 // pointers.
     std::list<OpenAvrilConcurrency::Object*>* _ptr_list_Of_Praise_In_Subsets = NULL;
