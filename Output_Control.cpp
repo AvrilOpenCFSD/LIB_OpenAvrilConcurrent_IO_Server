@@ -6,29 +6,6 @@
 // pointers.
 
 // constructor.
-
-// destructor.
-
-// public.
-	// dynamic.
-		// get.
-		// set.
-	// static.
-		// get.
-		// set.
-
-// private.
-	// dynamic.
-		// get.
-		// set.
-	// static.
-		// get.
-		// set.
-// calsses.
-
-// registers.
-
-// constructor.
 	OpenAvrilConcurrency::Output_Control::Output_Control()
 	{
 		std::cout << "entered => OpenAvrilConcurrency::Output_Control::Output_Control()" << std::endl;
@@ -41,18 +18,26 @@
 	}
 
 // public.
-	void OpenAvrilConcurrency::Output_Control::selectset_Output_Subset(OpenAvrilConcurrency::Framework_Server* obj, uint8_t ptr_praiseEventId, uint8_t concurrent_threadID)
+	// dynamic.
+		// get.
+		// set.
+	void OpenAvrilConcurrency::Output_Control::selectset_Output_Subset(OpenAvrilConcurrency::Framework_Server* obj, uint8_t praiseEventId, uint8_t concurrent_threadID)
 	{
-		switch (ptr_praiseEventId)
+		switch (praiseEventId)
 		{
 		case 0:
-			obj->get_ptr_Server()->get_ptr_Data()->get_ptr_Item_Of_list_Of_buffer_Output_ReferenceForThread(concurrent_threadID)->set_Subset_OutputBuffer(obj->get_ptr_Server()->get_ptr_Data()->get_ptr_User_O()->get_Praise0_Output());
+			obj->get_ptr_Server()->get_ptr_Data()->get_ptr_array_Of_doubleBuffer_Output_WRITE()->set_Subset_With_OutputSubet(obj->get_ptr_Server()->get_ptr_Data()->get_ptr_User_O()->get_ptr_Praise0_Output()); 
 			break;
 		}
 	}
-	// get.
-	// set.
+	// static.
+		// get.
+		// set.
 
 // private.
-	// get.
-	// set.
+	// dynamic.
+		// get.
+		// set.
+	// static.
+		// get.
+		// set.

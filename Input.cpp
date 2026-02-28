@@ -57,6 +57,12 @@
         return stat_get_Item_On_list_Of_Praise_In_Subsets(praiseID);
     }
         // set.
+    void OpenAvrilConcurrency::Input::set_Subset_With_InputSubet(Praise0_Input* praise0_Input)
+    {
+        auto temp = _ptr_list_Of_Praise_In_Subsets->begin();
+        std::advance(temp, 0);
+        *temp = reinterpret_cast<class Object*>(praise0_Input);
+    }
     // static.
         // get.
         // set.
@@ -65,12 +71,6 @@
     // dynamic.
         // get.
         // set.
-    void OpenAvrilConcurrency::Input::set_Subset_With_InputSubet(Praise0_Input* praise0_Input)
-    {
-        auto temp = _ptr_list_Of_Praise_In_Subsets->begin();
-        std::advance(temp, 0);
-        *temp = reinterpret_cast<class Object*>(praise0_Input);
-    }
     // static.
     void OpenAvrilConcurrency::Input::stat_create_ptr_in_playerId(uint8_t* newDEFAULT_uint8_t)
     {
@@ -95,7 +95,7 @@
         while (stat_get_ptr_Item_On_list_Of_Praise_In_Subsets() == NULL) { }
         *_ptr_list_Of_Praise_In_Subsets = { newDEFAULT_Object };//NUMBER OF PRAISES.
     }
-        // get.
+    // get.
     uint8_t* OpenAvrilConcurrency::Input::stat_get_ptr_in_playerId()
     {
         return _ptr_in_playerId;
@@ -103,10 +103,6 @@
     uint8_t* OpenAvrilConcurrency::Input::stat_get_ptr_in_praiseEventId()
     {
         return _ptr_in_praiseEventId;
-    }
-    OpenAvrilConcurrency::Input_Control* OpenAvrilConcurrency::Input::stat_get_ptr_Input_Control()
-    {
-        return _ptr_Input_Control;
     }
     OpenAvrilConcurrency::Object* OpenAvrilConcurrency::Input::stat_get_Item_On_list_Of_Praise_In_Subsets(uint8_t praiseID)
     {
@@ -117,6 +113,10 @@
     std::list<OpenAvrilConcurrency::Object*>* OpenAvrilConcurrency::Input::stat_get_ptr_Item_On_list_Of_Praise_In_Subsets()
     {
         return _ptr_list_Of_Praise_In_Subsets;
+    }
+    OpenAvrilConcurrency::Input_Control* OpenAvrilConcurrency::Input::stat_get_ptr_Input_Control()
+    {
+        return _ptr_Input_Control;
     }
         // set.
     void OpenAvrilConcurrency::Input::stat_set_ptr_in_playerId(uint8_t* new_uint8_t)

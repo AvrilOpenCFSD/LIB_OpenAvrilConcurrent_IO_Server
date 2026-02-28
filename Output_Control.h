@@ -4,24 +4,23 @@ namespace OpenAvrilConcurrency
 {
     class Output_Control
     {
-// classes.
-
-// registers.
-
-// pointers.
-
+	public:
 // constructor.
+		Output_Control();
 
 // destructor.
+		virtual ~Output_Control();
 
 // public.
 	// dynamic.
 		// get.
 		// set.
+		void selectset_Output_Subset(class Framework_Server* obj, uint8_t ptr_praiseEventId, uint8_t concurrent_threadID);
 	// static.
 		// get.
 		// set.
 
+	private:
 // private.
 	// dynamic.
 		// get.
@@ -29,27 +28,5 @@ namespace OpenAvrilConcurrency
 	// static.
 		// get.
 		// set.
-
-
-// calsses.
-
-// registers.
-
-    public:
-// constructor.
-    Output_Control();
-
-// destructor.
-    virtual ~Output_Control();
-
-// public.
-    void selectset_Output_Subset(class Framework_Server* obj, uint8_t ptr_praiseEventId, uint8_t concurrent_threadID);
-    // get.
-    // set.
-
-    private:
-// private.
-    // get.
-    // set.
     };
 }
