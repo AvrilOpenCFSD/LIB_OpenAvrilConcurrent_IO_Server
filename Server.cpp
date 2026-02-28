@@ -2,10 +2,10 @@
 
 // pointers.
     // classes.
-    class OpenAvrilConcurrency::Algorithms* OpenAvrilConcurrency::Server::_ptr_Algorithms = NULL;
-    class OpenAvrilConcurrency::Data* OpenAvrilConcurrency::Server::_ptr_Data = NULL;
-    class OpenAvrilConcurrency::Execute* OpenAvrilConcurrency::Server::_ptr_Execute = NULL;
-    class OpenAvrilConcurrency::Global* OpenAvrilConcurrency::Server::_ptr_Global = NULL;
+    OpenAvrilConcurrency::Algorithms* OpenAvrilConcurrency::Server::_ptr_Algorithms = NULL;
+    OpenAvrilConcurrency::Data* OpenAvrilConcurrency::Server::_ptr_Data = NULL;
+    OpenAvrilConcurrency::Execute* OpenAvrilConcurrency::Server::_ptr_Execute = NULL;
+    OpenAvrilConcurrency::Global* OpenAvrilConcurrency::Server::_ptr_Global = NULL;
     // registers.
 
 // constructor.

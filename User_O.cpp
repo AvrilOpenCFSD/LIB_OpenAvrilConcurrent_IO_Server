@@ -17,6 +17,11 @@
 		delete _ptr_Praise0_Output;
 	}
 
+	OpenAvrilConcurrency::Praise0_Output* OpenAvrilConcurrency::User_O::get_ptr_Praise0_Output()
+	{
+		return stat_get_ptr_Praise0_Output();
+	}
+
 // public.
 	// dynamic.
 		// get.

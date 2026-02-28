@@ -1,32 +1,8 @@
 #include "pch.h"
-// classes.
-
-// registers.
 
 // pointers.
-
-// constructor.
-
-// destructor.
-
-// public.
-	// dynamic.
-		// get.
-		// set.
-	// static.
-		// get.
-		// set.
-
-// private.
-	// dynamic.
-		// get.
-		// set.
-	// static.
-		// get.
-		// set.
-// calsses.
-
-// registers.
+	// classes.
+	// registers.
 
 // constructor.
 	OpenAvrilConcurrency::Concurrent_Control::Concurrent_Control()
@@ -41,6 +17,17 @@
 	}
 
 // public.
+	// dynamic.
+		// get.
+		// set.
+	// static.
+		// get.
+		// set.
+
+// private.
+	// dynamic.
+		// get.
+		// set.
 	void OpenAvrilConcurrency::Concurrent_Control::selectset_Algorithm_Subset(OpenAvrilConcurrency::Framework_Server* obj, uint8_t praiseEventId, uint8_t concurrent_threadID)
 	{
 		switch (praiseEventId)
@@ -50,11 +37,6 @@
 			break;
 		}
 	}
-	// get.
-	// set.
-
-// private.
-	// get.
-	// set.
-
-
+	// static.
+		// get.
+		// set.

@@ -33,7 +33,7 @@ namespace OpenAvrilConcurrency
 		static void stat_set_ptr_Praise0_Input(class Praise0_Input* praise0_I);
 	// pointers.
 		// classes.
-		static class Praise0_Input* ptr_Praise0_Input;
+		static class Praise0_Input* _ptr_Praise0_Input;
 		// registers.
 
 	};
