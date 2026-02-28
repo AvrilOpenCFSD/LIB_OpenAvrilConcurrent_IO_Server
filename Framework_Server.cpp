@@ -79,11 +79,7 @@
 		
 		
 		
-		
-		
-		
-		
-		obj->get_ptr_Server()->get_ptr_Data()->initialise(obj);
+
 
 		std::cout << "entered => OpenAvrilConcurrency::Framework_Server::initialise_Program()" << std::endl;
 		obj->get_ptr_Server()->get_ptr_Execute()->initialise_Libraries();

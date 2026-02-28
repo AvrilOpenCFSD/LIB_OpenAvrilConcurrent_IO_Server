@@ -72,7 +72,7 @@
         std::advance(temp, concurrentThreadID);
         return *temp;
     }
-    std::list<class OpenAvrilConcurrency::Concurrent*>* OpenAvrilConcurrency::Algorithms::stat_get_ptr_list_Of_ptr_Concurrent()
+    std::list<OpenAvrilConcurrency::Concurrent*>* OpenAvrilConcurrency::Algorithms::stat_get_ptr_list_Of_ptr_Concurrent()
     {
         return _ptr_list_Of_ptr_Concurrent;
     }

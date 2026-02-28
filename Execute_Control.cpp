@@ -27,12 +27,12 @@
 		// get.
 	bool OpenAvrilConcurrency::Execute_Control::get_flag_is_SystemInitialised()
 	{
-		set_flag_is_SystemInitialised(false);
+		stat_set_flag_is_SystemInitialised(new bool(false));
 		for (uint8_t index = 0; index < sizeof(stat_get_ptr_flag_is_SystemInitialised()); index++)
 		{
-			if (get_Item_On_list_Of_flag_ThreadInitialised(index) == true)
+			if (stat_get_Item_On_ptr_list_Of_flag_ThreadInitialised(index) == true)
 			{
-				set_flag_is_SystemInitialised(new bool(true));
+				stat_set_flag_is_SystemInitialised(new bool(true));
 			}
 		}
 		return stat_get_ptr_flag_is_SystemInitialised();
@@ -66,19 +66,25 @@
 	{
 		std::array<bool, 4>* _ptr_list_Of_flag_ThreadInitialised = new std::array<bool, 4>();//NUMBER OF THREADS
 		while (stat_get_ptr_list_Of_flag_ThreadInitialised() == NULL) {}
-		*_ptr_list_Of_flag_ThreadInitialised = { *newDEFAULT_Bool, *newDEFAULT_Bool, *newDEFAULT_Bool, *newDEFAULT_Bool }//NUMBER OF THREADS
+		*_ptr_list_Of_flag_ThreadInitialised = { *newDEFAULT_Bool, *newDEFAULT_Bool, *newDEFAULT_Bool, *newDEFAULT_Bool };//NUMBER OF THREADS
 	}
 		// get.
 	bool OpenAvrilConcurrency::Execute_Control::stat_get_ptr_flag_is_SystemInitialised()
 	{
 		return _ptr_flag_is_SystemInitialised;
 	}
+	bool OpenAvrilConcurrency::Execute_Control::stat_get_Item_On_ptr_list_Of_flag_ThreadInitialised(uint8_t threadID)
+	{
+		auto temp = stat_get_ptr_list_Of_flag_ThreadInitialised()->begin();
+		std::advance(temp, threadID);
+		return *temp;
+	}
 	std::array<bool, 4>* OpenAvrilConcurrency::Execute_Control::stat_get_ptr_list_Of_flag_ThreadInitialised()
 	{
 		return _ptr_list_Of_flag_ThreadInitialised;
 	}
 		// set.
-	void OpenAvrilConcurrency::Execute_Control::set_flag_is_SystemInitialised(bool* newFlag)
+	void OpenAvrilConcurrency::Execute_Control::stat_set_flag_is_SystemInitialised(bool* newFlag)
 	{
 		*_ptr_flag_is_SystemInitialised = *newFlag;
 	}

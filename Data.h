@@ -51,7 +51,7 @@ namespace OpenAvrilConcurrency
         static void stat_create_ptr_array_Of_doubleBuffer_Output(Output* newDEFAULT_Input);
         static void stat_create_ptr_Data_Control();
         static void stat_create_ptr_array_Of_buffer_Input_ReferenceForThread(Input* newDEFAULT_Input);
-        static void stat_create_ptr_array_Of_buffer_Output_ReferenceForThread(Output* newDEFAULT_Output;
+        static void stat_create_ptr_array_Of_buffer_Output_ReferenceForThread(Output* newDEFAULT_Output);
         static void stat_create_ptr_vector_Of_stack_Of_InputPraise(Input* newDEFAULT_Input);
         static void stat_create_ptr_vector_Of_stack_Of_OutputPraise(Output* newDEFAULT_Output);
         static void stat_create_ptr_User_I();

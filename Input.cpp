@@ -16,10 +16,7 @@
         stat_create_ptr_in_playerId(newDEFAULT_uint8_t);
         stat_create_ptr_in_praiseEventId(newDEFAULT_uint8_t);
         delete newDEFAULT_uint8_t;
-        Object* newDEFAULT_Object;
-        while (newDEFAULT_Object == NULL) {}
-        stat_create_ptr_list_Of_Praise_In_Subsets(newDEFAULT_Object);
-        delete newDEFAULT_Object;
+        stat_create_ptr_list_Of_Praise_In_Subsets();
     }
 
 // destructor.
@@ -89,11 +86,11 @@
         stat_set_ptr_Input_Control(new class OpenAvrilConcurrency::Input_Control());
         while (stat_get_ptr_Input_Control() == NULL) {}
     }
-    void OpenAvrilConcurrency::Input::stat_create_ptr_list_Of_Praise_In_Subsets(Object* newDEFAULT_Object)
+    void OpenAvrilConcurrency::Input::stat_create_ptr_list_Of_Praise_In_Subsets()
     {
         std::list<class Object*>* _ptr_list_Of_Praise_In_Subsets = new std::list<class Object*>();
         while (stat_get_ptr_Item_On_list_Of_Praise_In_Subsets() == NULL) { }
-        *_ptr_list_Of_Praise_In_Subsets = { newDEFAULT_Object };//NUMBER OF PRAISES.
+        _ptr_list_Of_Praise_In_Subsets->resize(1);//NUMBER OF PRAISES.
     }
     // get.
     uint8_t* OpenAvrilConcurrency::Input::stat_get_ptr_in_playerId()

@@ -14,7 +14,7 @@ namespace OpenAvrilConcurrency
 // public.
 	// dynamic.
 		// get.
-		class Praise0_Algorithm* get_ptr_Praise0_Algorithm();
+		class Object* get_ptr_Item_On_ptr_list_Of_ptr_Algorithms_Subset(uint8_t praiseID);
 		// set.
 	// static.
 		// get.
@@ -27,14 +27,19 @@ namespace OpenAvrilConcurrency
 		// set.
 	// static.
 		static void stat_create_ptr_Praise0_Algorithm();
+		static void stat_create_ptr_list_Of_Praise_Alg_Subsets(class Object* newDEFAULT_Object);
 		// get.
 		static class Praise0_Algorithm* stat_get_ptr_Praise0_Algorithm();
+		static class Object* stat_get_ptr_Item_On_list_Of_Praise_Alg_Subsets(uint8_t praiseID);
+		static std::list<class Object*>* stat_get_ptr_list_Of_Praise_Alg_Subsets();
 		// set.
 		static void stat_set_ptr_Praise0_Algorithm(class Praise0_Algorithm* praise0_A);
+		static void stat_set_ptr_Item_On_list_Of_Praise_Alg_Subsets(uint8_t praiseID, class Object* newPtr);
 	// pointers.
 		// classes.
 		static class Praise0_Algorithm* _ptr_Praise0_Algorithm;
 		// registers.
+		static std::list<class Object*>* _ptr_list_Of_Praise_Alg_Subsets;
 	};
 }
 

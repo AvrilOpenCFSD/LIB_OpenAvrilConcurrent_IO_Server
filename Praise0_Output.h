@@ -28,7 +28,7 @@ namespace OpenAvrilConcurrency
 		// get.
 		static double* stat_get_ptr_output_Value();
 		// set.
-		static void stat_set_output_Value(double* newValue);
+		static void stat_set_output_Value(double newValue);
 	// pointers.
 		// classes.
 		// registers.

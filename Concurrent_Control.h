@@ -18,6 +18,7 @@ namespace OpenAvrilConcurrency
 // public.
 	// dynamic.
 		// get.
+		void selectset_Algorithm_Subset(class Framework_Server* obj, uint8_t ptr_praiseEventId, uint8_t concurrent_threadID);
 		// set.
 	// static.
 		// get.
@@ -28,7 +29,6 @@ namespace OpenAvrilConcurrency
 	// dynamic.
 		// get.
 		// set.
-		void selectset_Algorithm_Subset(class Framework_Server* obj, uint8_t ptr_praiseEventId, uint8_t concurrent_threadID);
 	// static.
 		// get.
 		// set.

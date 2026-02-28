@@ -20,14 +20,6 @@
 	// dynamic.
 		// get.
 		// set.
-	// static.
-		// get.
-		// set.
-
-// private.
-	// dynamic.
-		// get.
-		// set.
 	void OpenAvrilConcurrency::Concurrent_Control::selectset_Algorithm_Subset(OpenAvrilConcurrency::Framework_Server* obj, uint8_t praiseEventId, uint8_t concurrent_threadID)
 	{
 		switch (praiseEventId)
@@ -37,6 +29,15 @@
 			break;
 		}
 	}
+	// static.
+		// get.
+		// set.
+
+// private.
+	// dynamic.
+		// get.
+		// set.
+
 	// static.
 		// get.
 		// set.

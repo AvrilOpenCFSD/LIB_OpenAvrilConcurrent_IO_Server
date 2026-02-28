@@ -37,11 +37,11 @@
 	}
 	bool OpenAvrilConcurrency::CLIBConcurrentServerIO::get_flag_isStackLoaded_Server_InputAction(OpenAvrilConcurrency::Framework_Server* obj)
 	{
-		return obj->get_ptr_Server()->get_ptr_Data()->get_ptr_Data_Control()->get_flag_isLoaded_Stack_InputAction();
+		return obj->get_ptr_Server()->get_ptr_Data()->get_ptr_Data_Control()->get_ptr_flag_isLoaded_Stack_InputAction();
 	}
 	bool OpenAvrilConcurrency::CLIBConcurrentServerIO::get_flag_isLoaded_Stack_OutputSend(OpenAvrilConcurrency::Framework_Server* obj)
 	{
-		return obj->get_ptr_Server()->get_ptr_Data()->get_ptr_Data_Control()->get_flag_isLoaded_Stack_OutputSend();
+		return obj->get_ptr_Server()->get_ptr_Data()->get_ptr_Data_Control()->get_ptr_flag_isLoaded_Stack_OutputSend();
 	}
 	bool OpenAvrilConcurrency::CLIBConcurrentServerIO::get_flag_IsInitialised_OpenAvrilConcurrencyConcurrency(OpenAvrilConcurrency::Framework_Server* obj)
 	{
@@ -65,15 +65,15 @@
 	}
 	void OpenAvrilConcurrency::CLIBConcurrentServerIO::select_set_Intput_Subset(OpenAvrilConcurrency::Framework_Server* obj, uint8_t praiseEventId)
 	{
-		obj->get_ptr_Server()->get_ptr_Data()->get_doubleBuffer_Input_WRITE()->get_ptr_Input_Control()->select_And_Set_Input_Subset(obj, praiseEventId);
+		obj->get_ptr_Server()->get_ptr_Data()->get_ptr_array_Of_doubleBuffer_Input_WRITE()->get_ptr_Input_Control()->select_And_Set_Input_Subset(obj, praiseEventId);
 	}
 	uint8_t OpenAvrilConcurrency::CLIBConcurrentServerIO::get_PraiseEventId(OpenAvrilConcurrency::Framework_Server* obj)
 	{
-		return obj->get_ptr_Server()->get_ptr_Data()->get_doubleBuffer_Output_WRITE()->get_out_praiseEventId();
+		return obj->get_ptr_Server()->get_ptr_Data()->get_ptr_array_Of_doubleBuffer_Output_WRITE()->get_out_praiseEventId();
 	}
 	void OpenAvrilConcurrency::CLIBConcurrentServerIO::set_PraiseEventId(OpenAvrilConcurrency::Framework_Server* obj, uint8_t value)
 	{
-		obj->get_ptr_Server()->get_ptr_Data()->get_doubleBuffer_Input_WRITE()->set_in_praiseEventId(value);
+		obj->get_ptr_Server()->get_ptr_Data()->get_ptr_array_Of_doubleBuffer_Input_WRITE()->get_ptr_Item_On_list_Of_Praise_In_Subsets(obj->get_ptr_Server()->get_ptr_Data()->get_ptr_array_Of_doubleBuffer_Input_WRITE()->get_in_praiseEventId());
 	}
 		// get.
 		// set.

@@ -13,8 +13,8 @@ namespace OpenAvrilConcurrency
 
         // public.
             // dynamic.
-        void intitialise_Control();
-        void intitialise_list_Of_Praise_Out_Subsets(class Framework_Server* obj);
+        void initialise_Control();
+        void initialise_list_Of_Praise_Out_Subsets(class Framework_Server* obj);
         // get.
         uint8_t get_out_praiseEventId();
         uint8_t get_out_playerId();
@@ -35,7 +35,7 @@ namespace OpenAvrilConcurrency
         static void stat_create_ptr_out_playerId(uint8_t* newDEFAULT_uint8_t);
         static void stat_create_ptr_out_praiseEventId(uint8_t* newDEFAULT_uint8_t);
         static void stat_create_ptr_Output_Control();
-        static void stat_create_ptr_list_Of_Praise_Out_Subsets(class Object* newDEFAULT_Object);
+        static void stat_create_ptr_list_Of_Praise_Out_Subsets();
         // get.
         static uint8_t* stat_get_ptr_out_playerId();
         static uint8_t* stat_get_ptr_out_praiseEventId();

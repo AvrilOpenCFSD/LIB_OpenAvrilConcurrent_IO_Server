@@ -57,8 +57,8 @@ namespace OpenAvrilConcurrency
         // set.
         static void stat_set_ptr_flag_isLoaded_Stack_InputAction(bool* newPtr);
         static void stat_set_ptr_flag_isLoaded_Stack_OutputSend(bool* newPtr);
-        static void stat_set_ptr_side_To_Write_For_array_Of_doubleBuffer_Input(uint8_t side, bool* newPtr);
-        static void stat_set_ptr_side_To_Write_For_array_Of_doubleBuffer_Output(uint8_t side, bool* newPtr);
+        static void stat_set_ptr_side_To_Write_For_array_Of_doubleBuffer_Input(bool newvalue);
+        static void stat_set_ptr_side_To_Write_For_array_Of_doubleBuffer_Output(bool newvalue);
     // pointers.
         // classes.
         // registers.

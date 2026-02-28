@@ -20,7 +20,7 @@
 	OpenAvrilConcurrency::Praise0_Input::~Praise0_Input()
 	{
 		delete _ptr_input_Value_A;
-		delete _ptr_input_Value_B
+		delete _ptr_input_Value_B;
 	}
 
 // public.

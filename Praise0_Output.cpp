@@ -40,7 +40,7 @@
 		return _ptr_output_Value;
 	}
 		// set.
-	void OpenAvrilConcurrency::Praise0_Output::stat_set_output_Value(double* newValue)
+	void OpenAvrilConcurrency::Praise0_Output::stat_set_output_Value(double newValue)
 	{
-		*_ptr_output_Value = *newValue;
+		*_ptr_output_Value = newValue;
 	}

@@ -15,8 +15,12 @@
 // constructor.
     OpenAvrilConcurrency::Global::Global()
     {
-        stat_create_number_Of_Implemented_Cores();
-        stat_create_number_Of_Praise_Events();
+        uint8_t* newDEFAULT_Value = new uint8_t(NULL);
+        while (newDEFAULT_Value == NULL) { }
+        *newDEFAULT_Value = uint8_t(UINT8_MAX);
+        stat_create_number_Of_Implemented_Cores(newDEFAULT_Value);
+        stat_create_number_Of_Praise_Events(newDEFAULT_Value);
+        delete newDEFAULT_Value;
     }
 
 // destructor.

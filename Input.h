@@ -35,7 +35,7 @@ namespace OpenAvrilConcurrency
         static void stat_create_ptr_in_playerId(uint8_t* newDEFAULT_uint8_t);
         static void stat_create_ptr_in_praiseEventId(uint8_t* newDEFAULT_uint8_t);
         static void stat_create_ptr_Input_Control();
-        static void stat_create_ptr_list_Of_Praise_In_Subsets(class Object* newDEFAULT_Object);
+        static void stat_create_ptr_list_Of_Praise_In_Subsets();
         // get.
         static uint8_t* stat_get_ptr_in_playerId();
         static uint8_t* stat_get_ptr_in_praiseEventId();
