@@ -1,12 +1,30 @@
 #include "pch.h"
 // pointers.
     // programs.
-
+    OpenAvrilConcurrency::LaunchEnableForConcurrentThreadsAt_SERVER_Framework* OpenAvrilConcurrency::Execute::_program_ConcurrentQue_Server = NULL;
+    OpenAvrilConcurrency::WriteEnableForThreadsAt_SERVERINPUTACTION_Framework* OpenAvrilConcurrency::Execute::_program_WriteEnableStack_ServerInputAction = NULL;
+    OpenAvrilConcurrency::WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE_Framework* OpenAvrilConcurrency::Execute::_program_WriteEnableStack_ServerOutputRecieve = NULL;
+    // classes.
+    OpenAvrilConcurrency::Execute_Control* OpenAvrilConcurrency::Execute::_ptr_Execute_Control = NULL;
     // registers.
+    std::list<std::thread*>* OpenAvrilConcurrency::Execute::_ptr_list_Of_Threads = NULL;
 
 // constructor.
+    OpenAvrilConcurrency::Execute::Execute()
+    {
+        std::thread* newDEFAULT_Thread = new std::thread(NULL);
+        stat_create_list_Of_Threads(newDEFAULT_Thread);
+    }
 
 // destructor.
+    OpenAvrilConcurrency::Execute::~Execute()
+    {
+        delete _ptr_Execute_Control;
+        delete _ptr_list_Of_Threads;
+        delete _program_ConcurrentQue_Server;
+        delete _program_WriteEnableStack_ServerInputAction;
+        delete _program_WriteEnableStack_ServerOutputRecieve;
+    }
 
 // public.
     // dynamic.
@@ -23,35 +41,15 @@
     // static.
         // get.
         // set.
-// classes.
-    OpenAvrilConcurrency::Execute_Control* _ptr_Execute_Control = NULL;
 
-// registers.
-    std::list<std::thread*> _list_Of_Threads = { NULL };
-
-// pointers.
-    std::list<std::thread*>* _ptr_list_Of_Threads =  NULL;
-    // programgs.
-    OpenAvrilConcurrency::LaunchEnableForConcurrentThreadsAt_SERVER_Framework* _program_ConcurrentQue_Server = NULL;
-    OpenAvrilConcurrency::WriteEnableForThreadsAt_SERVERINPUTACTION_Framework* _program_WriteEnableStack_ServerInputAction = NULL;
-    OpenAvrilConcurrency::WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE_Framework* _program_WriteEnableStack_ServerOutputRecieve = NULL;
+    
+    
 
 // constructor.
-    OpenAvrilConcurrency::Execute::Execute()
-    {
-        std::thread* newDEFAULT_Thread = new std::thread(NULL);
-        stat_create_list_Of_Threads(newDEFAULT_Thread);
-    }
+
 
 // desructor.
-    OpenAvrilConcurrency::Execute::~Execute()
-{
-    delete _ptr_Execute_Control;
-    delete _ptr_list_Of_Threads;
-    delete _program_ConcurrentQue_Server;
-    delete _program_WriteEnableStack_ServerInputAction;
-    delete _program_WriteEnableStack_ServerOutputRecieve;
-}
+
 
 // public.
     void OpenAvrilConcurrency::Execute::initialise_Control(uint8_t number_Implemented_Cores)

@@ -26,6 +26,8 @@
     OpenAvrilConcurrency::Output::~Output()
     {
         delete _ptr_Output_Control;
+        delete _ptr_out_praiseEventId;
+        delete _ptr_out_playerId;
         delete _ptr_list_Of_Praise_Out_Subsets;
     }
 
