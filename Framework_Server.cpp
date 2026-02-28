@@ -23,7 +23,8 @@
 	// dynamic.
 	void OpenAvrilConcurrency::Framework_Server::initialise_Program(OpenAvrilConcurrency::Framework_Server* obj)
 	{
-	// global.
+	// server.
+		// global.
 		uint8_t* newINITIALISED_Value = new uint8_t(UINT8_MAX);
 		while (newINITIALISED_Value) {}
 		*newINITIALISED_Value = uint8_t(4);
@@ -31,7 +32,8 @@
 		*newINITIALISED_Value = uint8_t(1);
 		obj->get_ptr_Server()->get_ptr_Global()->initialise_number_Of_Praise_Events(newINITIALISED_Value);
 		delete newINITIALISED_Value;
-	// algorithms.
+		// algorithms.
+			// concurrent.
 		OpenAvrilConcurrency::Concurrent* newINITIALISED_Concurrent = new class OpenAvrilConcurrency::Concurrent();
 		while (newINITIALISED_Concurrent == NULL) {}
 		newINITIALISED_Concurrent->initialise_Control();
@@ -40,7 +42,8 @@
 			obj->get_ptr_Server()->get_ptr_Algorithms()->initialise_Item_On_list_Of_ptr_Concurrent(concurrentThreadID, newINITIALISED_Concurrent);
 		}
 		delete newINITIALISED_Concurrent;
-	// data.
+		// data.
+			// input.
 		OpenAvrilConcurrency::Input* newINITIALISED_Input = new class OpenAvrilConcurrency::Input();
 		while (newINITIALISED_Input == NULL) {}
 		newINITIALISED_Input->initialise_Control();
@@ -57,7 +60,7 @@
 			obj->get_ptr_Server()->get_ptr_Data()->initialise_Item_On_vector_Of_stack_Of_InputPraise(slotID, newINITIALISED_Input);
 		}
 		delete newINITIALISED_Input;
-
+			// output.
 		OpenAvrilConcurrency::Output* newINITIALISED_Output = new class OpenAvrilConcurrency::Output();
 		while (newINITIALISED_Output == NULL) {}
 		newINITIALISED_Output->initialise_Control();
