@@ -4,24 +4,23 @@ namespace OpenAvrilConcurrency
 {
     class Input_Control
     {
-// classes.
-
-// registers.
-
-// pointers.
-
+	public:
 // constructor.
+		Input_Control();
 
 // destructor.
+		virtual ~Input_Control();
 
 // public.
 	// dynamic.
+		void select_And_Set_Input_Subset(class Framework_Server* obj, uint8_t ptr_praiseEventId);
 		// get.
 		// set.
 	// static.
 		// get.
 		// set.
 
+	private:
 // private.
 	// dynamic.
 		// get.
@@ -29,27 +28,5 @@ namespace OpenAvrilConcurrency
 	// static.
 		// get.
 		// set.
-
-
-// calsses.
-
-// registers.
-
-    public:
-// constructor.
-        Input_Control();
-
-// destructor.
-        virtual ~Input_Control();
-
-// public.
-        void select_And_Set_Input_Subset(class Framework_Server* obj, uint8_t ptr_praiseEventId);
-    // get.
-    // set.
-
-    private:
-// private.
-    // get.
-    // set.
     };
 }
