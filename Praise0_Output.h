@@ -4,15 +4,12 @@ namespace OpenAvrilConcurrency
 {
 	class Praise0_Output
 	{
-// classes.
-
-// registers.
-
-// pointers.
-
+	public:
 // constructor.
+		Praise0_Output();
 
 // destructor.
+		virtual ~Praise0_Output();
 
 // public.
 	// dynamic.
@@ -26,17 +23,15 @@ namespace OpenAvrilConcurrency
 	// dynamic.
 		// get.
 		// set.
-	// static.
+	// static
+		static void stat_create_ptr_output_Value();
 		// get.
+		static double* stat_get_ptr_output_Value();
 		// set.
-	public:
-		Praise0_Output();
-		virtual ~Praise0_Output();
-
-		void stat_create_output_Value();
-
-		double get_output_Value();
-
-		void set_output_Value(double newValue);
+		static void stat_set_output_Value(double* newValue);
+	// pointers.
+		// classes.
+		// registers.
+		static double* _ptr_output_Value;
 	};
 }

@@ -1,13 +1,21 @@
 #include "pch.h"
-// classes.
-
-// registers.
 
 // pointers.
+	// classes.
+	// registers.
+	double* OpenAvrilConcurrency::Praise0_Output::_ptr_output_Value = NULL;
 
 // constructor.
+	OpenAvrilConcurrency::Praise0_Output::Praise0_Output()
+	{
+		stat_create_ptr_output_Value();
+	}
 
 // destructor.
+	OpenAvrilConcurrency::Praise0_Output::~Praise0_Output()
+	{
+
+	}
 
 // public.
 	// dynamic.
@@ -22,31 +30,17 @@
 		// get.
 		// set.
 	// static.
+	void OpenAvrilConcurrency::Praise0_Output::stat_create_ptr_output_Value()
+	{
+
+	}
 		// get.
+	double* OpenAvrilConcurrency::Praise0_Output::stat_get_ptr_output_Value()
+	{
+		return _ptr_output_Value;
+	}
 		// set.
-	uint8_t _output_Value = NULL;
-
-	OpenAvrilConcurrency::Praise0_Output::Praise0_Output()
+	void OpenAvrilConcurrency::Praise0_Output::stat_set_output_Value(double* newValue)
 	{
-		stat_create_output_Value();
-	}
-
-	OpenAvrilConcurrency::Praise0_Output::~Praise0_Output()
-	{
-
-	}
-
-	void OpenAvrilConcurrency::Praise0_Output::stat_create_output_Value()
-	{
-
-	}
-
-	double OpenAvrilConcurrency::Praise0_Output::get_output_Value()
-	{
-		return _output_Value;
-	}
-
-	void OpenAvrilConcurrency::Praise0_Output::set_output_Value(double newValue)
-	{
-		_output_Value = newValue;
+		*_ptr_output_Value = *newValue;
 	}
