@@ -4,39 +4,6 @@ namespace OpenAvrilConcurrency
 {
     class Execute_Control
     {
-// classes.
-
-// registers.
-
-// pointers.
-
-// constructor.
-
-// destructor.
-
-// public.
-    // dynamic.
-        // get.
-        // set.
-    // static.
-        // get.
-        // set.
-
-// private.
-    // dynamic.
-        // get.
-        // set.
-    // static.
-        // get.
-        // set.
-      
-
-
-
-// calsses.
-
-// registers.
-
     public:
 // constructor.
         Execute_Control(uint8_t number_Implemented_Cores);
@@ -45,23 +12,35 @@ namespace OpenAvrilConcurrency
         virtual ~Execute_Control();
 
 // public.
-    // get.
+    // dynamic.
+        // get.
         bool get_flag_is_SystemInitialised();
         bool get_Item_On_list_Of_flag_ThreadInitialised(uint8_t threadID);
-        uint8_t get_length_Of_list_Of_flag_ThreadInitialised();
-        std::list<bool>* get_ptr_list_Of_flag_ThreadInitialised();
-    // set.
+        // set.
         void set_ConditionCode_Of_Thread(uint8_t threadID);
+    // static.
+        // get.
+        // set.
 
     private:
 // private.
-        void stat_create_flag_is_SystemInitialised();
-        void stat_create_list_Of_flag_ThreadInitialised();
-        void stat_create_ptr_list_Of_flag_ThreadInitialised();
-    // get.
-    // set.
-        void set_flag_is_SystemInitialised(bool newFlag);
-        void set_Item_On_list_Of_flag_ThreadInitialised(uint8_t threadID, bool newFlag);
-        void set_ptr_list_Of_flag_ThreadInitialised(std::list<bool>* newList);
+    // dynamic.
+        // get.
+        // set.
+        
+    // static.
+        void stat_create_flag_is_SystemInitialised(bool* newDEFAULT_Bool);
+        void stat_create_list_Of_flag_ThreadInitialised(bool* newDEFAULT_Bool);
+        // get.
+        bool stat_get_ptr_flag_is_SystemInitialised();
+        static std::array<bool, 4>* stat_get_ptr_list_Of_flag_ThreadInitialised();
+        // set.
+        void set_flag_is_SystemInitialised(bool* newFlag);
+        void set_Item_On_list_Of_flag_ThreadInitialised(uint8_t threadID, bool* newFlag);
+    // pointers.
+        // classes.
+        // registers.
+        static bool* _ptr_flag_is_SystemInitialised;
+        static std::array<bool, 4>* _ptr_list_Of_flag_ThreadInitialised;//NUMBER OF THREADS
     };
 }
