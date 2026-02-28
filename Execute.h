@@ -47,11 +47,7 @@ namespace OpenAvrilConcurrency
         static void stat_set_Item_On_array_Of_ptr_list_Of_Threads(OpenAvrilConcurrency::Framework_Server* obj, uint8_t threadID);
     // pointers.
         // programs.
-        static class OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtSERVER::LaunchEnableForConcurrentThreadsAt_SERVER_Framework* _program_ConcurrentQue_Server;
-        static class OpenAvrilCLIDWriteEnableForThreadsAtSERVERINPUTACTION::WriteEnableForThreadsAt_SERVERINPUTACTION_Framework* _program_WriteEnable_ServerInputAction;
-        static class OpenAvrilCLIDWriteEnableForThreadsAtSERVEROUTPUTRECIEVE::WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE_Framework* _program_WriteEnable_ServerOutputRecieve;
         // classes.
-        static class Execute_Control* _ptr_Execute_Control;
         // registers.
         static std::list<std::thread*>* _ptr_array_Of_ptr_list_Of_Threads;
     };

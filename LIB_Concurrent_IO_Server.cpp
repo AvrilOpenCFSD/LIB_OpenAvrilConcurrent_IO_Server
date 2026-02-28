@@ -7,9 +7,11 @@
 // pointers.
 	// programs.
 	// classes.
-	OpenAvrilConcurrency::Framework_Server* _ptr_Framework_Server = NULL;
+	class OpenAvrilConcurrency::Framework_Server* _ptr_Framework_Server = NULL;
 	// registers.
-
+	//_flag_isStackLoaded_Server_InputAction
+	//_flag_isLoaded_Stack_OutputSend
+	//_flag_IsInitialised_OpenAvrilConcurrencyConcurrency
 // constructor.
 	OpenAvrilConcurrency::CLIBConcurrentServerIO::CLIBConcurrentServerIO()
 	{

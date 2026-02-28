@@ -2,7 +2,7 @@
 
 // pointers.
 	// classes.
-	OpenAvrilConcurrency::Server* OpenAvrilConcurrency::Framework_Server::_ptr_Server = NULL;
+	OpenAvrilConcurrency::Server* _ptr_Server = NULL;
 	// registers.
 
 // constructor.
@@ -32,7 +32,7 @@
 		obj->get_ptr_Server()->get_ptr_Global()->initialise_number_Of_Praise_Events(newINITIALISED_Value);
 		delete newINITIALISED_Value;
 	// algorithms.
-		class OpenAvrilConcurrency::Concurrent* newINITIALISED_Concurrent = new class OpenAvrilConcurrency::Concurrent();
+		OpenAvrilConcurrency::Concurrent* newINITIALISED_Concurrent = new class OpenAvrilConcurrency::Concurrent();
 		while (newINITIALISED_Concurrent == NULL) {}
 		newINITIALISED_Concurrent->initialise_Control();
 		for (uint8_t concurrentThreadID = 0; concurrentThreadID < sizeof((obj->get_ptr_Server()->get_ptr_Global()->get_number_Of_Implemented_Cores() - 1)); concurrentThreadID++)

@@ -195,6 +195,10 @@
         *_ptr_side_To_Write_For_array_Of_doubleBuffer_Output = *newDEFAULT_Bool;
     }
         // get.
+    bool* OpenAvrilConcurrency::Data_Control::stat_get_ptr_flag_isLoaded_Stack_InputAction()
+    {
+        return _ptr_flag_isLoaded_Stack_InputAction;
+    }
     bool* OpenAvrilConcurrency::Data_Control::stat_get_ptr_flag_isLoaded_Stack_OutputSend()
     {
         return _ptr_flag_isLoaded_Stack_OutputSend;
@@ -211,5 +215,17 @@
     void OpenAvrilConcurrency::Data_Control::stat_set_ptr_flag_isLoaded_Stack_InputAction(bool* newPtr)
     {
         *_ptr_flag_isLoaded_Stack_InputAction = *newPtr;
+    }
+    void OpenAvrilConcurrency::Data_Control::stat_set_ptr_flag_isLoaded_Stack_OutputSend(bool* newPtr)
+    {
+        *_ptr_flag_isLoaded_Stack_OutputSend = *newPtr;
+    }
+    void OpenAvrilConcurrency::Data_Control::stat_set_ptr_side_To_Write_For_array_Of_doubleBuffer_Input(bool newvalue)
+    {
+        *_ptr_side_To_Write_For_array_Of_doubleBuffer_Input = newvalue;
+    }
+    void OpenAvrilConcurrency::Data_Control::stat_set_ptr_side_To_Write_For_array_Of_doubleBuffer_Output(bool newvalue)
+    {
+        *_ptr_side_To_Write_For_array_Of_doubleBuffer_Output = newvalue;
     }
 

@@ -80,9 +80,6 @@ namespace OpenAvrilConcurrency
         static void stat_set_ptr_User_O(class User_O* newClass); 
     // pointers.
         // classes.
-        static class Data_Control* _ptr_Data_Control;
-        static class User_I* _ptr_User_I;
-        static class User_O* _ptr_User_O;
         // registers.
         static std::array<class Input*, 3>* _ptr_array_Of_buffer_Input_ReferenceForThread;//NUMBER OF CONCURRENT THREADS.
         static std::array<class Output*, 3>* _ptr_array_Of_buffer_Output_ReferenceForThread;//NUMBER OF CONCURRENT THREADS.

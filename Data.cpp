@@ -2,9 +2,9 @@
 
 // pointers.
     // classes.
-    OpenAvrilConcurrency::Data_Control* OpenAvrilConcurrency::Data::_ptr_Data_Control = NULL;
-    OpenAvrilConcurrency::User_I* OpenAvrilConcurrency::Data::_ptr_User_I = NULL;
-    OpenAvrilConcurrency::User_O* OpenAvrilConcurrency::Data::_ptr_User_O = NULL;
+    OpenAvrilConcurrency::Data_Control* _ptr_Data_Control = NULL;
+    OpenAvrilConcurrency::User_I* _ptr_User_I = NULL;
+    OpenAvrilConcurrency::User_O* _ptr_User_O = NULL;
     // registers.
     std::array<class OpenAvrilConcurrency::Input*, 3>* OpenAvrilConcurrency::Data::_ptr_array_Of_buffer_Input_ReferenceForThread = NULL;//NUMBER OF CONCURRENT THREADS.
     std::array<class OpenAvrilConcurrency::Output*, 3>* OpenAvrilConcurrency::Data::_ptr_array_Of_buffer_Output_ReferenceForThread = NULL;//NUMBER OF CONCURRENT THREADS.

@@ -42,7 +42,6 @@ namespace OpenAvrilConcurrency
         static void stat_set_Item_On_ptr_list_Of_ptr_Algorithms_Subset(uint8_t praiseID, class Object* newDEFAULT_Object);
     // pointers.
         // classes.
-        static class Concurrent_Control* _ptr_Concurrent_Control;
         // registers.
         static std::list<class Object*>* _ptr_list_Of_ptr_Algorithms_Subset;
     };

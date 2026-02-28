@@ -49,7 +49,6 @@ namespace OpenAvrilConcurrency
         static void stat_set_Item_On_list_Of_Praise_In_Subsets(uint8_t praiseID, class Object* newObject);
     // pointers.
         // calsses.
-        static class Input_Control* _ptr_Input_Control;
         // registers.
         static uint8_t* _ptr_in_praiseEventId;
         static uint8_t* _ptr_in_playerId;
