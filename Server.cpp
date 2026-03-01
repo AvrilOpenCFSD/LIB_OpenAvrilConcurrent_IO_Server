@@ -11,12 +11,14 @@
 // constructor.
     OpenAvrilConcurrency::Server::Server()
     {
+        std::cout << "entered constructor of OpenAvrilConcurrency::Server::Server()" << std::endl;
         stat_create_ptr_Global();
         stat_create_ptr_Algorithms();
         stat_create_ptr_Data();
         stat_get_ptr_Data()->initialise_Control();
         stat_create_ptr_Execute();
         stat_get_ptr_Execute()->initialise_Control(stat_get_ptr_Global()->get_number_Of_Implemented_Cores());
+        std::cout << "exiting constructor of OpenAvrilConcurrency::Server::Server()" << std::endl;
     }
 
 // destructor.

@@ -9,13 +9,13 @@
 // constructor.
     OpenAvrilConcurrency::Algorithms::Algorithms()
     {
-        std::cout << "entered => Algorithms()" << std::endl;
+        std::cout << "entered constructor of OpenAvrilConcurrency::Algorithms::Algorithms()" << std::endl;
         stat_create_ptr_User_Algorithms();
         class OpenAvrilConcurrency::Concurrent* newDEFAULT_Concurrent = new class OpenAvrilConcurrency::Concurrent();
         while (newDEFAULT_Concurrent == NULL) {}
         stat_create_ptr_list_Of_ptr_Concurrent(newDEFAULT_Concurrent);
         delete newDEFAULT_Concurrent;
-        std::cout << "exiting => Algorithms()" << std::endl;
+        std::cout << "exiting constructor of OpenAvrilConcurrency::Algorithms::Algorithms()" << std::endl;
     }
 
 // destructor.

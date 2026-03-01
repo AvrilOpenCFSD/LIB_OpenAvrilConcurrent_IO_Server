@@ -16,6 +16,7 @@
 // constructor.
     OpenAvrilConcurrency::Data::Data()
     {
+        std::cout << "entered constructor of OpenAvrilConcurrency::Data::Data()" << std::endl;
         stat_create_ptr_User_I();
         stat_create_ptr_User_O();
        
@@ -32,6 +33,7 @@
         stat_create_ptr_array_Of_doubleBuffer_Output(newDEFAULT_output);
         stat_create_ptr_vector_Of_stack_Of_OutputPraise(newDEFAULT_output);
         delete newDEFAULT_output;
+        std::cout << "exiting constructor of OpenAvrilConcurrency::Data::Data()" << std::endl;
     }
 
 // destructor.

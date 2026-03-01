@@ -13,7 +13,9 @@
 // constructor.
     OpenAvrilConcurrency::Execute::Execute()
     {
+        std::cout << "entered constructor of OpenAvrilConcurrency::Execute::Execute()" << std::endl;
         stat_create_ptr_array_Of_ptr_list_Of_Threads();
+        std::cout << "entered constructor of OpenAvrilConcurrency::Execute::Execute()" << std::endl;
     }
 
 // destructor.
