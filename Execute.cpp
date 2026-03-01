@@ -2,9 +2,9 @@
 
 // pointers.
     // pointers.
-    OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtSERVER::LaunchEnableForConcurrentThreadsAt_SERVER_Framework* _program_ConcurrentQue_Server = NULL;
-    OpenAvrilCLIDWriteEnableForThreadsAtSERVERINPUTACTION::WriteEnableForThreadsAt_SERVERINPUTACTION_Framework* _program_WriteEnable_ServerInputAction = NULL;
-    OpenAvrilCLIDWriteEnableForThreadsAtSERVEROUTPUTRECIEVE::WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE_Framework* _program_WriteEnable_ServerOutputRecieve = NULL;
+    static class OpenAvrilCLIBLaunchEnableForConcurrentThreadsAtSERVER::LaunchEnableForConcurrentThreadsAt_SERVER_Framework* _program_ConcurrentQue_Server = NULL;
+    static class OpenAvrilCLIDWriteEnableForThreadsAtSERVERINPUTACTION::WriteEnableForThreadsAt_SERVERINPUTACTION_Framework* _program_WriteEnable_ServerInputAction = NULL;
+    static class OpenAvrilCLIDWriteEnableForThreadsAtSERVEROUTPUTRECIEVE::WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE_Framework* _program_WriteEnable_ServerOutputRecieve = NULL;
     // classes.
     OpenAvrilConcurrency::Execute_Control* _ptr_Execute_Control = NULL;
     // registers.
@@ -80,7 +80,7 @@
     // static.
     void OpenAvrilConcurrency::Execute::stat_create_ptr_Execute_Control(uint8_t number_Implemented_Cores)
     {
-        class OpenAvrilConcurrency::Execute_Control* _ptr_Execute_Control = new class OpenAvrilConcurrency::Execute_Control(number_Implemented_Cores);
+        static class OpenAvrilConcurrency::Execute_Control* _ptr_Execute_Control = new class OpenAvrilConcurrency::Execute_Control(number_Implemented_Cores);
         while (stat_get_ptr_Execute_Control() == NULL) { }
     }
     void OpenAvrilConcurrency::Execute::stat_create_ptr_array_Of_ptr_list_Of_Threads()

@@ -39,10 +39,6 @@ namespace OpenAvrilConcurrency
         static class Execute* stat_get_ptr_Execute();
         static class Global* stat_get_ptr_Global();
         // set.
-        static void stat_set_ptr_Algorithms(class Algorithms* algorithms);
-        static void stat_set_ptr_Data(class Data* data);
-        static void stat_set_ptr_Execute(class Execute* execute);
-        static void stat_set_ptr_Global(class Global* global);
     // pointers.
         // classes.
         // registers.

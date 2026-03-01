@@ -31,7 +31,6 @@ namespace OpenAvrilConcurrency
         // get.
         static class Server* stat_get_ptr_Server();
         // set.
-        static void stat_set_ptr_Server(class Server* server);
     // pointers.
         // classes.
         // registers.
