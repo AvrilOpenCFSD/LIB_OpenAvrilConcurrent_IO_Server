@@ -13,10 +13,15 @@
     {
         std::cout << "entered constructor of OpenAvrilConcurrency::Server::Server()" << std::endl;
         stat_create_ptr_Global();
+        std::cout << "alpha." << std::endl;
         stat_create_ptr_Algorithms();
+        std::cout << "bravo." << std::endl;
         stat_create_ptr_Data();
+        std::cout << "charlie." << std::endl;
         stat_get_ptr_Data()->initialise_Control();
+        std::cout << "delta." << std::endl;
         stat_create_ptr_Execute();
+        std::cout << "echo." << std::endl;
         stat_get_ptr_Execute()->initialise_Control(stat_get_ptr_Global()->get_number_Of_Implemented_Cores());
         std::cout << "exiting constructor of OpenAvrilConcurrency::Server::Server()" << std::endl;
     }
